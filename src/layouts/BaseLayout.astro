@@ -1,0 +1,99 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  keywords?: string;
+  canonicalUrl?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  author?: string;
+  datePublished?: string;
+  dateModified?: string;
+}
+
+const {
+  title,
+  description,
+  keywords = '',
+  canonicalUrl = '',
+  ogTitle = title,
+  ogDescription = description,
+  author = 'Eastern Wellness Methods',
+  datePublished = new Date().toISOString().split('T')[0],
+  dateModified = new Date().toISOString().split('T')[0],
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>{title}</title>
+  <meta name="description" content={description}/>
+  {keywords && <meta name="keywords" content={keywords}/>}
+  {canonicalUrl && <link rel="canonical" href={canonicalUrl}/>}
+
+  <!-- Open Graph -->
+  <meta property="og:title" content={ogTitle}/>
+  <meta property="og:description" content={ogDescription}/>
+  <meta property="og:type" content="article"/>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+  <!-- Schema.org structured data -->
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": title,
+    "description": description,
+    "author": {
+      "@type": author.startsWith('Dr.') ? 'Person' : 'Organization',
+      "name": author
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Eastern Wellness Methods"
+    },
+    "datePublished": datePublished,
+    "dateModified": dateModified
+  })}/>
+
+  <style is:global>
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: rgba(0,0,0,0.1);
+      border-radius: 20px;
+    }
+    .dark ::-webkit-scrollbar-thumb {
+      background-color: rgba(255,255,255,0.1);
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-main-light dark:text-text-main-dark transition-colors duration-300 antialiased selection:bg-primary selection:text-background-dark">
+  <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden group/design-root">
+    <Header />
+    <slot />
+    <Footer />
+  </div>
+</body>
+</html>

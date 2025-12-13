@@ -1,0 +1,233 @@
+---
+// Sidebar component with table of contents, product card, author card, and related topics
+---
+
+<aside class="hidden lg:block lg:col-span-4 relative">
+  <div class="sticky top-24 space-y-8">
+
+    <!-- Product Card -->
+    <div class="bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-xl shadow-lg overflow-hidden relative group">
+      <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent-dark to-primary"></div>
+      <div class="p-6">
+        <div class="flex items-center justify-between mb-4">
+          <span class="text-xs font-bold text-accent-dark dark:text-primary uppercase tracking-wider bg-emerald-50 dark:bg-emerald-900/30 px-2 py-1 rounded">Editor's Pick</span>
+          <span class="material-symbols-outlined text-gray-400" style="font-size: 20px;">star</span>
+        </div>
+        <div class="flex gap-4 mb-4">
+          <img alt="Premium Japanese stretching towel" class="size-24 rounded-lg object-cover bg-gray-100 shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9nsb95m4Dtcbi-y8FeqXDKtjYTH84xJHoLK24dwIDg_enjGjveQG2mGG06j8aOXalCo77wZhdMd4kc4cfO2Q9ujf1m35TezycilA6io5ZEShctf1PxuPaiJGN6x6ue-Y6kXpvY4J0CGrOFVcP7xSAZavGN4ucKdd92PCpJORgUpkkCy3PN-Q25bbdS52seqPmDdvlsRM3BMLgnhZLxVqpOxURSlTBhVUF_VW2PJWBgsxpSHT-g6VQhNn60JAS3mJat1ku4OIF32QJ"/>
+          <div>
+            <h4 class="text-lg font-bold text-text-main-light dark:text-text-main-dark leading-tight">Long-Loop Stretch Towel</h4>
+            <div class="flex text-yellow-400 text-xs mt-1">
+              <span class="material-symbols-outlined" style="font-size: 16px; font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined" style="font-size: 16px; font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined" style="font-size: 16px; font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined" style="font-size: 16px; font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined" style="font-size: 16px; font-variation-settings: 'FILL' 1;">star_half</span>
+            </div>
+          </div>
+        </div>
+        <p class="text-sm text-text-muted-light dark:text-text-muted-dark mb-5 leading-relaxed">
+          Designed specifically for neck stretches. Extra length and textured grip for better control during exercises.
+        </p>
+        <button class="flex items-center justify-center gap-2 bg-accent-dark hover:bg-emerald-800 text-white font-bold py-3 px-4 rounded-lg text-sm w-full transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+          Check Price on Amazon
+          <span class="material-symbols-outlined text-sm">open_in_new</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="bg-gray-50 dark:bg-surface-dark/50 rounded-xl p-6 border border-gray-100 dark:border-gray-800">
+      <h3 class="font-bold text-lg mb-4 flex items-center gap-2 text-text-main-light dark:text-text-main-dark">
+        <span class="material-symbols-outlined text-accent-dark dark:text-emerald-400">list</span>
+        In this Article
+      </h3>
+      <nav>
+        <ul class="space-y-3 relative border-l border-gray-200 dark:border-gray-700 ml-2 pl-4">
+          <li>
+            <a class="block text-sm font-medium text-accent-dark dark:text-emerald-400 hover:text-emerald-800 transition-colors" href="#why-japanese-methods">
+              Why Japanese Methods Are Different
+            </a>
+          </li>
+          <li>
+            <a class="block text-sm text-text-muted-light dark:text-gray-400 hover:text-accent-dark dark:hover:text-emerald-400 transition-colors" href="#technique-1">
+              1. Basic Neck Support Stretch
+            </a>
+          </li>
+          <li>
+            <a class="block text-sm text-text-muted-light dark:text-gray-400 hover:text-accent-dark dark:hover:text-emerald-400 transition-colors" href="#technique-2">
+              2. Lateral Neck Release
+            </a>
+          </li>
+          <li>
+            <a class="block text-sm text-text-muted-light dark:text-gray-400 hover:text-accent-dark dark:hover:text-emerald-400 transition-colors" href="#technique-3">
+              3. Shoulder-Neck Connection
+            </a>
+          </li>
+          <li>
+            <a class="block text-sm text-text-muted-light dark:text-gray-400 hover:text-accent-dark dark:hover:text-emerald-400 transition-colors" href="#technique-4">
+              4. Lying Down Decompression
+            </a>
+          </li>
+          <li>
+            <a class="block text-sm text-text-muted-light dark:text-gray-400 hover:text-accent-dark dark:hover:text-emerald-400 transition-colors" href="#technique-5">
+              5. Rotation Release
+            </a>
+          </li>
+          <li>
+            <a class="block text-sm text-text-muted-light dark:text-gray-400 hover:text-accent-dark dark:hover:text-emerald-400 transition-colors" href="#benefits">
+              Why It Works
+            </a>
+          </li>
+          <li>
+            <a class="block text-sm text-text-muted-light dark:text-gray-400 hover:text-accent-dark dark:hover:text-emerald-400 transition-colors" href="#tips">
+              Tips for Best Results
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Author Card -->
+    <div class="bg-white dark:bg-surface-dark rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700">
+      <div class="flex items-center gap-4 mb-4">
+        <img alt="Dr. Yuki Tanaka" class="size-14 rounded-full border-2 border-emerald-100 dark:border-emerald-900" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjUcgeAK6K6KACQtlruj6_ORdvKKdr-yUYMQ4Md9OLoSabhEdtwQhOlD_x-KGSpFOo-BZrr-fQnuyn68T1CI88qrZS2KhuC4jHLI7apguZdMsVu1bjgRT3cT0r5AT5dkhCXxHbbVswmTXf57p6_JdOkgxzyW8tO4nUTG8MX3MP3NJSyXKr4_d6TfCcIRmO8f-Vwv60Mf99hzyavFxCczrIv0PoiBcfwIzHm_4XZOCHRHlx2gxua20OucXhGFECkwwfYj1SJX1EVSEs"/>
+        <div>
+          <h3 class="font-serif text-lg font-bold text-text-main-light dark:text-text-main-dark">Dr. Yuki Tanaka</h3>
+          <p class="text-[10px] font-bold text-accent-dark dark:text-emerald-400 uppercase tracking-wide">Physical Therapist</p>
+        </div>
+      </div>
+      <p class="text-sm text-text-muted-light dark:text-text-muted-dark leading-relaxed mb-4">
+        Dr. Tanaka has spent 15 years studying traditional Japanese wellness practices and their applications in modern physical therapy.
+      </p>
+      <button class="text-accent-dark dark:text-emerald-400 font-bold text-sm hover:underline flex items-center gap-1 group">
+        Read full bio <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+      </button>
+    </div>
+
+    <!-- Japanese Exercise Methods -->
+    <div class="bg-white dark:bg-surface-dark rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700">
+      <h3 class="font-bold text-lg mb-2 flex items-center gap-2 text-text-main-light dark:text-text-main-dark">
+        <span class="material-symbols-outlined text-accent-dark dark:text-emerald-400">fitness_center</span>
+        Japanese Exercise Methods
+      </h3>
+      <p class="text-xs text-text-muted-light dark:text-text-muted-dark mb-4">Explore traditional techniques for longevity and wellness</p>
+      <nav>
+        <ul class="space-y-2">
+          <li>
+            <a class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-colors group" href="/rajio-taiso-radio-calisthenics">
+              <span class="flex items-center justify-center size-8 rounded-lg bg-emerald-100 dark:bg-emerald-900/30 text-accent-dark dark:text-emerald-400 text-xs font-bold group-hover:bg-accent-dark group-hover:text-white transition-colors">1</span>
+              <div class="flex-1">
+                <span class="block text-sm font-medium text-text-main-light dark:text-text-main-dark group-hover:text-accent-dark dark:group-hover:text-emerald-400 transition-colors">Rajio Taiso</span>
+                <span class="block text-xs text-text-muted-light dark:text-text-muted-dark">Radio Calisthenics</span>
+              </div>
+              <span class="material-symbols-outlined text-gray-300 group-hover:text-accent-dark dark:group-hover:text-emerald-400 transition-colors text-sm">arrow_forward</span>
+            </a>
+          </li>
+          <li>
+            <a class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-colors group" href="/shinrin-yoku-forest-bathing">
+              <span class="flex items-center justify-center size-8 rounded-lg bg-emerald-100 dark:bg-emerald-900/30 text-accent-dark dark:text-emerald-400 text-xs font-bold group-hover:bg-accent-dark group-hover:text-white transition-colors">2</span>
+              <div class="flex-1">
+                <span class="block text-sm font-medium text-text-main-light dark:text-text-main-dark group-hover:text-accent-dark dark:group-hover:text-emerald-400 transition-colors">Shinrin-Yoku</span>
+                <span class="block text-xs text-text-muted-light dark:text-text-muted-dark">Forest Bathing Walks</span>
+              </div>
+              <span class="material-symbols-outlined text-gray-300 group-hover:text-accent-dark dark:group-hover:text-emerald-400 transition-colors text-sm">arrow_forward</span>
+            </a>
+          </li>
+          <li>
+            <a class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-colors group" href="/makko-ho-stretching">
+              <span class="flex items-center justify-center size-8 rounded-lg bg-emerald-100 dark:bg-emerald-900/30 text-accent-dark dark:text-emerald-400 text-xs font-bold group-hover:bg-accent-dark group-hover:text-white transition-colors">3</span>
+              <div class="flex-1">
+                <span class="block text-sm font-medium text-text-main-light dark:text-text-main-dark group-hover:text-accent-dark dark:group-hover:text-emerald-400 transition-colors">Makko-Ho</span>
+                <span class="block text-xs text-text-muted-light dark:text-text-muted-dark">4-Pose Meridian Stretching</span>
+              </div>
+              <span class="material-symbols-outlined text-gray-300 group-hover:text-accent-dark dark:group-hover:text-emerald-400 transition-colors text-sm">arrow_forward</span>
+            </a>
+          </li>
+          <li>
+            <a class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-colors group" href="/seiza-sitting-benefits">
+              <span class="flex items-center justify-center size-8 rounded-lg bg-emerald-100 dark:bg-emerald-900/30 text-accent-dark dark:text-emerald-400 text-xs font-bold group-hover:bg-accent-dark group-hover:text-white transition-colors">4</span>
+              <div class="flex-1">
+                <span class="block text-sm font-medium text-text-main-light dark:text-text-main-dark group-hover:text-accent-dark dark:group-hover:text-emerald-400 transition-colors">Seiza Sitting</span>
+                <span class="block text-xs text-text-muted-light dark:text-text-muted-dark">Traditional Floor Posture</span>
+              </div>
+              <span class="material-symbols-outlined text-gray-300 group-hover:text-accent-dark dark:group-hover:text-emerald-400 transition-colors text-sm">arrow_forward</span>
+            </a>
+          </li>
+          <li>
+            <a class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-colors group" href="/hara-breathing-exercises">
+              <span class="flex items-center justify-center size-8 rounded-lg bg-emerald-100 dark:bg-emerald-900/30 text-accent-dark dark:text-emerald-400 text-xs font-bold group-hover:bg-accent-dark group-hover:text-white transition-colors">5</span>
+              <div class="flex-1">
+                <span class="block text-sm font-medium text-text-main-light dark:text-text-main-dark group-hover:text-accent-dark dark:group-hover:text-emerald-400 transition-colors">Hara Breathing</span>
+                <span class="block text-xs text-text-muted-light dark:text-text-muted-dark">Belly-Centered Breathwork</span>
+              </div>
+              <span class="material-symbols-outlined text-gray-300 group-hover:text-accent-dark dark:group-hover:text-emerald-400 transition-colors text-sm">arrow_forward</span>
+            </a>
+          </li>
+          <li>
+            <a class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-colors group" href="/japanese-towel-stretch-back-pain">
+              <span class="flex items-center justify-center size-8 rounded-lg bg-emerald-100 dark:bg-emerald-900/30 text-accent-dark dark:text-emerald-400 text-xs font-bold group-hover:bg-accent-dark group-hover:text-white transition-colors">6</span>
+              <div class="flex-1">
+                <span class="block text-sm font-medium text-text-main-light dark:text-text-main-dark group-hover:text-accent-dark dark:group-hover:text-emerald-400 transition-colors">Towel Stretch for Back</span>
+                <span class="block text-xs text-text-muted-light dark:text-text-muted-dark">Fukutsudzi Method</span>
+              </div>
+              <span class="material-symbols-outlined text-gray-300 group-hover:text-accent-dark dark:group-hover:text-emerald-400 transition-colors text-sm">arrow_forward</span>
+            </a>
+          </li>
+          <li>
+            <a class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-colors group" href="/japanese-morning-stretch-routine">
+              <span class="flex items-center justify-center size-8 rounded-lg bg-emerald-100 dark:bg-emerald-900/30 text-accent-dark dark:text-emerald-400 text-xs font-bold group-hover:bg-accent-dark group-hover:text-white transition-colors">7</span>
+              <div class="flex-1">
+                <span class="block text-sm font-medium text-text-main-light dark:text-text-main-dark group-hover:text-accent-dark dark:group-hover:text-emerald-400 transition-colors">Morning Stretch Routine</span>
+                <span class="block text-xs text-text-muted-light dark:text-text-muted-dark">Asa no Taisō</span>
+              </div>
+              <span class="material-symbols-outlined text-gray-300 group-hover:text-accent-dark dark:group-hover:text-emerald-400 transition-colors text-sm">arrow_forward</span>
+            </a>
+          </li>
+          <li>
+            <a class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-colors group" href="/do-in-self-massage">
+              <span class="flex items-center justify-center size-8 rounded-lg bg-emerald-100 dark:bg-emerald-900/30 text-accent-dark dark:text-emerald-400 text-xs font-bold group-hover:bg-accent-dark group-hover:text-white transition-colors">8</span>
+              <div class="flex-1">
+                <span class="block text-sm font-medium text-text-main-light dark:text-text-main-dark group-hover:text-accent-dark dark:group-hover:text-emerald-400 transition-colors">Do-In Self Massage</span>
+                <span class="block text-xs text-text-muted-light dark:text-text-muted-dark">Acupressure Techniques</span>
+              </div>
+              <span class="material-symbols-outlined text-gray-300 group-hover:text-accent-dark dark:group-hover:text-emerald-400 transition-colors text-sm">arrow_forward</span>
+            </a>
+          </li>
+          <li>
+            <a class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-colors group" href="/sotai-movement-therapy">
+              <span class="flex items-center justify-center size-8 rounded-lg bg-emerald-100 dark:bg-emerald-900/30 text-accent-dark dark:text-emerald-400 text-xs font-bold group-hover:bg-accent-dark group-hover:text-white transition-colors">9</span>
+              <div class="flex-1">
+                <span class="block text-sm font-medium text-text-main-light dark:text-text-main-dark group-hover:text-accent-dark dark:group-hover:text-emerald-400 transition-colors">Sotai</span>
+                <span class="block text-xs text-text-muted-light dark:text-text-muted-dark">Natural Movement Therapy</span>
+              </div>
+              <span class="material-symbols-outlined text-gray-300 group-hover:text-accent-dark dark:group-hover:text-emerald-400 transition-colors text-sm">arrow_forward</span>
+            </a>
+          </li>
+          <li>
+            <a class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-colors group" href="/japanese-walking-meditation">
+              <span class="flex items-center justify-center size-8 rounded-lg bg-emerald-100 dark:bg-emerald-900/30 text-accent-dark dark:text-emerald-400 text-xs font-bold group-hover:bg-accent-dark group-hover:text-white transition-colors">10</span>
+              <div class="flex-1">
+                <span class="block text-sm font-medium text-text-main-light dark:text-text-main-dark group-hover:text-accent-dark dark:group-hover:text-emerald-400 transition-colors">Kinhin</span>
+                <span class="block text-xs text-text-muted-light dark:text-text-muted-dark">Walking Meditation</span>
+              </div>
+              <span class="material-symbols-outlined text-gray-300 group-hover:text-accent-dark dark:group-hover:text-emerald-400 transition-colors text-sm">arrow_forward</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Popular Topics -->
+    <div>
+      <h3 class="font-bold text-sm uppercase tracking-wider text-text-muted-light dark:text-gray-400 mb-4">Related Topics</h3>
+      <div class="flex flex-wrap gap-2">
+        <a class="px-3 py-1.5 rounded-md bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 text-xs font-medium text-text-muted-light dark:text-text-muted-dark hover:border-accent-dark hover:text-accent-dark dark:hover:text-emerald-400 transition-all shadow-sm" href="#">Neck Pain</a>
+        <a class="px-3 py-1.5 rounded-md bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 text-xs font-medium text-text-muted-light dark:text-text-muted-dark hover:border-accent-dark hover:text-accent-dark dark:hover:text-emerald-400 transition-all shadow-sm" href="#">Japanese Exercises</a>
+        <a class="px-3 py-1.5 rounded-md bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 text-xs font-medium text-text-muted-light dark:text-text-muted-dark hover:border-accent-dark hover:text-accent-dark dark:hover:text-emerald-400 transition-all shadow-sm" href="#">Stretching</a>
+        <a class="px-3 py-1.5 rounded-md bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 text-xs font-medium text-text-muted-light dark:text-text-muted-dark hover:border-accent-dark hover:text-accent-dark dark:hover:text-emerald-400 transition-all shadow-sm" href="#">Posture</a>
+        <a class="px-3 py-1.5 rounded-md bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 text-xs font-medium text-text-muted-light dark:text-text-muted-dark hover:border-accent-dark hover:text-accent-dark dark:hover:text-emerald-400 transition-all shadow-sm" href="#">Physical Therapy</a>
+      </div>
+    </div>
+  </div>
+</aside>
