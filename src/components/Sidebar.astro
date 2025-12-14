@@ -1,5 +1,7 @@
 ---
 // Sidebar component with table of contents, product card, author card, and related topics
+import { Image } from 'astro:assets';
+import towelImage from '../assets/towel-small.jpg';
 ---
 
 <aside class="hidden lg:block lg:col-span-4 relative">
@@ -14,7 +16,7 @@
           <span class="material-symbols-outlined text-gray-400" style="font-size: 20px;">check_circle</span>
         </div>
         <div class="flex gap-4 mb-4">
-          <img alt="Simple household towel for stretching" class="size-24 rounded-lg object-cover bg-gray-100 shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjpXJgVPgF9MG5vvB8ZBKNtqPdDp8E0rPZoqJ0_qkC8YL1AEH-RbN8Gb5YmI_TUvN_qrR-7L5i_J5yqKpW5rY4kQ5j6t8mR9o5_B8X6Q8G8G6X5Y4Z3X2W1V0U9T8S7R6Q5P4O3N2M1L0K9J8I7H6G5F4E3D2C1B0A"/>
+          <Image src={towelImage} alt="Simple household towel for stretching" class="size-24 rounded-lg object-cover bg-gray-100 shadow-md" width={96} height={96} />
           <div>
             <h4 class="text-lg font-bold text-text-main-light dark:text-text-main-dark leading-tight">Your Household Towel</h4>
             <p class="text-xs text-text-muted-light dark:text-text-muted-dark mt-1">
