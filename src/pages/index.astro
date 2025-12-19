@@ -245,7 +245,16 @@ import Sidebar from '../components/Sidebar.astro';
 
       </article>
 
-      <Sidebar />
+      <Sidebar tocItems={[
+        { href: "#why-japanese-methods", text: "Why Japanese Methods Are Different" },
+        { href: "#technique-1", text: "1. Basic Neck Support Stretch" },
+        { href: "#technique-2", text: "2. Lateral Neck Release" },
+        { href: "#technique-3", text: "3. Shoulder-Neck Connection" },
+        { href: "#technique-4", text: "4. Lying Down Decompression" },
+        { href: "#technique-5", text: "5. Rotation Release" },
+        { href: "#benefits", text: "Why It Works" },
+        { href: "#tips", text: "Tips for Best Results" },
+      ]} />
 
       <!-- Mobile Topics -->
       <div class="lg:hidden space-y-8 mt-12">

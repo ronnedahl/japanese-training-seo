@@ -675,7 +675,16 @@ import Sidebar from '../components/Sidebar.astro';
 
       </article>
 
-      <Sidebar />
+      <Sidebar tocItems={[
+        { href: "#what-is-makko-ho", text: "What Is Makko-Ho?" },
+        { href: "#benefits", text: "Health Benefits" },
+        { href: "#four-poses", text: "The Four Poses" },
+        { href: "#how-to-practice", text: "How to Practice" },
+        { href: "#equipment", text: "Equipment Needed" },
+        { href: "#common-mistakes", text: "Common Mistakes" },
+        { href: "#combining", text: "Combining with Other Practices" },
+        { href: "#faq", text: "FAQ" },
+      ]} />
 
       <!-- Mobile Topics -->
       <div class="lg:hidden space-y-8 mt-12">

@@ -207,7 +207,14 @@ import Sidebar from '../components/Sidebar.astro';
 
       </article>
 
-      <Sidebar />
+      <Sidebar tocItems={[
+        { href: "#our-story", text: "Our Story" },
+        { href: "#our-mission", text: "Our Mission" },
+        { href: "#our-approach", text: "Our Approach" },
+        { href: "#about-me", text: "About Me" },
+        { href: "#my-values", text: "My Values" },
+        { href: "#what-to-expect", text: "What to Expect" },
+      ]} />
     </div>
   </main>
 </BaseLayout>

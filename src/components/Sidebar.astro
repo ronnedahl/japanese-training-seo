@@ -2,6 +2,17 @@
 // Sidebar component with table of contents, product card, author card, and related topics
 import { Image } from 'astro:assets';
 import towelImage from '../assets/towel-small.jpg';
+
+interface TocItem {
+  href: string;
+  text: string;
+}
+
+interface Props {
+  tocItems?: TocItem[];
+}
+
+const { tocItems = [] } = Astro.props;
 ---
 
 <aside class="hidden lg:block lg:col-span-4 relative">
@@ -35,56 +46,28 @@ import towelImage from '../assets/towel-small.jpg';
     </div>
 
     <!-- Table of Contents -->
-    <div class="bg-gray-50 dark:bg-surface-dark/50 rounded-xl p-6 border border-gray-100 dark:border-gray-800">
-      <h3 class="font-bold text-lg mb-4 flex items-center gap-2 text-text-main-light dark:text-text-main-dark">
-        <span class="material-symbols-outlined text-accent-dark dark:text-emerald-400">list</span>
-        In this Article
-      </h3>
-      <nav>
-        <ul class="space-y-3 relative border-l border-gray-200 dark:border-gray-700 ml-2 pl-4">
-          <li>
-            <a class="block text-sm font-medium text-accent-dark dark:text-emerald-400 hover:text-emerald-800 transition-colors" href="#why-japanese-methods">
-              Why Japanese Methods Are Different
-            </a>
-          </li>
-          <li>
-            <a class="block text-sm text-text-muted-light dark:text-gray-400 hover:text-accent-dark dark:hover:text-emerald-400 transition-colors" href="#technique-1">
-              1. Basic Neck Support Stretch
-            </a>
-          </li>
-          <li>
-            <a class="block text-sm text-text-muted-light dark:text-gray-400 hover:text-accent-dark dark:hover:text-emerald-400 transition-colors" href="#technique-2">
-              2. Lateral Neck Release
-            </a>
-          </li>
-          <li>
-            <a class="block text-sm text-text-muted-light dark:text-gray-400 hover:text-accent-dark dark:hover:text-emerald-400 transition-colors" href="#technique-3">
-              3. Shoulder-Neck Connection
-            </a>
-          </li>
-          <li>
-            <a class="block text-sm text-text-muted-light dark:text-gray-400 hover:text-accent-dark dark:hover:text-emerald-400 transition-colors" href="#technique-4">
-              4. Lying Down Decompression
-            </a>
-          </li>
-          <li>
-            <a class="block text-sm text-text-muted-light dark:text-gray-400 hover:text-accent-dark dark:hover:text-emerald-400 transition-colors" href="#technique-5">
-              5. Rotation Release
-            </a>
-          </li>
-          <li>
-            <a class="block text-sm text-text-muted-light dark:text-gray-400 hover:text-accent-dark dark:hover:text-emerald-400 transition-colors" href="#benefits">
-              Why It Works
-            </a>
-          </li>
-          <li>
-            <a class="block text-sm text-text-muted-light dark:text-gray-400 hover:text-accent-dark dark:hover:text-emerald-400 transition-colors" href="#tips">
-              Tips for Best Results
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    {tocItems.length > 0 && (
+      <div class="bg-gray-50 dark:bg-surface-dark/50 rounded-xl p-6 border border-gray-100 dark:border-gray-800">
+        <h3 class="font-bold text-lg mb-4 flex items-center gap-2 text-text-main-light dark:text-text-main-dark">
+          <span class="material-symbols-outlined text-accent-dark dark:text-emerald-400">list</span>
+          In this Article
+        </h3>
+        <nav>
+          <ul class="space-y-3 relative border-l border-gray-200 dark:border-gray-700 ml-2 pl-4">
+            {tocItems.map((item, index) => (
+              <li>
+                <a
+                  class={`block text-sm transition-colors ${index === 0 ? 'font-medium text-accent-dark dark:text-emerald-400 hover:text-emerald-800' : 'text-text-muted-light dark:text-gray-400 hover:text-accent-dark dark:hover:text-emerald-400'}`}
+                  href={item.href}
+                >
+                  {item.text}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    )}
 
     <!-- Author Card -->
     <div class="bg-white dark:bg-surface-dark rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700">
