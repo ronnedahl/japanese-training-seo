@@ -570,7 +570,16 @@ import Sidebar from '../components/Sidebar.astro';
 
       </article>
 
-      <Sidebar />
+      <Sidebar tocItems={[
+        { href: "#understanding-hara", text: "Understanding Hara" },
+        { href: "#chest-breathing", text: "Chest vs Belly Breathing" },
+        { href: "#benefits", text: "Health Benefits" },
+        { href: "#how-to-practice", text: "How to Practice" },
+        { href: "#advanced-techniques", text: "Advanced Techniques" },
+        { href: "#practice-schedule", text: "Practice Schedule" },
+        { href: "#common-mistakes", text: "Common Mistakes" },
+        { href: "#faq", text: "FAQ" },
+      ]} />
 
       <!-- Mobile Topics -->
       <div class="lg:hidden space-y-8 mt-12">

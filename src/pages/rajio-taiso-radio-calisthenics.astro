@@ -570,7 +570,16 @@ import Sidebar from '../components/Sidebar.astro';
 
       </article>
 
-      <Sidebar />
+      <Sidebar tocItems={[
+        { href: "#what-is-radio-taiso", text: "What Is Radio Taiso?" },
+        { href: "#benefits", text: "Science-Backed Benefits" },
+        { href: "#exercises", text: "The 13 Exercises" },
+        { href: "#getting-started", text: "How to Get Started" },
+        { href: "#common-mistakes", text: "Common Mistakes to Avoid" },
+        { href: "#equipment", text: "Equipment Needed" },
+        { href: "#faq", text: "FAQ" },
+        { href: "#why-perfect", text: "Why Perfect for Seniors" },
+      ]} />
 
       <!-- Mobile Topics -->
       <div class="lg:hidden space-y-8 mt-12">

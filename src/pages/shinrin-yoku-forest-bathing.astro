@@ -566,7 +566,16 @@ import Sidebar from '../components/Sidebar.astro';
 
       </article>
 
-      <Sidebar />
+      <Sidebar tocItems={[
+        { href: "#what-is-shinrin-yoku", text: "What Is Shinrin-Yoku?" },
+        { href: "#benefits", text: "Health Benefits" },
+        { href: "#how-to-practice", text: "How to Practice" },
+        { href: "#what-to-bring", text: "What to Bring" },
+        { href: "#limited-mobility", text: "For Limited Mobility" },
+        { href: "#best-times", text: "Best Times to Practice" },
+        { href: "#common-mistakes", text: "Common Mistakes" },
+        { href: "#faq", text: "FAQ" },
+      ]} />
 
       <!-- Mobile Topics -->
       <div class="lg:hidden space-y-8 mt-12">
