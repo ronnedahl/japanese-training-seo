@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Sidebar from '../components/Sidebar.astro';
+import makkoHoImage from '../assets/images/makko-ho-stretching-sunset.png';
 ---
 
 <BaseLayout
@@ -33,7 +34,7 @@ import Sidebar from '../components/Sidebar.astro';
         <figure class="mb-8">
           <div class="w-full aspect-[16/9] bg-gray-200 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg relative">
             <img
-              src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1200&h=675&fit=crop"
+              src={makkoHoImage.src}
               alt="Person practicing gentle stretching exercises on a yoga mat, demonstrating Makko-Ho meridian stretching"
               class="w-full h-full object-cover"
             />

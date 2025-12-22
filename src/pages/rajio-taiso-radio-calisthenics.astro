@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Sidebar from '../components/Sidebar.astro';
+import radioTaisoImage from '../assets/images/radio-taiso-group-exercise.png';
 ---
 
 <BaseLayout
@@ -33,9 +34,9 @@ import Sidebar from '../components/Sidebar.astro';
         <figure class="mb-8">
           <div class="w-full aspect-[16/9] bg-gray-200 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg relative">
             <img
-              src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=1200&h=675&fit=crop"
+              src={radioTaisoImage.src}
               alt="Senior Japanese people performing Radio Taiso morning exercises in a park"
-              class="w-full h-full object-cover"
+              class="w-full h-full object-cover object-top"
             />
           </div>
           <figcaption class="text-sm text-text-muted-light dark:text-text-muted-dark mt-3 italic text-center">

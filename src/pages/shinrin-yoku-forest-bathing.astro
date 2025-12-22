@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Sidebar from '../components/Sidebar.astro';
+import shinrinYokuImage from '../assets/images/shinrin-yoku-forest-sunlight.jpg';
 ---
 
 <BaseLayout
@@ -33,7 +34,7 @@ import Sidebar from '../components/Sidebar.astro';
         <figure class="mb-8">
           <div class="w-full aspect-[16/9] bg-gray-200 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg relative">
             <img
-              src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=1200&h=675&fit=crop"
+              src={shinrinYokuImage.src}
               alt="Peaceful forest path with sunlight filtering through trees, perfect for Shinrin-Yoku forest bathing"
               class="w-full h-full object-cover"
             />
