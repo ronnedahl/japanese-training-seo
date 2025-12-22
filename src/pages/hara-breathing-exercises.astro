@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Sidebar from '../components/Sidebar.astro';
+import haraBreathingImage from '../assets/images/hara-breathing-meditation.png';
 ---
 
 <BaseLayout
@@ -33,9 +34,10 @@ import Sidebar from '../components/Sidebar.astro';
         <figure class="mb-8">
           <div class="w-full aspect-[16/9] bg-gray-200 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg relative">
             <img
-              src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&h=675&fit=crop"
+              src={haraBreathingImage.src}
               alt="Person practicing peaceful breathing meditation in a serene setting, demonstrating Hara breathing technique"
               class="w-full h-full object-cover"
+              style="object-position: center 5%;"
             />
           </div>
           <figcaption class="text-sm text-text-muted-light dark:text-text-muted-dark mt-3 italic text-center">
