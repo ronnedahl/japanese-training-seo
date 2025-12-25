@@ -1,0 +1,917 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Sidebar from '../components/Sidebar.astro';
+import seizaImage from '../assets/images/seiza-sitting-meditation.png';
+---
+
+<BaseLayout
+  title="Seiza: Japanese Floor Sitting for Posture and Knee Health After 50"
+  description="Discover Seiza, the traditional Japanese kneeling posture that strengthens knees, improves posture, and promotes mindfulness. Learn proper technique and modifications for seniors."
+  keywords="seiza, japanese sitting, floor sitting, knee health, posture improvement, kneeling posture, meditation posture, senior flexibility"
+  author="Simple Senior Fitness"
+  datePublished="2025-01-15"
+  dateModified="2025-01-15"
+  canonicalUrl="https://simpleseniorfitness.com/seiza-sitting-benefits"
+>
+  <main class="flex-1 w-full max-w-6xl mx-auto pb-12 px-6">
+    <div class="lg:grid lg:grid-cols-12 lg:gap-12">
+      <article class="lg:col-span-8">
+        <!-- Hero Section -->
+        <header class="mb-10">
+          <div class="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 mb-4">
+            <span class="material-symbols-outlined">self_improvement</span>
+            <span class="text-sm font-medium uppercase tracking-wider">Japanese Wellness Practice</span>
+          </div>
+          <h1 class="font-serif text-4xl md:text-5xl font-bold text-text-main-light dark:text-text-main-dark mb-6 leading-tight">
+            Seiza: The Japanese Floor Sitting Posture That Improves Posture and Knee Health After 50
+          </h1>
+          <p class="text-xl text-text-muted-light dark:text-text-muted-dark leading-relaxed">
+            In Western culture, most of us spend our days sitting in chairs. By the time we reach 50, many have lost the ability to sit comfortably on the floor altogether. Yet in Japan, people of all ages regularly sit in Seiza—a formal kneeling posture that maintains joint health, improves posture, and supports mental clarity.
+          </p>
+        </header>
+
+        <!-- Hero Image -->
+        <figure class="mb-12">
+          <div class="w-full aspect-[16/9] bg-gray-200 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg relative">
+            <img
+              src={seizaImage.src}
+              alt="Person practicing Seiza, the traditional Japanese kneeling meditation posture"
+              class="w-full h-full object-cover"
+              style="object-position: center 25%;"
+            />
+          </div>
+          <figcaption class="text-sm text-text-muted-light dark:text-text-muted-dark mt-3 italic text-center">
+            Seiza has been practiced in Japan for centuries as a foundation for meditation and mindfulness.
+          </figcaption>
+        </figure>
+
+        <!-- Introduction -->
+        <section class="prose prose-lg dark:prose-invert max-w-none mb-12">
+          <p>
+            Seiza (pronounced "say-zah") literally means <strong>"correct sitting"</strong> in Japanese. It involves kneeling with your buttocks resting on your heels, your spine straight, and your hands resting gently on your thighs. While it might sound simple, Seiza is a complete body practice that offers remarkable benefits—especially for people over 50 who want to maintain mobility, flexibility, and functional strength as they age.
+          </p>
+          <p>
+            The good news? Even if you haven't sat on the floor in decades, you can learn Seiza with proper modifications and gradually work toward comfortable practice. This ancient posture can help reverse some of the flexibility loss and postural decline that comes with modern sedentary living.
+          </p>
+        </section>
+
+        <!-- What is Seiza Section -->
+        <section class="mb-12">
+          <h2 class="font-serif text-3xl font-bold text-text-main-light dark:text-text-main-dark mb-6">What Is Seiza? Understanding Traditional Japanese Sitting</h2>
+
+          <p class="text-text-muted-light dark:text-text-muted-dark mb-6">
+            Seiza is the formal, traditional way of sitting in Japan. In Seiza, you kneel on the floor with the tops of your feet flat on the ground, your big toes overlapping or touching, and your buttocks resting on your heels. Your spine remains upright and straight, shoulders are relaxed, and hands rest on the upper thighs.
+          </p>
+
+          <div class="bg-indigo-50 dark:bg-indigo-900/20 rounded-xl p-6 mb-6">
+            <h3 class="font-semibold text-indigo-800 dark:text-indigo-300 mb-4">Traditional Uses of Seiza</h3>
+            <div class="grid sm:grid-cols-2 gap-3">
+              <div class="flex items-center gap-2 text-indigo-700 dark:text-indigo-400">
+                <span class="material-symbols-outlined text-sm">emoji_food_beverage</span>
+                <span>Tea ceremony (Chanoyu)</span>
+              </div>
+              <div class="flex items-center gap-2 text-indigo-700 dark:text-indigo-400">
+                <span class="material-symbols-outlined text-sm">sports_martial_arts</span>
+                <span>Martial arts practice</span>
+              </div>
+              <div class="flex items-center gap-2 text-indigo-700 dark:text-indigo-400">
+                <span class="material-symbols-outlined text-sm">self_improvement</span>
+                <span>Zen meditation (Zazen)</span>
+              </div>
+              <div class="flex items-center gap-2 text-indigo-700 dark:text-indigo-400">
+                <span class="material-symbols-outlined text-sm">celebration</span>
+                <span>Formal occasions</span>
+              </div>
+              <div class="flex items-center gap-2 text-indigo-700 dark:text-indigo-400">
+                <span class="material-symbols-outlined text-sm">restaurant</span>
+                <span>Traditional dining</span>
+              </div>
+              <div class="flex items-center gap-2 text-indigo-700 dark:text-indigo-400">
+                <span class="material-symbols-outlined text-sm">temple_buddhist</span>
+                <span>Temple visits</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-violet-50 dark:bg-violet-900/20 rounded-xl p-6">
+            <h3 class="font-semibold text-violet-800 dark:text-violet-300 mb-3">Historical Context</h3>
+            <p class="text-violet-700 dark:text-violet-400 text-sm">
+              Seiza became widespread during the Edo period (1603-1868). The adoption was partly practical—it allows for quick movement to standing (important in martial contexts) and demonstrates respect in formal settings. It also reflects Japanese aesthetic values: discipline, mindfulness, and the integration of physical form with mental state.
+            </p>
+          </div>
+        </section>
+
+        <!-- Why Floor Sitting Matters -->
+        <section class="mb-12">
+          <div class="bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/20 rounded-2xl p-8 border border-amber-200 dark:border-amber-800">
+            <h3 class="font-serif text-2xl font-bold text-amber-800 dark:text-amber-300 mb-4">Why Floor Sitting Matters for Health</h3>
+            <p class="text-amber-700 dark:text-amber-400 mb-4">
+              Before chairs became common, humans sat on the floor in various positions. This natural practice maintained hip and ankle flexibility, strengthened muscles needed to get up and down, and kept joints mobile.
+            </p>
+            <div class="bg-white/50 dark:bg-black/20 rounded-lg p-4">
+              <p class="text-amber-800 dark:text-amber-300 font-medium text-sm">
+                <span class="material-symbols-outlined text-amber-600 dark:text-amber-400 align-middle mr-1" style="font-size: 18px;">science</span>
+                A 2012 study in the European Journal of Preventive Cardiology found that people who could sit down on the floor and stand back up with minimal support had significantly lower mortality rates.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 10 Benefits Section -->
+        <section class="mb-12">
+          <h2 class="font-serif text-3xl font-bold text-text-main-light dark:text-text-main-dark mb-6">10 Powerful Health Benefits of Seiza for Seniors Over 50</h2>
+
+          <div class="grid gap-4">
+            <!-- Benefit 1 -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700">
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0 w-12 h-12 bg-indigo-100 dark:bg-indigo-900/50 rounded-xl flex items-center justify-center">
+                  <span class="material-symbols-outlined text-indigo-600 dark:text-indigo-400">straighten</span>
+                </div>
+                <div>
+                  <h3 class="font-bold text-text-main-light dark:text-text-main-dark mb-2">1. Improved Posture and Spinal Alignment</h3>
+                  <p class="text-text-muted-light dark:text-text-muted-dark text-sm">Seiza naturally encourages proper spinal alignment with active core engagement, natural lumbar curve, and shoulders pulled back. This strengthens muscles that support good posture.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Benefit 2 -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700">
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0 w-12 h-12 bg-violet-100 dark:bg-violet-900/50 rounded-xl flex items-center justify-center">
+                  <span class="material-symbols-outlined text-violet-600 dark:text-violet-400">accessibility_new</span>
+                </div>
+                <div>
+                  <h3 class="font-bold text-text-main-light dark:text-text-main-dark mb-2">2. Enhanced Knee Health and Function</h3>
+                  <p class="text-text-muted-light dark:text-text-muted-dark text-sm">Properly practiced Seiza maintains full knee flexion range of motion, strengthens supporting muscles, promotes circulation, and improves proprioception around the knee.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Benefit 3 -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700">
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0 w-12 h-12 bg-purple-100 dark:bg-purple-900/50 rounded-xl flex items-center justify-center">
+                  <span class="material-symbols-outlined text-purple-600 dark:text-purple-400">directions_walk</span>
+                </div>
+                <div>
+                  <h3 class="font-bold text-text-main-light dark:text-text-main-dark mb-2">3. Increased Hip and Ankle Flexibility</h3>
+                  <p class="text-text-muted-light dark:text-text-muted-dark text-sm">Seiza stretches and mobilizes multiple joints: ankles (plantar flexion), knees (full flexion), and hips (active hip flexors). This multi-joint flexibility is functional for real-life activities.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Benefit 4 -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700">
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-900/50 rounded-xl flex items-center justify-center">
+                  <span class="material-symbols-outlined text-blue-600 dark:text-blue-400">fitness_center</span>
+                </div>
+                <div>
+                  <h3 class="font-bold text-text-main-light dark:text-text-main-dark mb-2">4. Strengthened Lower Body Muscles</h3>
+                  <p class="text-text-muted-light dark:text-text-muted-dark text-sm">Getting into and out of Seiza requires significant leg strength: quadriceps, hamstrings, gluteal muscles, and calves all work together. This functional strength training happens naturally.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Benefit 5 -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700">
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0 w-12 h-12 bg-red-100 dark:bg-red-900/50 rounded-xl flex items-center justify-center">
+                  <span class="material-symbols-outlined text-red-600 dark:text-red-400">favorite</span>
+                </div>
+                <div>
+                  <h3 class="font-bold text-text-main-light dark:text-text-main-dark mb-2">5. Improved Circulation and Reduced Swelling</h3>
+                  <p class="text-text-muted-light dark:text-text-muted-dark text-sm">The alternating compression and release when coming out of Seiza stimulates circulation, promotes lymphatic drainage, and can reduce chronic ankle and foot swelling.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Benefit 6 -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700">
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0 w-12 h-12 bg-emerald-100 dark:bg-emerald-900/50 rounded-xl flex items-center justify-center">
+                  <span class="material-symbols-outlined text-emerald-600 dark:text-emerald-400">exercise</span>
+                </div>
+                <div>
+                  <h3 class="font-bold text-text-main-light dark:text-text-main-dark mb-2">6. Enhanced Core Strength and Stability</h3>
+                  <p class="text-text-muted-light dark:text-text-muted-dark text-sm">Maintaining an upright spine requires continuous, gentle core engagement. This sustained low-level activation builds endurance in deep stabilizing muscles, obliques, and erector spinae.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Benefit 7 -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700">
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0 w-12 h-12 bg-teal-100 dark:bg-teal-900/50 rounded-xl flex items-center justify-center">
+                  <span class="material-symbols-outlined text-teal-600 dark:text-teal-400">balance</span>
+                </div>
+                <div>
+                  <h3 class="font-bold text-text-main-light dark:text-text-main-dark mb-2">7. Better Balance and Stability</h3>
+                  <p class="text-text-muted-light dark:text-text-muted-dark text-sm">Transitioning into and out of Seiza challenges your balance and proprioception, improving awareness of your center of gravity and strengthening stabilizing muscles—reducing fall risk.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Benefit 8 -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700">
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0 w-12 h-12 bg-orange-100 dark:bg-orange-900/50 rounded-xl flex items-center justify-center">
+                  <span class="material-symbols-outlined text-orange-600 dark:text-orange-400">gastroenterology</span>
+                </div>
+                <div>
+                  <h3 class="font-bold text-text-main-light dark:text-text-main-dark mb-2">8. Digestive System Support</h3>
+                  <p class="text-text-muted-light dark:text-text-muted-dark text-sm">Many practitioners report improved digestive comfort when sitting in Seiza after meals. The upright posture prevents compression of digestive organs and may facilitate optimal function.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Benefit 9 -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700">
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0 w-12 h-12 bg-cyan-100 dark:bg-cyan-900/50 rounded-xl flex items-center justify-center">
+                  <span class="material-symbols-outlined text-cyan-600 dark:text-cyan-400">psychology</span>
+                </div>
+                <div>
+                  <h3 class="font-bold text-text-main-light dark:text-text-main-dark mb-2">9. Mental Clarity and Mindfulness</h3>
+                  <p class="text-text-muted-light dark:text-text-muted-dark text-sm">The physical discipline of Seiza cultivates present-moment awareness, patience, discipline, acceptance, and calmness. In Zen Buddhism, Seiza is considered a form of practice itself.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Benefit 10 -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700">
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0 w-12 h-12 bg-rose-100 dark:bg-rose-900/50 rounded-xl flex items-center justify-center">
+                  <span class="material-symbols-outlined text-rose-600 dark:text-rose-400">elderly</span>
+                </div>
+                <div>
+                  <h3 class="font-bold text-text-main-light dark:text-text-main-dark mb-2">10. Increased Functional Independence</h3>
+                  <p class="text-text-muted-light dark:text-text-muted-dark text-sm">Seiza maintains the ability to get down to and up from the floor, reach items at floor level, play with grandchildren, and garden—directly linked to quality of life as you age.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- How to Practice Seiza -->
+        <section class="mb-12">
+          <h2 class="font-serif text-3xl font-bold text-text-main-light dark:text-text-main-dark mb-6">How to Practice Seiza: Step-by-Step Guide</h2>
+
+          <p class="text-text-muted-light dark:text-text-muted-dark mb-8">
+            Learning Seiza requires patience, especially if you've been chair-sitting for decades. Start with modifications and gradually work toward the traditional position.
+          </p>
+
+          <!-- Getting Into Position -->
+          <div class="bg-gradient-to-br from-indigo-50 to-violet-50 dark:from-indigo-900/20 dark:to-violet-900/20 rounded-2xl p-8 mb-8">
+            <h3 class="font-serif text-2xl font-bold text-indigo-800 dark:text-indigo-300 mb-6">Getting Into Position</h3>
+
+            <div class="space-y-4">
+              <div class="flex gap-4">
+                <div class="flex-shrink-0 w-8 h-8 bg-indigo-600 dark:bg-indigo-500 rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
+                <div>
+                  <p class="font-semibold text-indigo-800 dark:text-indigo-300">Start kneeling</p>
+                  <p class="text-indigo-700 dark:text-indigo-400 text-sm">Come to your hands and knees on a mat or soft surface</p>
+                </div>
+              </div>
+
+              <div class="flex gap-4">
+                <div class="flex-shrink-0 w-8 h-8 bg-indigo-600 dark:bg-indigo-500 rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
+                <div>
+                  <p class="font-semibold text-indigo-800 dark:text-indigo-300">Bring your knees together</p>
+                  <p class="text-indigo-700 dark:text-indigo-400 text-sm">Your big toes should touch or slightly overlap behind you</p>
+                </div>
+              </div>
+
+              <div class="flex gap-4">
+                <div class="flex-shrink-0 w-8 h-8 bg-indigo-600 dark:bg-indigo-500 rounded-full flex items-center justify-center text-white font-bold text-sm">3</div>
+                <div>
+                  <p class="font-semibold text-indigo-800 dark:text-indigo-300">Sit back</p>
+                  <p class="text-indigo-700 dark:text-indigo-400 text-sm">Lower your buttocks to rest on your heels</p>
+                </div>
+              </div>
+
+              <div class="flex gap-4">
+                <div class="flex-shrink-0 w-8 h-8 bg-indigo-600 dark:bg-indigo-500 rounded-full flex items-center justify-center text-white font-bold text-sm">4</div>
+                <div>
+                  <p class="font-semibold text-indigo-800 dark:text-indigo-300">Align your spine</p>
+                  <p class="text-indigo-700 dark:text-indigo-400 text-sm">Sit up tall, lengthening through the crown of your head</p>
+                </div>
+              </div>
+
+              <div class="flex gap-4">
+                <div class="flex-shrink-0 w-8 h-8 bg-indigo-600 dark:bg-indigo-500 rounded-full flex items-center justify-center text-white font-bold text-sm">5</div>
+                <div>
+                  <p class="font-semibold text-indigo-800 dark:text-indigo-300">Position your hands</p>
+                  <p class="text-indigo-700 dark:text-indigo-400 text-sm">Rest them gently on your upper thighs, palms down or up</p>
+                </div>
+              </div>
+
+              <div class="flex gap-4">
+                <div class="flex-shrink-0 w-8 h-8 bg-indigo-600 dark:bg-indigo-500 rounded-full flex items-center justify-center text-white font-bold text-sm">6</div>
+                <div>
+                  <p class="font-semibold text-indigo-800 dark:text-indigo-300">Relax your shoulders</p>
+                  <p class="text-indigo-700 dark:text-indigo-400 text-sm">Draw them down and back, opening the chest</p>
+                </div>
+              </div>
+
+              <div class="flex gap-4">
+                <div class="flex-shrink-0 w-8 h-8 bg-indigo-600 dark:bg-indigo-500 rounded-full flex items-center justify-center text-white font-bold text-sm">7</div>
+                <div>
+                  <p class="font-semibold text-indigo-800 dark:text-indigo-300">Soften your face</p>
+                  <p class="text-indigo-700 dark:text-indigo-400 text-sm">Release tension in your jaw, eyes, and forehead</p>
+                </div>
+              </div>
+
+              <div class="flex gap-4">
+                <div class="flex-shrink-0 w-8 h-8 bg-indigo-600 dark:bg-indigo-500 rounded-full flex items-center justify-center text-white font-bold text-sm">8</div>
+                <div>
+                  <p class="font-semibold text-indigo-800 dark:text-indigo-300">Breathe naturally</p>
+                  <p class="text-indigo-700 dark:text-indigo-400 text-sm">Allow your breath to flow easily</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Key Points of Proper Form -->
+          <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 mb-8">
+            <h3 class="font-bold text-text-main-light dark:text-text-main-dark mb-4">Key Points of Proper Form</h3>
+            <div class="grid sm:grid-cols-2 gap-4 text-sm">
+              <div class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-indigo-500 text-lg">check_circle</span>
+                <div>
+                  <span class="font-medium text-text-main-light dark:text-text-main-dark">Feet:</span>
+                  <span class="text-text-muted-light dark:text-text-muted-dark"> Tops flat on floor, big toes touching</span>
+                </div>
+              </div>
+              <div class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-indigo-500 text-lg">check_circle</span>
+                <div>
+                  <span class="font-medium text-text-main-light dark:text-text-main-dark">Knees:</span>
+                  <span class="text-text-muted-light dark:text-text-muted-dark"> Together or slightly apart</span>
+                </div>
+              </div>
+              <div class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-indigo-500 text-lg">check_circle</span>
+                <div>
+                  <span class="font-medium text-text-main-light dark:text-text-main-dark">Spine:</span>
+                  <span class="text-text-muted-light dark:text-text-muted-dark"> Straight and tall, natural curves</span>
+                </div>
+              </div>
+              <div class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-indigo-500 text-lg">check_circle</span>
+                <div>
+                  <span class="font-medium text-text-main-light dark:text-text-main-dark">Pelvis:</span>
+                  <span class="text-text-muted-light dark:text-text-muted-dark"> Neutral, not tilted or tucked</span>
+                </div>
+              </div>
+              <div class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-indigo-500 text-lg">check_circle</span>
+                <div>
+                  <span class="font-medium text-text-main-light dark:text-text-main-dark">Shoulders:</span>
+                  <span class="text-text-muted-light dark:text-text-muted-dark"> Relaxed, not hunched</span>
+                </div>
+              </div>
+              <div class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-indigo-500 text-lg">check_circle</span>
+                <div>
+                  <span class="font-medium text-text-main-light dark:text-text-main-dark">Head:</span>
+                  <span class="text-text-muted-light dark:text-text-muted-dark"> Balanced over spine, chin tucked</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coming Out of Position -->
+          <div class="bg-violet-50 dark:bg-violet-900/20 rounded-xl p-6">
+            <h3 class="font-bold text-violet-800 dark:text-violet-300 mb-4">Coming Out of Position</h3>
+            <ol class="space-y-2 text-violet-700 dark:text-violet-400 text-sm">
+              <li><strong>1.</strong> Lean forward and place your hands on the floor in front of your knees</li>
+              <li><strong>2.</strong> Shift your weight and transfer to your hands</li>
+              <li><strong>3.</strong> Lift your hips and rise up to a kneeling position</li>
+              <li><strong>4.</strong> Step forward—bring one foot forward into a lunge position</li>
+              <li><strong>5.</strong> Stand up by pressing through the front foot</li>
+              <li><strong>6.</strong> Shake out your legs and walk a few steps to restore circulation</li>
+            </ol>
+          </div>
+        </section>
+
+        <!-- Modifications Section -->
+        <section class="mb-12">
+          <h2 class="font-serif text-3xl font-bold text-text-main-light dark:text-text-main-dark mb-6">Modifications for Different Levels</h2>
+
+          <p class="text-text-muted-light dark:text-text-muted-dark mb-8">
+            Most seniors will need to start with modifications and may continue using them indefinitely. This is perfectly fine—the benefits come from the practice at your level, not from achieving a specific ideal form.
+          </p>
+
+          <!-- Level 1 -->
+          <div class="bg-green-50 dark:bg-green-900/20 rounded-2xl p-6 mb-6 border-l-4 border-green-500">
+            <h3 class="font-bold text-green-800 dark:text-green-300 mb-4 flex items-center gap-2">
+              <span class="bg-green-500 text-white px-2 py-1 rounded text-xs">LEVEL 1</span>
+              Significant Modifications (Best for Beginners)
+            </h3>
+            <div class="space-y-4 text-green-700 dark:text-green-400">
+              <div>
+                <p class="font-semibold">Option 1: Seiza Bench</p>
+                <p class="text-sm">Use a dedicated Seiza bench that supports your weight. Your feet slide under the bench, removing pressure from ankles. Excellent for knee or ankle issues.</p>
+              </div>
+              <div>
+                <p class="font-semibold">Option 2: Cushion Stack</p>
+                <p class="text-sm">Stack 2-4 firm cushions or folded blankets. Sit on the stack with knees on the floor. Gradually reduce height as flexibility improves.</p>
+              </div>
+              <div>
+                <p class="font-semibold">Option 3: Chair Seiza</p>
+                <p class="text-sm">Kneel in front of a chair and rest your buttocks on the chair seat edge. Provides most postural benefits with minimal knee stress.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Level 2 -->
+          <div class="bg-yellow-50 dark:bg-yellow-900/20 rounded-2xl p-6 mb-6 border-l-4 border-yellow-500">
+            <h3 class="font-bold text-yellow-800 dark:text-yellow-300 mb-4 flex items-center gap-2">
+              <span class="bg-yellow-500 text-white px-2 py-1 rounded text-xs">LEVEL 2</span>
+              Moderate Modifications
+            </h3>
+            <div class="space-y-4 text-yellow-700 dark:text-yellow-400">
+              <div>
+                <p class="font-semibold">Single Cushion Support</p>
+                <p class="text-sm">Place one firm cushion or zafu between your heels and buttocks. Reduces knee flexion angle while maintaining position.</p>
+              </div>
+              <div>
+                <p class="font-semibold">Ankle Support</p>
+                <p class="text-sm">Roll a hand towel under your ankles. This lifts the feet slightly, reducing stretch on the tops of your feet—often the limiting factor.</p>
+              </div>
+              <div>
+                <p class="font-semibold">Separated Knees</p>
+                <p class="text-sm">Allow knees to separate more than traditionally correct. Reduces pressure and provides most postural benefits.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Level 3 -->
+          <div class="bg-indigo-50 dark:bg-indigo-900/20 rounded-2xl p-6 border-l-4 border-indigo-500">
+            <h3 class="font-bold text-indigo-800 dark:text-indigo-300 mb-4 flex items-center gap-2">
+              <span class="bg-indigo-500 text-white px-2 py-1 rounded text-xs">LEVEL 3</span>
+              Traditional Seiza with Short Duration
+            </h3>
+            <div class="space-y-4 text-indigo-700 dark:text-indigo-400">
+              <div>
+                <p class="font-semibold">Progressive Duration</p>
+                <p class="text-sm">Start with 30-60 seconds in proper Seiza. Gradually increase by 15-30 seconds per week. Work up to 5-10 minutes of continuous sitting.</p>
+              </div>
+              <div>
+                <p class="font-semibold">Alternate Positions</p>
+                <p class="text-sm">Switch between Seiza and other floor sitting positions. Use Seiza for formal practice but allow variety during longer sitting periods.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Time Recommendations -->
+        <section class="mb-12">
+          <div class="bg-gradient-to-r from-slate-100 to-gray-100 dark:from-slate-800 dark:to-gray-800 rounded-2xl p-8">
+            <h3 class="font-serif text-2xl font-bold text-text-main-light dark:text-text-main-dark mb-6">Time Recommendations</h3>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div class="bg-white dark:bg-gray-700 rounded-xl p-4 text-center">
+                <p class="text-3xl font-bold text-indigo-600 dark:text-indigo-400">30s-1min</p>
+                <p class="text-sm text-text-muted-light dark:text-text-muted-dark">Absolute Beginners</p>
+              </div>
+              <div class="bg-white dark:bg-gray-700 rounded-xl p-4 text-center">
+                <p class="text-3xl font-bold text-violet-600 dark:text-violet-400">2-5 min</p>
+                <p class="text-sm text-text-muted-light dark:text-text-muted-dark">Developing Practice</p>
+              </div>
+              <div class="bg-white dark:bg-gray-700 rounded-xl p-4 text-center">
+                <p class="text-3xl font-bold text-purple-600 dark:text-purple-400">10-20 min</p>
+                <p class="text-sm text-text-muted-light dark:text-text-muted-dark">Established Practice</p>
+              </div>
+              <div class="bg-white dark:bg-gray-700 rounded-xl p-4 text-center">
+                <p class="text-3xl font-bold text-fuchsia-600 dark:text-fuchsia-400">30-60+ min</p>
+                <p class="text-sm text-text-muted-light dark:text-text-muted-dark">Advanced Practitioners</p>
+              </div>
+            </div>
+            <p class="text-center text-sm text-text-muted-light dark:text-text-muted-dark mt-4">
+              Don't compare yourself to lifelong practitioners—compare yourself to yourself last week.
+            </p>
+          </div>
+        </section>
+
+        <!-- Common Mistakes -->
+        <section class="mb-12">
+          <h2 class="font-serif text-3xl font-bold text-text-main-light dark:text-text-main-dark mb-6">Common Mistakes and How to Avoid Them</h2>
+
+          <div class="grid gap-4">
+            <div class="bg-red-50 dark:bg-red-900/20 rounded-xl p-5 border border-red-200 dark:border-red-800">
+              <div class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-red-500 mt-1">error</span>
+                <div>
+                  <h4 class="font-bold text-red-800 dark:text-red-300 mb-1">Forcing the Position</h4>
+                  <p class="text-red-700 dark:text-red-400 text-sm mb-2">Pushing through significant pain to achieve "proper" form can damage joints.</p>
+                  <p class="text-green-700 dark:text-green-400 text-sm"><strong>Better:</strong> Use modifications until flexibility develops naturally. Discomfort is acceptable; pain is not.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-red-50 dark:bg-red-900/20 rounded-xl p-5 border border-red-200 dark:border-red-800">
+              <div class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-red-500 mt-1">error</span>
+                <div>
+                  <h4 class="font-bold text-red-800 dark:text-red-300 mb-1">Collapsing the Spine</h4>
+                  <p class="text-red-700 dark:text-red-400 text-sm mb-2">Without core engagement, many people slump forward, losing postural benefits.</p>
+                  <p class="text-green-700 dark:text-green-400 text-sm"><strong>Better:</strong> Imagine a string pulling the crown of your head toward the ceiling. Engage core gently.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-red-50 dark:bg-red-900/20 rounded-xl p-5 border border-red-200 dark:border-red-800">
+              <div class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-red-500 mt-1">error</span>
+                <div>
+                  <h4 class="font-bold text-red-800 dark:text-red-300 mb-1">Holding Your Breath</h4>
+                  <p class="text-red-700 dark:text-red-400 text-sm mb-2">Tension can cause breath holding, increasing discomfort and preventing relaxation.</p>
+                  <p class="text-green-700 dark:text-green-400 text-sm"><strong>Better:</strong> Make conscious breathing your priority. If you can't breathe comfortably, you've gone too far.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-red-50 dark:bg-red-900/20 rounded-xl p-5 border border-red-200 dark:border-red-800">
+              <div class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-red-500 mt-1">error</span>
+                <div>
+                  <h4 class="font-bold text-red-800 dark:text-red-300 mb-1">Practicing on Hard Floors</h4>
+                  <p class="text-red-700 dark:text-red-400 text-sm mb-2">Kneeling on hardwood or tile can damage knee joints and cause unnecessary pain.</p>
+                  <p class="text-green-700 dark:text-green-400 text-sm"><strong>Better:</strong> Always practice on a yoga mat, carpet, or dedicated cushioning. Protect your joints.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Equipment Section -->
+        <section class="mb-12">
+          <h2 class="font-serif text-3xl font-bold text-text-main-light dark:text-text-main-dark mb-6">What You Need for Seiza Practice</h2>
+
+          <div class="grid md:grid-cols-3 gap-6">
+            <!-- Essential -->
+            <div class="bg-green-50 dark:bg-green-900/20 rounded-xl p-6">
+              <h3 class="font-bold text-green-800 dark:text-green-300 mb-4 flex items-center gap-2">
+                <span class="material-symbols-outlined">check_circle</span>
+                Essential
+              </h3>
+              <ul class="space-y-2 text-green-700 dark:text-green-400 text-sm">
+                <li class="flex items-start gap-2">
+                  <span class="material-symbols-outlined text-xs mt-1">arrow_right</span>
+                  <span><strong>Yoga mat or cushioned surface</strong> - Protects knees from hard floors</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="material-symbols-outlined text-xs mt-1">arrow_right</span>
+                  <span><strong>Comfortable clothing</strong> - Loose pants that allow knee bending</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Recommended -->
+            <div class="bg-indigo-50 dark:bg-indigo-900/20 rounded-xl p-6">
+              <h3 class="font-bold text-indigo-800 dark:text-indigo-300 mb-4 flex items-center gap-2">
+                <span class="material-symbols-outlined">thumb_up</span>
+                Highly Recommended
+              </h3>
+              <ul class="space-y-2 text-indigo-700 dark:text-indigo-400 text-sm">
+                <li class="flex items-start gap-2">
+                  <span class="material-symbols-outlined text-xs mt-1">arrow_right</span>
+                  <span><strong>Seiza bench</strong> - Purpose-built support, traditional or adjustable</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="material-symbols-outlined text-xs mt-1">arrow_right</span>
+                  <span><strong>Meditation cushion (zafu)</strong> - Round cushion for elevation</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="material-symbols-outlined text-xs mt-1">arrow_right</span>
+                  <span><strong>Yoga blocks</strong> - Adjustable height substitute for cushions</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Optional -->
+            <div class="bg-violet-50 dark:bg-violet-900/20 rounded-xl p-6">
+              <h3 class="font-bold text-violet-800 dark:text-violet-300 mb-4 flex items-center gap-2">
+                <span class="material-symbols-outlined">add_circle</span>
+                Optional Enhancements
+              </h3>
+              <ul class="space-y-2 text-violet-700 dark:text-violet-400 text-sm">
+                <li class="flex items-start gap-2">
+                  <span class="material-symbols-outlined text-xs mt-1">arrow_right</span>
+                  <span><strong>Knee pads</strong> - Extra cushioning for sensitive knees</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="material-symbols-outlined text-xs mt-1">arrow_right</span>
+                  <span><strong>Ankle cushion</strong> - Small rolled towel or foam roller</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="material-symbols-outlined text-xs mt-1">arrow_right</span>
+                  <span><strong>Meditation mat (zabuton)</strong> - Larger flat cushion under entire lower body</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Practice Routine -->
+        <section class="mb-12">
+          <h2 class="font-serif text-3xl font-bold text-text-main-light dark:text-text-main-dark mb-6">Creating Your Seiza Practice Routine</h2>
+
+          <div class="grid sm:grid-cols-2 gap-6 mb-8">
+            <div class="bg-amber-50 dark:bg-amber-900/20 rounded-xl p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="material-symbols-outlined text-amber-600 dark:text-amber-400">wb_sunny</span>
+                <h3 class="font-bold text-amber-800 dark:text-amber-300">Morning Practice</h3>
+              </div>
+              <p class="text-amber-700 dark:text-amber-400 text-sm">5-10 minutes for meditation or breathing. Sets a mindful tone for the day.</p>
+            </div>
+
+            <div class="bg-orange-50 dark:bg-orange-900/20 rounded-xl p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="material-symbols-outlined text-orange-600 dark:text-orange-400">restaurant</span>
+                <h3 class="font-bold text-orange-800 dark:text-orange-300">Meal Times</h3>
+              </div>
+              <p class="text-orange-700 dark:text-orange-400 text-sm">Sit in Seiza while eating. Promotes mindful eating and connects to Japanese tradition.</p>
+            </div>
+
+            <div class="bg-emerald-50 dark:bg-emerald-900/20 rounded-xl p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="material-symbols-outlined text-emerald-600 dark:text-emerald-400">fitness_center</span>
+                <h3 class="font-bold text-emerald-800 dark:text-emerald-300">Exercise Integration</h3>
+              </div>
+              <p class="text-emerald-700 dark:text-emerald-400 text-sm">Begin Radio Taiso from Seiza. Practice Hara breathing while seated. Use as rest position.</p>
+            </div>
+
+            <div class="bg-indigo-50 dark:bg-indigo-900/20 rounded-xl p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="material-symbols-outlined text-indigo-600 dark:text-indigo-400">nightlight</span>
+                <h3 class="font-bold text-indigo-800 dark:text-indigo-300">Evening Wind-Down</h3>
+              </div>
+              <p class="text-indigo-700 dark:text-indigo-400 text-sm">5-15 minutes for reflection or reading. Stretch in Seiza before bed.</p>
+            </div>
+          </div>
+
+          <!-- 12-Week Program -->
+          <div class="bg-gradient-to-br from-indigo-100 to-violet-100 dark:from-indigo-900/30 dark:to-violet-900/30 rounded-2xl p-8">
+            <h3 class="font-serif text-2xl font-bold text-indigo-800 dark:text-indigo-300 mb-6">12-Week Progressive Training Program</h3>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
+              <div class="bg-white/70 dark:bg-black/20 rounded-lg p-4">
+                <p class="font-bold text-indigo-700 dark:text-indigo-400">Weeks 1-2</p>
+                <p class="text-indigo-600 dark:text-indigo-300">Seiza bench or high cushion stack, 2-3 min daily</p>
+              </div>
+              <div class="bg-white/70 dark:bg-black/20 rounded-lg p-4">
+                <p class="font-bold text-indigo-700 dark:text-indigo-400">Weeks 3-4</p>
+                <p class="text-indigo-600 dark:text-indigo-300">Reduce cushion height by half, 3-5 min daily</p>
+              </div>
+              <div class="bg-white/70 dark:bg-black/20 rounded-lg p-4">
+                <p class="font-bold text-indigo-700 dark:text-indigo-400">Weeks 5-6</p>
+                <p class="text-indigo-600 dark:text-indigo-300">Single cushion, 5-7 min daily</p>
+              </div>
+              <div class="bg-white/70 dark:bg-black/20 rounded-lg p-4">
+                <p class="font-bold text-indigo-700 dark:text-indigo-400">Weeks 7-8</p>
+                <p class="text-indigo-600 dark:text-indigo-300">Thin cushion or towel roll under ankles, 7-10 min</p>
+              </div>
+              <div class="bg-white/70 dark:bg-black/20 rounded-lg p-4">
+                <p class="font-bold text-indigo-700 dark:text-indigo-400">Weeks 9-10</p>
+                <p class="text-indigo-600 dark:text-indigo-300">Traditional Seiza 1-2 min, then cushion</p>
+              </div>
+              <div class="bg-white/70 dark:bg-black/20 rounded-lg p-4">
+                <p class="font-bold text-indigo-700 dark:text-indigo-400">Weeks 11-12</p>
+                <p class="text-indigo-600 dark:text-indigo-300">Gradually increase to 5+ min traditional</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Combining with Other Practices -->
+        <section class="mb-12">
+          <h2 class="font-serif text-3xl font-bold text-text-main-light dark:text-text-main-dark mb-6">Combining Seiza with Other Japanese Practices</h2>
+
+          <div class="grid gap-4">
+            <a href="/hara-breathing-exercises" class="block bg-sky-50 dark:bg-sky-900/20 rounded-xl p-6 hover:shadow-md transition-shadow border border-sky-200 dark:border-sky-800">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 bg-sky-100 dark:bg-sky-900/50 rounded-xl flex items-center justify-center">
+                  <span class="material-symbols-outlined text-sky-600 dark:text-sky-400">respiratory_rate</span>
+                </div>
+                <div>
+                  <h3 class="font-bold text-sky-800 dark:text-sky-300">Seiza + Hara Breathing</h3>
+                  <p class="text-sky-700 dark:text-sky-400 text-sm">Perfect combination: sit in Seiza, place hands on lower belly, and practice Hara breathing. The upright posture facilitates optimal diaphragm movement.</p>
+                </div>
+              </div>
+            </a>
+
+            <div class="bg-purple-50 dark:bg-purple-900/20 rounded-xl p-6 border border-purple-200 dark:border-purple-800">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/50 rounded-xl flex items-center justify-center">
+                  <span class="material-symbols-outlined text-purple-600 dark:text-purple-400">self_improvement</span>
+                </div>
+                <div>
+                  <h3 class="font-bold text-purple-800 dark:text-purple-300">Seiza + Zazen (Meditation)</h3>
+                  <p class="text-purple-700 dark:text-purple-400 text-sm">Traditional practice: sit in Seiza with hands in meditation mudra. The formal posture supports alert, wakeful meditation.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-rose-50 dark:bg-rose-900/20 rounded-xl p-6 border border-rose-200 dark:border-rose-800">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 bg-rose-100 dark:bg-rose-900/50 rounded-xl flex items-center justify-center">
+                  <span class="material-symbols-outlined text-rose-600 dark:text-rose-400">emoji_food_beverage</span>
+                </div>
+                <div>
+                  <h3 class="font-bold text-rose-800 dark:text-rose-300">Seiza + Tea Ceremony</h3>
+                  <p class="text-rose-700 dark:text-rose-400 text-sm">Learn basic tea ceremony movements. Practice serving and receiving tea while in Seiza. Combines physical practice with cultural appreciation.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="mb-12">
+          <h2 class="font-serif text-3xl font-bold text-text-main-light dark:text-text-main-dark mb-6">Frequently Asked Questions</h2>
+
+          <div class="space-y-4">
+            <details class="group bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
+              <summary class="flex items-center justify-between p-6 cursor-pointer">
+                <span class="font-semibold text-text-main-light dark:text-text-main-dark">Is Seiza safe for people with knee replacements?</span>
+                <span class="material-symbols-outlined text-gray-400 group-open:rotate-180 transition-transform">expand_more</span>
+              </summary>
+              <div class="px-6 pb-6 text-text-muted-light dark:text-text-muted-dark text-sm">
+                <p>This requires consultation with your orthopedic surgeon. Generally, total knee replacements can achieve the flexion needed for Seiza, but recovery timeline and individual healing vary. Many surgeons approve modified Seiza (with bench or cushion support) after full recovery. Never practice full Seiza immediately after knee surgery.</p>
+              </div>
+            </details>
+
+            <details class="group bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
+              <summary class="flex items-center justify-between p-6 cursor-pointer">
+                <span class="font-semibold text-text-main-light dark:text-text-main-dark">Can I practice Seiza if I have arthritis?</span>
+                <span class="material-symbols-outlined text-gray-400 group-open:rotate-180 transition-transform">expand_more</span>
+              </summary>
+              <div class="px-6 pb-6 text-text-muted-light dark:text-text-muted-dark text-sm">
+                <p>Mild to moderate arthritis may actually benefit from gentle Seiza practice, as movement is beneficial for arthritis. However: start with significant modifications (bench or high cushion), practice when your joints are warmed up, never force through pain, and consult your rheumatologist or physical therapist.</p>
+              </div>
+            </details>
+
+            <details class="group bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
+              <summary class="flex items-center justify-between p-6 cursor-pointer">
+                <span class="font-semibold text-text-main-light dark:text-text-main-dark">Will Seiza damage my knees over time?</span>
+                <span class="material-symbols-outlined text-gray-400 group-open:rotate-180 transition-transform">expand_more</span>
+              </summary>
+              <div class="px-6 pb-6 text-text-muted-light dark:text-text-muted-dark text-sm">
+                <p>When practiced properly with appropriate modifications, Seiza does not damage knees. The Japanese have practiced it for centuries without higher rates of knee problems. However, forcing the position before you're ready, or practicing on hard surfaces without cushioning, can cause damage. Listen to your body and progress gradually.</p>
+              </div>
+            </details>
+
+            <details class="group bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
+              <summary class="flex items-center justify-between p-6 cursor-pointer">
+                <span class="font-semibold text-text-main-light dark:text-text-main-dark">What if I can never achieve traditional Seiza?</span>
+                <span class="material-symbols-outlined text-gray-400 group-open:rotate-180 transition-transform">expand_more</span>
+              </summary>
+              <div class="px-6 pb-6 text-text-muted-light dark:text-text-muted-dark text-sm">
+                <p>That's completely acceptable. Some people have structural limitations (body proportions, previous injuries, joint conditions) that prevent traditional Seiza even with extensive practice. Using modifications permanently is perfectly valid—you still receive most benefits from the practice.</p>
+              </div>
+            </details>
+
+            <details class="group bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
+              <summary class="flex items-center justify-between p-6 cursor-pointer">
+                <span class="font-semibold text-text-main-light dark:text-text-main-dark">How does Seiza compare to chair sitting for health?</span>
+                <span class="material-symbols-outlined text-gray-400 group-open:rotate-180 transition-transform">expand_more</span>
+              </summary>
+              <div class="px-6 pb-6 text-text-muted-light dark:text-text-muted-dark text-sm">
+                <p>Seiza is generally superior to typical chair sitting because it requires active postural engagement (chairs allow slumping), maintains hip and knee flexibility, strengthens legs and core, and promotes better spinal alignment. Ideally, vary your sitting positions throughout the day.</p>
+              </div>
+            </details>
+
+            <details class="group bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
+              <summary class="flex items-center justify-between p-6 cursor-pointer">
+                <span class="font-semibold text-text-main-light dark:text-text-main-dark">My feet fall asleep immediately. What can I do?</span>
+                <span class="material-symbols-outlined text-gray-400 group-open:rotate-180 transition-transform">expand_more</span>
+              </summary>
+              <div class="px-6 pb-6 text-text-muted-light dark:text-text-muted-dark text-sm">
+                <p>This is extremely common when starting Seiza. Solutions: start with very short durations (30-60 seconds), use a Seiza bench to remove weight from your feet, shift your weight slightly from side to side, come out as soon as numbness begins. With consistent practice, your circulation adapts and this improves significantly.</p>
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <!-- Why Perfect for Seniors -->
+        <section class="mb-12">
+          <div class="bg-gradient-to-r from-indigo-100 to-violet-100 dark:from-indigo-900/30 dark:to-violet-900/30 rounded-2xl p-8 border border-indigo-200 dark:border-indigo-800">
+            <h2 class="font-serif text-2xl font-bold text-indigo-800 dark:text-indigo-300 mb-6">Why Seiza Is Perfect for Seniors Over 50</h2>
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-indigo-600 dark:text-indigo-400">check_circle</span>
+                <div>
+                  <p class="font-semibold text-indigo-800 dark:text-indigo-300">Maintains Crucial Flexibility</p>
+                  <p class="text-indigo-700 dark:text-indigo-400 text-sm">The mobility needed for Seiza is the same you need for functional independence.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-indigo-600 dark:text-indigo-400">check_circle</span>
+                <div>
+                  <p class="font-semibold text-indigo-800 dark:text-indigo-300">It's Preventive</p>
+                  <p class="text-indigo-700 dark:text-indigo-400 text-sm">Practicing now maintains abilities you'll need in your 70s and 80s.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-indigo-600 dark:text-indigo-400">check_circle</span>
+                <div>
+                  <p class="font-semibold text-indigo-800 dark:text-indigo-300">Requires No Equipment</p>
+                  <p class="text-indigo-700 dark:text-indigo-400 text-sm">With just a cushion, you can practice anywhere.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-indigo-600 dark:text-indigo-400">check_circle</span>
+                <div>
+                  <p class="font-semibold text-indigo-800 dark:text-indigo-300">It's Scalable</p>
+                  <p class="text-indigo-700 dark:text-indigo-400 text-sm">Everyone can practice at their level—from beginner to advanced.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-indigo-600 dark:text-indigo-400">check_circle</span>
+                <div>
+                  <p class="font-semibold text-indigo-800 dark:text-indigo-300">Supports Multiple Practices</p>
+                  <p class="text-indigo-700 dark:text-indigo-400 text-sm">Foundation for breathing, meditation, tea ceremony, and more.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-indigo-600 dark:text-indigo-400">check_circle</span>
+                <div>
+                  <p class="font-semibold text-indigo-800 dark:text-indigo-300">It's Empowering</p>
+                  <p class="text-indigo-700 dark:text-indigo-400 text-sm">Builds confidence and reverses the narrative of inevitable decline.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="mb-12">
+          <div class="bg-gradient-to-r from-violet-600 to-indigo-600 rounded-2xl p-8 text-white text-center">
+            <h2 class="font-serif text-2xl font-bold mb-4">Start Your Seiza Practice Today</h2>
+            <p class="mb-6 text-violet-100">
+              The Japanese have a saying: "Fall seven times, stand up eight." Your floor sitting journey begins with a single kneel. That first awkward minute is the most important—it's the moment you decide to reclaim capabilities you thought were lost.
+            </p>
+            <p class="text-lg font-medium">Will today be the day you take that first kneel?</p>
+          </div>
+        </section>
+
+        <!-- Related Articles -->
+        <section class="mb-12">
+          <div class="bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20 rounded-2xl p-8 border border-emerald-200 dark:border-emerald-800">
+            <h2 class="font-serif text-2xl font-bold text-accent-dark dark:text-emerald-400 mb-6">Explore More Japanese Wellness Practices</h2>
+            <div class="grid gap-4">
+              <a href="/rajio-taiso-radio-calisthenics" class="flex items-center gap-4 p-4 bg-white/70 dark:bg-black/20 rounded-xl hover:bg-white dark:hover:bg-black/30 transition-colors">
+                <span class="material-symbols-outlined text-emerald-600 dark:text-emerald-400" style="font-size: 32px;">fitness_center</span>
+                <div>
+                  <h3 class="font-semibold text-text-main-light dark:text-text-main-dark">Radio Taiso</h3>
+                  <p class="text-sm text-text-muted-light dark:text-text-muted-dark">Japan's beloved morning exercise routine for all ages</p>
+                </div>
+              </a>
+              <a href="/shinrin-yoku-forest-bathing" class="flex items-center gap-4 p-4 bg-white/70 dark:bg-black/20 rounded-xl hover:bg-white dark:hover:bg-black/30 transition-colors">
+                <span class="material-symbols-outlined text-emerald-600 dark:text-emerald-400" style="font-size: 32px;">forest</span>
+                <div>
+                  <h3 class="font-semibold text-text-main-light dark:text-text-main-dark">Shinrin-Yoku</h3>
+                  <p class="text-sm text-text-muted-light dark:text-text-muted-dark">The healing art of forest bathing</p>
+                </div>
+              </a>
+              <a href="/makko-ho-stretching" class="flex items-center gap-4 p-4 bg-white/70 dark:bg-black/20 rounded-xl hover:bg-white dark:hover:bg-black/30 transition-colors">
+                <span class="material-symbols-outlined text-emerald-600 dark:text-emerald-400" style="font-size: 32px;">self_improvement</span>
+                <div>
+                  <h3 class="font-semibold text-text-main-light dark:text-text-main-dark">Makko-Ho</h3>
+                  <p class="text-sm text-text-muted-light dark:text-text-muted-dark">4-pose meridian stretching for flexibility and energy</p>
+                </div>
+              </a>
+              <a href="/hara-breathing-exercises" class="flex items-center gap-4 p-4 bg-white/70 dark:bg-black/20 rounded-xl hover:bg-white dark:hover:bg-black/30 transition-colors">
+                <span class="material-symbols-outlined text-emerald-600 dark:text-emerald-400" style="font-size: 32px;">respiratory_rate</span>
+                <div>
+                  <h3 class="font-semibold text-text-main-light dark:text-text-main-dark">Hara Breathing</h3>
+                  <p class="text-sm text-text-muted-light dark:text-text-muted-dark">Japanese belly breathing for calm and vitality</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Disclaimer -->
+        <section class="mb-12">
+          <div class="bg-amber-50 dark:bg-amber-900/20 rounded-xl p-6 border border-amber-200 dark:border-amber-800">
+            <div class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-amber-600 dark:text-amber-400 flex-shrink-0">warning</span>
+              <div>
+                <h3 class="font-bold text-amber-800 dark:text-amber-300 mb-2">Medical Disclaimer</h3>
+                <p class="text-amber-700 dark:text-amber-400 text-sm">
+                  This article is for informational purposes only and should not replace professional medical advice. Consult with your healthcare provider before beginning Seiza practice, especially if you have knee injuries, joint replacements, arthritis, or other musculoskeletal conditions. If you experience sharp pain during practice, stop immediately and seek professional guidance. Seiza should be practiced gradually with appropriate modifications for your individual needs and capabilities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </article>
+
+      <Sidebar tocItems={[]} />
+    </div>
+  </main>
+</BaseLayout>

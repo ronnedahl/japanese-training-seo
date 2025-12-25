@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Sidebar from '../components/Sidebar.astro';
+import towelStretchImage from '../assets/images/towel-stretch-exercise.png';
 ---
 
 <BaseLayout
@@ -19,9 +20,8 @@ import Sidebar from '../components/Sidebar.astro';
         Japanese Towel Stretch for Neck Pain: 5 Simple Techniques That Actually Work
       </h1>
       <div class="flex items-center gap-4 border-l-4 border-accent-dark pl-4 py-1">
-        <img alt="Dr. Yuki Tanaka" class="size-12 rounded-full object-cover shadow-sm ring-2 ring-white dark:ring-gray-800" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr3uvFjua0dPvRVDuoJYO7g9890k5i4DoQJe7io42kX51f2otvfamBkM8DoF-ijwLfAW1oSQ7zGtUCzH_7JKpLQHx7KXZQP1yci7oKgdulEQx01w_HBpxWudaqTWLSDbT6aRzFuPHKhkK4LqDWhUHaFb10cP0DL7d05HYw5brQAcph2NiXyf9sHnlXyaOkml1HPnmHCglSHkHeUmnDtg3D6lQ9yLIs_28AbYNgo9GDCiGqtonKnFLTHJKA8uLrr5-XbE-u9wIGm2Ub"/>
         <div class="flex flex-col">
-          <span class="text-base font-semibold text-text-main-light dark:text-text-main-dark">By Dr. Yuki Tanaka</span>
+          <span class="text-base font-semibold text-text-main-light dark:text-text-main-dark">By Simple Senior Fitness</span>
           <span class="text-sm text-text-muted-light dark:text-text-muted-dark">Jan 15, 2025 • 8 min read</span>
         </div>
       </div>
@@ -31,7 +31,7 @@ import Sidebar from '../components/Sidebar.astro';
       <article class="lg:col-span-8 space-y-8">
         <figure class="mb-8">
           <div class="w-full aspect-[16/9] bg-gray-200 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg relative">
-            <div class="absolute inset-0 bg-cover bg-center transition-transform hover:scale-105 duration-1000" data-alt="Japanese woman performing towel stretch for neck pain relief in a serene setting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAuV5f7Ms7sv2ds27o_VHvn9hNZGIdyPONeJaokAukjXjF5SisXOVaIDX-SJ-EBDoKnz2uDf3fnZu65jhRmyb4phXzE8u5UPIN2HKGw0WhYoEW397z_CraN0T5LX9n_i-CYmxGGmmaBLPFrDVvldLb2BDZJQ0ebpwdpkGRteuWTavjuYzt7tZuOSQomMnILyZ9MQBhxBpeI84JST5uK9GSHnhQkFydz9Qv9LbtvB-favQWyBzXYbxOW2sCd6NOzkLfRLLW9ybu4TiCI');">
+            <div class="absolute inset-0 bg-cover transition-transform hover:scale-105 duration-1000" role="img" aria-label="Japanese woman performing gentle towel stretch for neck pain relief in a peaceful, serene setting demonstrating proper technique" style={`background-image: url('${towelStretchImage.src}'); background-position: center 25%;`}>
             </div>
           </div>
           <figcaption class="text-sm text-text-muted-light dark:text-text-muted-dark mt-3 italic text-center">
@@ -59,23 +59,21 @@ import Sidebar from '../components/Sidebar.astro';
           Using a towel provides several advantages over hands-alone stretching. The towel extends your reach, allows you to control the exact amount of pressure, and helps maintain proper form throughout each movement. This makes the Japanese towel stretch for neck pain particularly effective for people with limited flexibility or mobility.
         </p>
 
-        <!-- Video placeholder -->
-        <div class="my-10 relative group cursor-pointer rounded-2xl overflow-hidden shadow-xl ring-1 ring-gray-900/5 dark:ring-white/10">
-          <div class="aspect-video w-full bg-gray-800 relative">
-            <img alt="Thumbnail for Japanese towel neck stretch demonstration video" class="w-full h-full object-cover opacity-80 group-hover:opacity-70 transition-opacity duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpIXyBn9Z6-Rpv2U84It-v3XCsL8X7w4AbFZFgIsljYH2MDTrEpoq5MW1TBySesaDdt1nrHIoEDyoahvG7pjG9z6nIuKtgS7hKM51Pa9D9br0wyRf8vskBbu_ajoGi9EKPKjtRoQo4bRe65NOPICZH7Xs3bu51kGZL5t4QBg9OhBhzAIlq8uzQlDhxqW1N3v2_XT0P34YblkelpNVq89IqsVH89fl7AtPjvG2JwG9mUibT4U3dibr4M71L2k4NJr50IeNxtVsPEe4H"/>
-            <div class="absolute inset-0 flex items-center justify-center">
-              <div class="size-20 rounded-full bg-accent-dark text-white flex items-center justify-center shadow-lg shadow-black/20 transform group-hover:scale-110 transition-transform duration-300 ring-4 ring-white/20">
-                <span class="material-symbols-outlined text-5xl ml-1">play_arrow</span>
-              </div>
-            </div>
-            <div class="absolute bottom-4 right-4 bg-black/70 px-3 py-1.5 rounded-md text-white text-sm font-medium flex items-center gap-2 backdrop-blur-sm">
-              <span class="material-symbols-outlined text-[16px]">closed_caption</span>
-              CC Available
-            </div>
+        <!-- YouTube Video -->
+        <div class="my-10 rounded-2xl overflow-hidden shadow-xl ring-1 ring-gray-900/5 dark:ring-white/10">
+          <div class="aspect-video w-full">
+            <iframe
+              class="w-full h-full border-0"
+              src="https://www.youtube.com/embed/Hs5Gi4r-7UM?si=IYY3kd2R_7664K2E"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
           </div>
           <div class="p-5 bg-white dark:bg-surface-dark border-t border-gray-100 dark:border-gray-700">
-            <h3 class="font-bold text-xl text-text-main-light dark:text-text-main-dark mb-1">Watch: Complete Japanese Towel Stretch Routine</h3>
-            <p class="text-base text-text-muted-light dark:text-text-muted-dark">A gentle 5-minute demonstration of all five techniques.</p>
+            <h3 class="font-bold text-xl text-text-main-light dark:text-text-main-dark mb-1">This Japanese 3-Minute Exercise Has Worked for 97 Years</h3>
+            <p class="text-base text-text-muted-light dark:text-text-muted-dark">Discover the simple daily routine that has kept generations of Japanese seniors active and healthy.</p>
           </div>
         </div>
 
@@ -118,7 +116,7 @@ import Sidebar from '../components/Sidebar.astro';
         <!-- Mobile Product Card -->
         <div class="lg:hidden my-8 bg-white dark:bg-surface-dark border-l-4 border-accent-dark rounded-r-xl shadow-lg p-5 flex flex-col gap-4">
           <div class="flex items-start gap-4">
-            <img alt="Japanese-style stretching towel for neck exercises" class="size-20 rounded-lg object-cover bg-gray-100 shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9nsb95m4Dtcbi-y8FeqXDKtjYTH84xJHoLK24dwIDg_enjGjveQG2mGG06j8aOXalCo77wZhdMd4kc4cfO2Q9ujf1m35TezycilA6io5ZEShctf1PxuPaiJGN6x6ue-Y6kXpvY4J0CGrOFVcP7xSAZavGN4ucKdd92PCpJORgUpkkCy3PN-Q25bbdS52seqPmDdvlsRM3BMLgnhZLxVqpOxURSlTBhVUF_VW2PJWBgsxpSHT-g6VQhNn60JAS3mJat1ku4OIF32QJ"/>
+            <img alt="Premium long-loop cotton stretch towel for Japanese neck and shoulder exercises - optimal grip for physical therapy" class="size-20 rounded-lg object-cover bg-gray-100 shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9nsb95m4Dtcbi-y8FeqXDKtjYTH84xJHoLK24dwIDg_enjGjveQG2mGG06j8aOXalCo77wZhdMd4kc4cfO2Q9ujf1m35TezycilA6io5ZEShctf1PxuPaiJGN6x6ue-Y6kXpvY4J0CGrOFVcP7xSAZavGN4ucKdd92PCpJORgUpkkCy3PN-Q25bbdS52seqPmDdvlsRM3BMLgnhZLxVqpOxURSlTBhVUF_VW2PJWBgsxpSHT-g6VQhNn60JAS3mJat1ku4OIF32QJ"/>
             <div>
               <h4 class="text-lg font-bold text-text-main-light dark:text-text-main-dark mb-1">Premium Stretch Towel</h4>
               <p class="text-sm text-text-muted-light dark:text-text-muted-dark">Long-loop cotton for optimal grip.</p>
@@ -187,21 +185,76 @@ import Sidebar from '../components/Sidebar.astro';
           Remember: the Japanese approach isn't about quick fixes—it's about building sustainable habits that support your body for the long term. Start with one or two techniques that feel good to you, and gradually build your routine from there. Your neck will thank you.
         </p>
 
-      </article>
-
-      <Sidebar />
-
-      <!-- Mobile Topics -->
-      <div class="lg:hidden space-y-8 mt-12">
-        <div class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-6">
-          <h3 class="font-bold text-lg mb-4 text-text-main-light dark:text-text-main-dark">More Topics</h3>
-          <div class="flex flex-wrap gap-2">
-            <a class="px-4 py-2 rounded-full bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 text-sm text-text-muted-light dark:text-text-muted-dark shadow-sm" href="#">Neck Pain Relief</a>
-            <a class="px-4 py-2 rounded-full bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 text-sm text-text-muted-light dark:text-text-muted-dark shadow-sm" href="#">Japanese Wellness</a>
-            <a class="px-4 py-2 rounded-full bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 text-sm text-text-muted-light dark:text-text-muted-dark shadow-sm" href="#">Stretching Exercises</a>
+        <!-- Related Articles Section -->
+        <div class="bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20 rounded-2xl p-8 mt-12 border border-emerald-200 dark:border-emerald-800">
+          <h2 class="font-serif text-2xl font-bold text-accent-dark dark:text-emerald-400 mb-6">Explore More Japanese Wellness Practices</h2>
+          <div class="grid gap-4">
+            <a href="/rajio-taiso-radio-calisthenics" class="bg-white dark:bg-surface-dark p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-accent-dark dark:hover:border-emerald-400 transition-colors group">
+              <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-3xl text-accent-dark dark:text-emerald-400">fitness_center</span>
+                <div>
+                  <h3 class="font-bold text-lg text-text-main-light dark:text-text-main-dark group-hover:text-accent-dark dark:group-hover:text-emerald-400 transition-colors">Radio Taiso</h3>
+                  <p class="text-sm text-text-muted-light dark:text-text-muted-dark">Japan's 3-minute morning exercise routine for better balance and flexibility.</p>
+                </div>
+                <span class="material-symbols-outlined text-gray-400 group-hover:text-accent-dark dark:group-hover:text-emerald-400 ml-auto">arrow_forward</span>
+              </div>
+            </a>
+            <a href="/shinrin-yoku-forest-bathing" class="bg-white dark:bg-surface-dark p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-accent-dark dark:hover:border-emerald-400 transition-colors group">
+              <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-3xl text-accent-dark dark:text-emerald-400">forest</span>
+                <div>
+                  <h3 class="font-bold text-lg text-text-main-light dark:text-text-main-dark group-hover:text-accent-dark dark:group-hover:text-emerald-400 transition-colors">Shinrin-Yoku</h3>
+                  <p class="text-sm text-text-muted-light dark:text-text-muted-dark">Forest bathing for stress relief, better immunity, and mental clarity.</p>
+                </div>
+                <span class="material-symbols-outlined text-gray-400 group-hover:text-accent-dark dark:group-hover:text-emerald-400 ml-auto">arrow_forward</span>
+              </div>
+            </a>
+            <a href="/makko-ho-stretching" class="bg-white dark:bg-surface-dark p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-accent-dark dark:hover:border-emerald-400 transition-colors group">
+              <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-3xl text-accent-dark dark:text-emerald-400">self_improvement</span>
+                <div>
+                  <h3 class="font-bold text-lg text-text-main-light dark:text-text-main-dark group-hover:text-accent-dark dark:group-hover:text-emerald-400 transition-colors">Makko-Ho</h3>
+                  <p class="text-sm text-text-muted-light dark:text-text-muted-dark">4-pose meridian stretching for energy flow, flexibility, and relaxation.</p>
+                </div>
+                <span class="material-symbols-outlined text-gray-400 group-hover:text-accent-dark dark:group-hover:text-emerald-400 ml-auto">arrow_forward</span>
+              </div>
+            </a>
+            <a href="/hara-breathing-exercises" class="bg-white dark:bg-surface-dark p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-accent-dark dark:hover:border-emerald-400 transition-colors group">
+              <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-3xl text-accent-dark dark:text-emerald-400">respiratory_rate</span>
+                <div>
+                  <h3 class="font-bold text-lg text-text-main-light dark:text-text-main-dark group-hover:text-accent-dark dark:group-hover:text-emerald-400 transition-colors">Hara Breathing</h3>
+                  <p class="text-sm text-text-muted-light dark:text-text-muted-dark">Japanese belly breathing for stress relief, lower blood pressure, and better sleep.</p>
+                </div>
+                <span class="material-symbols-outlined text-gray-400 group-hover:text-accent-dark dark:group-hover:text-emerald-400 ml-auto">arrow_forward</span>
+              </div>
+            </a>
+            <a href="/seiza-sitting-benefits" class="bg-white dark:bg-surface-dark p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-accent-dark dark:hover:border-emerald-400 transition-colors group">
+              <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-3xl text-accent-dark dark:text-emerald-400">self_improvement</span>
+                <div>
+                  <h3 class="font-bold text-lg text-text-main-light dark:text-text-main-dark group-hover:text-accent-dark dark:group-hover:text-emerald-400 transition-colors">Seiza Sitting</h3>
+                  <p class="text-sm text-text-muted-light dark:text-text-muted-dark">Traditional Japanese floor sitting for posture, knee health, and mindfulness.</p>
+                </div>
+                <span class="material-symbols-outlined text-gray-400 group-hover:text-accent-dark dark:group-hover:text-emerald-400 ml-auto">arrow_forward</span>
+              </div>
+            </a>
           </div>
         </div>
-      </div>
+
+      </article>
+
+      <Sidebar tocItems={[
+        { href: "#why-japanese-methods", text: "Why Japanese Methods Are Different" },
+        { href: "#technique-1", text: "1. Basic Neck Support Stretch" },
+        { href: "#technique-2", text: "2. Lateral Neck Release" },
+        { href: "#technique-3", text: "3. Shoulder-Neck Connection" },
+        { href: "#technique-4", text: "4. Lying Down Decompression" },
+        { href: "#technique-5", text: "5. Rotation Release" },
+        { href: "#benefits", text: "Why It Works" },
+        { href: "#tips", text: "Tips for Best Results" },
+      ]} />
+
     </div>
   </main>
 </BaseLayout>

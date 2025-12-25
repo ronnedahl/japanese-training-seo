@@ -1,27 +1,180 @@
 ---
-// Header component
+// Header component with mobile menu
 ---
 
 <header class="sticky top-0 z-50 w-full bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
   <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
     <div class="flex items-center gap-4">
-      <span class="material-symbols-outlined text-text-main-light dark:text-text-main-dark cursor-pointer p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors lg:hidden" style="font-size: 28px;">menu</span>
-      <h2 class="text-2xl font-bold tracking-tight text-text-main-light dark:text-text-main-dark font-serif">Eastern Wellness Methods</h2>
+      <button
+        id="mobile-menu-button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        class="material-symbols-outlined text-text-main-light dark:text-text-main-dark cursor-pointer p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors lg:hidden"
+        style="font-size: 28px;"
+      >menu</button>
+      <a href="/" class="text-2xl font-bold tracking-tight text-text-main-light dark:text-text-main-dark font-serif hover:text-accent-dark dark:hover:text-accent-light transition-colors">Simple Senior Fitness</a>
       <nav class="hidden lg:flex items-center gap-6 ml-8">
-        <a class="text-text-muted-light dark:text-text-muted-dark hover:text-accent-dark dark:hover:text-accent-light font-medium transition-colors" href="#">Stretching</a>
-        <a class="text-text-muted-light dark:text-text-muted-dark hover:text-accent-dark dark:hover:text-accent-light font-medium transition-colors" href="#">Exercises</a>
-        <a class="text-text-muted-light dark:text-text-muted-dark hover:text-accent-dark dark:hover:text-accent-light font-medium transition-colors" href="#">Longevity</a>
-        <a class="text-text-muted-light dark:text-text-muted-dark hover:text-accent-dark dark:hover:text-accent-light font-medium transition-colors" href="#">Reviews</a>
+        <a class="text-text-muted-light dark:text-text-muted-dark hover:text-accent-dark dark:hover:text-accent-light font-medium transition-colors" href="/">Home</a>
+        <a class="text-text-muted-light dark:text-text-muted-dark hover:text-accent-dark dark:hover:text-accent-light font-medium transition-colors" href="/about">About</a>
       </nav>
     </div>
     <div class="flex items-center gap-4">
-      <span class="material-symbols-outlined text-text-main-light dark:text-text-main-dark cursor-pointer p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors" style="font-size: 24px;">search</span>
+      <button aria-label="Search" class="material-symbols-outlined text-text-main-light dark:text-text-main-dark cursor-pointer p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors" style="font-size: 24px;">search</button>
       <button aria-label="User Profile" class="flex items-center justify-center size-9 rounded-full bg-accent-dark text-white font-bold text-sm hover:opacity-90 transition-opacity shadow-sm">
         <span class="material-symbols-outlined" style="font-size: 20px;">person</span>
       </button>
     </div>
   </div>
-  <div class="h-1 w-full bg-gray-200 dark:bg-gray-700">
+  <div class="h-1 w-full bg-gray-200 dark:bg-gray-700" role="presentation" aria-hidden="true">
     <div class="h-full w-[35%] bg-accent-dark rounded-r-full"></div>
   </div>
 </header>
+
+<!-- Mobile Menu Overlay -->
+<div
+  id="mobile-menu-overlay"
+  class="fixed inset-0 bg-black/50 z-[60] opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden"
+  aria-hidden="true"
+></div>
+
+<!-- Mobile Menu Drawer -->
+<nav
+  id="mobile-menu"
+  class="fixed top-0 left-0 h-full w-[280px] max-w-[85vw] bg-background-light dark:bg-background-dark z-[70] transform -translate-x-full transition-transform duration-300 ease-out lg:hidden shadow-2xl"
+  aria-label="Mobile navigation"
+  aria-hidden="true"
+>
+  <div class="flex flex-col h-full">
+    <!-- Menu Header -->
+    <div class="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
+      <span class="text-lg font-bold text-text-main-light dark:text-text-main-dark font-serif">Menu</span>
+      <button
+        id="mobile-menu-close"
+        aria-label="Close menu"
+        class="material-symbols-outlined text-text-main-light dark:text-text-main-dark p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors"
+        style="font-size: 24px;"
+      >close</button>
+    </div>
+
+    <!-- Menu Links -->
+    <div class="flex-1 overflow-y-auto py-4">
+      <!-- Main Navigation -->
+      <div class="px-4 mb-6">
+        <p class="text-xs font-bold uppercase tracking-wider text-text-muted-light dark:text-text-muted-dark mb-3">Navigation</p>
+        <ul class="space-y-1">
+          <li>
+            <a href="/" class="flex items-center gap-3 px-3 py-3 rounded-lg text-text-main-light dark:text-text-main-dark hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+              <span class="material-symbols-outlined text-accent-dark" style="font-size: 22px;">home</span>
+              <span class="font-medium">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="/about" class="flex items-center gap-3 px-3 py-3 rounded-lg text-text-main-light dark:text-text-main-dark hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+              <span class="material-symbols-outlined text-accent-dark" style="font-size: 22px;">person</span>
+              <span class="font-medium">About</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Wellness Practices -->
+      <div class="px-4 mb-6">
+        <p class="text-xs font-bold uppercase tracking-wider text-text-muted-light dark:text-text-muted-dark mb-3">Wellness Practices</p>
+        <ul class="space-y-1">
+          <li>
+            <a href="/rajio-taiso-radio-calisthenics" class="flex items-center gap-3 px-3 py-3 rounded-lg text-text-main-light dark:text-text-main-dark hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+              <span class="material-symbols-outlined text-accent-dark" style="font-size: 22px;">fitness_center</span>
+              <span class="font-medium">Radio Taiso</span>
+            </a>
+          </li>
+          <li>
+            <a href="/shinrin-yoku-forest-bathing" class="flex items-center gap-3 px-3 py-3 rounded-lg text-text-main-light dark:text-text-main-dark hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+              <span class="material-symbols-outlined text-accent-dark" style="font-size: 22px;">forest</span>
+              <span class="font-medium">Shinrin-Yoku</span>
+            </a>
+          </li>
+          <li>
+            <a href="/makko-ho-stretching" class="flex items-center gap-3 px-3 py-3 rounded-lg text-text-main-light dark:text-text-main-dark hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+              <span class="material-symbols-outlined text-accent-dark" style="font-size: 22px;">self_improvement</span>
+              <span class="font-medium">Makko-Ho Stretching</span>
+            </a>
+          </li>
+          <li>
+            <a href="/hara-breathing-exercises" class="flex items-center gap-3 px-3 py-3 rounded-lg text-text-main-light dark:text-text-main-dark hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+              <span class="material-symbols-outlined text-accent-dark" style="font-size: 22px;">respiratory_rate</span>
+              <span class="font-medium">Hara Breathing</span>
+            </a>
+          </li>
+          <li>
+            <a href="/seiza-sitting-benefits" class="flex items-center gap-3 px-3 py-3 rounded-lg text-text-main-light dark:text-text-main-dark hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+              <span class="material-symbols-outlined text-accent-dark" style="font-size: 22px;">self_improvement</span>
+              <span class="font-medium">Seiza Sitting</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Legal -->
+      <div class="px-4">
+        <p class="text-xs font-bold uppercase tracking-wider text-text-muted-light dark:text-text-muted-dark mb-3">Legal</p>
+        <ul class="space-y-1">
+          <li>
+            <a href="/privacy-policy" class="flex items-center gap-3 px-3 py-3 rounded-lg text-text-main-light dark:text-text-main-dark hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+              <span class="material-symbols-outlined text-accent-dark" style="font-size: 22px;">shield</span>
+              <span class="font-medium">Privacy Policy</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Menu Footer -->
+    <div class="p-4 border-t border-gray-200 dark:border-gray-700">
+      <p class="text-xs text-text-muted-light dark:text-text-muted-dark text-center">
+        © 2025 Simple Senior Fitness
+      </p>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const menuButton = document.getElementById('mobile-menu-button');
+  const menuClose = document.getElementById('mobile-menu-close');
+  const menu = document.getElementById('mobile-menu');
+  const overlay = document.getElementById('mobile-menu-overlay');
+
+  function openMenu() {
+    menu?.classList.remove('-translate-x-full');
+    menu?.setAttribute('aria-hidden', 'false');
+    overlay?.classList.remove('opacity-0', 'pointer-events-none');
+    overlay?.setAttribute('aria-hidden', 'false');
+    menuButton?.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    menu?.classList.add('-translate-x-full');
+    menu?.setAttribute('aria-hidden', 'true');
+    overlay?.classList.add('opacity-0', 'pointer-events-none');
+    overlay?.setAttribute('aria-hidden', 'true');
+    menuButton?.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  menuButton?.addEventListener('click', openMenu);
+  menuClose?.addEventListener('click', closeMenu);
+  overlay?.addEventListener('click', closeMenu);
+
+  // Close menu on escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !menu?.classList.contains('-translate-x-full')) {
+      closeMenu();
+    }
+  });
+
+  // Close menu when clicking a link
+  menu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+</script>
