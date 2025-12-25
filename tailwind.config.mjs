@@ -18,8 +18,8 @@ export default {
         'accent-light': '#10b981',
       },
       fontFamily: {
-        display: ['Lexend', 'sans-serif'],
-        serif: ['Playfair Display', 'serif'],
+        display: ['Atkinson Hyperlegible', 'sans-serif'],
+        serif: ['Poppins', 'sans-serif'],
       },
       borderRadius: {
         DEFAULT: '0.25rem',
