@@ -1,12 +1,13 @@
 {
-  "name": "eastern-wellness-methods",
+  "name": "simple-senior-fitness",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
+    "deploy": "bash deploy.sh",
     "astro": "astro"
   },
   "dependencies": {
