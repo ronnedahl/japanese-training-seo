@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Sidebar from '../components/Sidebar.astro';
 import towelStretchImage from '../assets/images/towel-stretch-exercise.png';
+import towelImage from '../assets/towel-small.jpg';
 ---
 
 <BaseLayout
@@ -114,17 +115,28 @@ import towelStretchImage from '../assets/images/towel-stretch-exercise.png';
         </p>
 
         <!-- Mobile Product Card -->
-        <div class="lg:hidden my-8 bg-white dark:bg-surface-dark border-l-4 border-accent-dark rounded-r-xl shadow-lg p-5 flex flex-col gap-4">
-          <div class="flex items-start gap-4">
-            <img alt="Premium long-loop cotton stretch towel for Japanese neck and shoulder exercises - optimal grip for physical therapy" class="size-20 rounded-lg object-cover bg-gray-100 shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9nsb95m4Dtcbi-y8FeqXDKtjYTH84xJHoLK24dwIDg_enjGjveQG2mGG06j8aOXalCo77wZhdMd4kc4cfO2Q9ujf1m35TezycilA6io5ZEShctf1PxuPaiJGN6x6ue-Y6kXpvY4J0CGrOFVcP7xSAZavGN4ucKdd92PCpJORgUpkkCy3PN-Q25bbdS52seqPmDdvlsRM3BMLgnhZLxVqpOxURSlTBhVUF_VW2PJWBgsxpSHT-g6VQhNn60JAS3mJat1ku4OIF32QJ"/>
-            <div>
-              <h4 class="text-lg font-bold text-text-main-light dark:text-text-main-dark mb-1">Premium Stretch Towel</h4>
-              <p class="text-sm text-text-muted-light dark:text-text-muted-dark">Long-loop cotton for optimal grip.</p>
+        <div class="lg:hidden my-8 bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-xl shadow-lg overflow-hidden">
+          <div class="h-1 bg-gradient-to-r from-accent-dark to-primary"></div>
+          <div class="p-5">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-bold text-accent-dark dark:text-primary uppercase tracking-wider bg-emerald-50 dark:bg-emerald-900/30 px-2 py-1 rounded">Essential Tool</span>
+              <span class="material-symbols-outlined text-gray-400" style="font-size: 20px;">check_circle</span>
             </div>
+            <div class="flex gap-4 mb-4">
+              <img src={towelImage.src} alt="Soft cotton household towel used for Japanese neck stretching exercises - the only equipment needed" class="size-20 rounded-lg object-cover bg-gray-100 shadow-md" />
+              <div>
+                <h4 class="text-lg font-bold text-text-main-light dark:text-text-main-dark leading-tight">Your Household Towel</h4>
+                <p class="text-xs text-text-muted-light dark:text-text-muted-dark mt-1">No equipment needed</p>
+              </div>
+            </div>
+            <p class="text-sm text-text-muted-light dark:text-text-muted-dark mb-5 leading-relaxed">
+              You don't need expensive gym equipment. Learn how a simple towel can fix your posture.
+            </p>
+            <a href="#technique-1" class="flex items-center justify-center gap-2 bg-accent-dark hover:bg-emerald-800 text-white font-bold py-3 px-4 rounded-lg text-sm w-full transition-all shadow-md hover:shadow-lg">
+              See How It Works
+              <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
           </div>
-          <button class="bg-accent-dark hover:bg-emerald-800 text-white font-bold py-3 px-6 rounded-lg text-sm w-full transition-colors shadow-sm">
-            Check Price on Amazon
-          </button>
         </div>
 
         <!-- Technique 4 -->
