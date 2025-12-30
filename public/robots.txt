@@ -1,0 +1,7 @@
+# robots.txt for simpleseniorfitness.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://simpleseniorfitness.com/sitemap-index.xml
