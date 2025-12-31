@@ -2,7 +2,7 @@
 
 A static website built with Astro showcasing Japanese wellness and physical therapy content.
 
-## 🚀 Project Structure
+## Project Structure
 
 ```
 /
@@ -22,7 +22,7 @@ A static website built with Astro showcasing Japanese wellness and physical ther
 └── tsconfig.json
 ```
 
-## 🧞 Commands
+## Commands
 
 All commands are run from the root of the project, from a terminal:
 
@@ -34,7 +34,7 @@ All commands are run from the root of the project, from a terminal:
 | `npm run preview`         | Preview your build locally, before deploying     |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 
-## 🎨 Design System
+## Design System
 
 The site uses a custom Tailwind CSS configuration with:
 - **Primary accent**: `#08f7b3` (bright teal/green)
@@ -66,7 +66,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </BaseLayout>
 ```
 
-## 🔍 SEO
+## SEO
 
 SEO metadata is managed through the `BaseLayout` component, which includes:
 - Meta tags (title, description, keywords)
@@ -74,7 +74,7 @@ SEO metadata is managed through the `BaseLayout` component, which includes:
 - Schema.org structured data (Article type)
 - Canonical URLs
 
-## 🌐 Deployment
+## Deployment
 
 Build the static site:
 ```bash
