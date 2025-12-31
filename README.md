@@ -42,7 +42,7 @@ The site uses a custom Tailwind CSS configuration with:
 - **Fonts**: Lexend (sans-serif), Playfair Display (serif)
 - **Icons**: Material Symbols from Google Fonts
 
-## 📝 Adding New Pages
+## Adding New Pages
 
 1. Create a new `.astro` file in `src/pages/`
 2. Import and use the `BaseLayout` component
