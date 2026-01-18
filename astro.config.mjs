@@ -10,6 +10,7 @@ export default defineConfig({
     sitemap(),
   ],
   site: 'https://simpleseniorfitness.com',
+  trailingSlash: 'never',
   vite: {
     server: {
       watch: {
