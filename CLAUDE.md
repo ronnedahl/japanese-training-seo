@@ -14,7 +14,7 @@ This is a static website built with **Astro** for "Eastern Wellness Methods" foc
 - **Astro 5.x**: Static site generator with component-based architecture
 - **Tailwind CSS**: Utility-first CSS framework with custom configuration
 - **TypeScript**: Strict mode enabled for type safety
-- **Google Fonts**: Lexend (sans-serif) and Playfair Display (serif)
+- **Google Fonts**: Atkinson Hyperlegible (sans-serif) and Poppins (serif)
 - **Material Symbols**: Icon library from Google Fonts
 - **Dark Mode**: Implemented using Tailwind's class-based dark mode
 
@@ -128,11 +128,9 @@ The layout automatically generates:
 
 ## Image Handling
 
-- Images are currently loaded from external CDN (Googleusercontent)
+- Images are stored in `src/assets/images/`
+- Use Astro's `Image` component for optimization
+- Import images directly in Astro components
 - Use descriptive alt text for all images
 - For hero images, use background-image with aspect ratio containers
 - For thumbnails, use object-cover with defined dimensions
-
-## Original HTML File
-
-The original single-file HTML version is preserved as `index.html` for reference. The new Astro version maintains the exact same design and functionality while providing a modular, maintainable structure.
