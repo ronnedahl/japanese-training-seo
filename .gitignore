@@ -24,3 +24,8 @@ pnpm-debug.log*
 # IDE
 .vscode/
 .idea/
+
+# content source drafts (not meant for the public repo)
+/*.md
+!CLAUDE.md
+!README.md
