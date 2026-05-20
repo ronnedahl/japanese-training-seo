@@ -1,0 +1,61 @@
+---
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+  name: string;
+  role: string;
+  contribution: string;
+  iconName: string;
+  sourceUrl: string;
+  sourceLabel: string;
+  years?: string;
+  nameJp?: string;
+}
+
+const { name, role, contribution, iconName, sourceUrl, sourceLabel, years, nameJp } = Astro.props;
+---
+
+<aside class="bg-white dark:bg-surface-dark rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700">
+  <span class="block text-[10px] font-bold text-accent-dark dark:text-emerald-400 uppercase tracking-wider mb-4">Featured Pioneer</span>
+
+  <div class="flex items-center justify-center size-20 rounded-full bg-emerald-50 dark:bg-emerald-900/30 mb-4">
+    <Icon name={iconName} class="size-10 text-accent-dark dark:text-emerald-400" aria-hidden="true" />
+  </div>
+
+  <h3 class="font-serif text-lg font-bold text-text-main-light dark:text-text-main-dark leading-tight">
+    {name}
+  </h3>
+
+  {nameJp && (
+    <p class="text-sm text-text-muted-light dark:text-text-muted-dark mt-1" lang="ja">{nameJp}</p>
+  )}
+
+  {years && (
+    <p class="text-sm text-text-muted-light dark:text-text-muted-dark mt-1">{years}</p>
+  )}
+
+  <p class="text-sm font-semibold text-accent-dark dark:text-emerald-400 mt-2 leading-snug">
+    {role}
+  </p>
+
+  <p class="text-sm text-text-muted-light dark:text-text-muted-dark leading-relaxed mt-3">
+    {contribution}
+  </p>
+
+  <a
+    href={sourceUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="inline-flex items-center gap-1 mt-4 text-sm font-bold text-accent-dark dark:text-emerald-400 hover:underline group"
+  >
+    <span>{sourceLabel}</span>
+    <Icon name="lucide:external-link" class="size-3.5 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+    <span class="sr-only">(opens in a new tab)</span>
+  </a>
+
+  <hr class="my-5 border-gray-100 dark:border-gray-800" />
+
+  <p class="text-xs text-text-muted-light dark:text-text-muted-dark italic leading-relaxed">
+    This site credits and links to the original developers of each technique. We are not affiliated with them.
+  </p>
+</aside>
