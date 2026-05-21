@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Sidebar from '../components/Sidebar.astro';
+import TraditionCard from '../components/TraditionCard.astro';
 import seizaImage from '../assets/images/seiza-sitting-meditation.png';
 ---
 
@@ -934,7 +935,18 @@ import seizaImage from '../assets/images/seiza-sitting-meditation.png';
 
       </article>
 
-      <Sidebar tocItems={[]} />
+      <Sidebar tocItems={[]}>
+        <TraditionCard
+          slot="pioneer"
+          name="Seiza"
+          nameJp="正座"
+          origin="Centuries-old Japanese tradition"
+          description="The traditional Japanese kneeling posture, tied to Zen Buddhism, tea ceremony, martial arts, and everyday etiquette. Seiza is a collective practice without a single creator — it evolved across centuries of Japanese cultural life."
+          iconName="lucide:landmark"
+          sourceUrl="https://en.wikipedia.org/wiki/Seiza"
+          sourceLabel="About Seiza"
+        />
+      </Sidebar>
     </div>
   </main>
 </BaseLayout>

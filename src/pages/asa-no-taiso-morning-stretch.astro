@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Sidebar from '../components/Sidebar.astro';
+import TraditionCard from '../components/TraditionCard.astro';
 import morningStretchImage from '../assets/images/morning-stretch-routine.png';
 ---
 
@@ -413,7 +414,17 @@ import morningStretchImage from '../assets/images/morning-stretch-routine.png';
 
       </article>
 
-      <Sidebar />
+      <Sidebar>
+        <TraditionCard
+          slot="pioneer"
+          name="Asa no Taisō"
+          origin="Japanese morning-calisthenics tradition"
+          description="A Japanese tradition of light morning calisthenics that overlaps significantly with Radio Taiso. Practiced in homes, schools, and workplaces across Japan as a gentle way to wake the body and start the day."
+          iconName="lucide:sunrise"
+          sourceUrl="https://en.wikipedia.org/wiki/Radio_taiso"
+          sourceLabel="About Radio Taiso (related tradition)"
+        />
+      </Sidebar>
     </div>
   </main>
 </BaseLayout>

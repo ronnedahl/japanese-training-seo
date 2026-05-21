@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Sidebar from '../components/Sidebar.astro';
+import TraditionCard from '../components/TraditionCard.astro';
 import radioTaisoImage from '../assets/images/radio-taiso-group-exercise.png';
 ---
 
@@ -593,7 +594,18 @@ import radioTaisoImage from '../assets/images/radio-taiso-group-exercise.png';
         { href: "#equipment", text: "Equipment Needed" },
         { href: "#faq", text: "FAQ" },
         { href: "#why-perfect", text: "Why Perfect for Seniors" },
-      ]} />
+      ]}>
+        <TraditionCard
+          slot="pioneer"
+          name="Radio Taiso"
+          nameJp="ラジオ体操"
+          origin="Japan, 1928"
+          description="A national calisthenics routine broadcast daily by NHK since its launch in 1928. Radio Taiso is practiced every morning in schools, workplaces, and parks across Japan — a collective tradition with no single creator."
+          iconName="lucide:radio"
+          sourceUrl="https://en.wikipedia.org/wiki/Radio_taiso"
+          sourceLabel="About Radio Taiso"
+        />
+      </Sidebar>
 
     </div>
   </main>

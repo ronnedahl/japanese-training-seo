@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Sidebar from '../components/Sidebar.astro';
+import TraditionCard from '../components/TraditionCard.astro';
 import doInImage from '../assets/images/do-in-facial-massage-morning-routine.png';
 import heguPointImage from '../assets/images/do-in-hand-acupressure-hegu-point.png';
 ---
@@ -562,7 +563,18 @@ import heguPointImage from '../assets/images/do-in-hand-acupressure-hegu-point.p
         { href: "#health-concerns", text: "Specific Health Issues" },
         { href: "#safety", text: "Safety Guidelines" },
         { href: "#science", text: "Scientific Research" },
-      ]} />
+      ]}>
+        <TraditionCard
+          slot="pioneer"
+          name="Do-In"
+          nameJp="導引"
+          origin="Ancient Japanese self-massage"
+          description="An ancient Japanese self-massage tradition, derived from the Chinese practice of Dao Yin (Tao Yin). Do-In combines gentle stretching, breathing, and acupressure to support energy flow and everyday vitality."
+          iconName="ph:hand-palm"
+          sourceUrl="https://en.wikipedia.org/wiki/Daoyin"
+          sourceLabel="About Daoyin (Do-In's Chinese root)"
+        />
+      </Sidebar>
 
     </div>
   </main>

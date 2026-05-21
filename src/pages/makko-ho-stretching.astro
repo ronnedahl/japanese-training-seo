@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Sidebar from '../components/Sidebar.astro';
+import PioneerCard from '../components/PioneerCard.astro';
 import makkoHoImage from '../assets/images/makko-ho-stretching-sunset.png';
 ---
 
@@ -686,7 +687,19 @@ import makkoHoImage from '../assets/images/makko-ho-stretching-sunset.png';
         { href: "#common-mistakes", text: "Common Mistakes" },
         { href: "#combining", text: "Combining with Other Practices" },
         { href: "#faq", text: "FAQ" },
-      ]} />
+      ]}>
+        <PioneerCard
+          slot="pioneer"
+          name="Wataru Nagai"
+          nameJp="長井津"
+          years="1889 – 1963"
+          role="Japanese businessman & creator of Makko-Ho"
+          contribution="Suffered a stroke at age 42 that left half his body paralyzed. Refusing to accept doctors' prognosis, he developed the four Makko-Ho stretches in the 1930s based on Buddhist temple postures, eventually regaining mobility. His son Haruka Nagai published the first Makko-Ho book in 1972."
+          iconName="ph:person-simple-tai-chi"
+          sourceUrl="https://makkohoorg.wordpress.com/wataru-nagai-and-the-origin-of-makko-ho/"
+          sourceLabel="Learn about Makko-Ho"
+        />
+      </Sidebar>
 
     </div>
   </main>

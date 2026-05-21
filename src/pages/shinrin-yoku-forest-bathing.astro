@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Sidebar from '../components/Sidebar.astro';
+import PioneerCard from '../components/PioneerCard.astro';
 import shinrinYokuImage from '../assets/images/shinrin-yoku-forest-sunlight.jpg';
 ---
 
@@ -573,7 +574,17 @@ import shinrinYokuImage from '../assets/images/shinrin-yoku-forest-sunlight.jpg'
         { href: "#best-times", text: "Best Times to Practice" },
         { href: "#common-mistakes", text: "Common Mistakes" },
         { href: "#faq", text: "FAQ" },
-      ]} />
+      ]}>
+        <PioneerCard
+          slot="pioneer"
+          name="Prof. Dr. Qing Li"
+          role="MD, PhD — Nippon Medical School, Tokyo"
+          contribution="Founded the research field of forest medicine. His work established that phytoncides emitted by trees contribute substantially to the health benefits of forest bathing. President of the Japanese Society of Forest Medicine and author of 'Shinrin-Yoku: The Art and Science of Forest Bathing' (2018)."
+          iconName="lucide:trees"
+          sourceUrl="https://forest-medicine.jp/"
+          sourceLabel="Visit the Japanese Society of Forest Medicine"
+        />
+      </Sidebar>
 
     </div>
   </main>

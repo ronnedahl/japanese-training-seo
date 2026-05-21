@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Sidebar from '../components/Sidebar.astro';
+import PioneerCard from '../components/PioneerCard.astro';
 import sotaiMorning from '../assets/images/sotai-morning-routine-mindful-practice.jpg';
 import sotaiNeck from '../assets/images/sotai-neck-rotation-therapy-technique.jpg';
 import sotaiShoulder from '../assets/images/sotai-shoulder-pain-relief-technique.jpg';
@@ -860,7 +861,19 @@ import sotaiPartner from '../assets/images/sotai-partner-assisted-therapy-techni
 
       </article>
 
-      <Sidebar tocItems={[]} />
+      <Sidebar tocItems={[]}>
+        <PioneerCard
+          slot="pioneer"
+          name="Dr. Keizo Hashimoto"
+          nameJp="橋本敬三"
+          years="1897 – 1993"
+          role="Japanese medical doctor, Sendai"
+          contribution="Invented Sotai-ho (操体法). The name 'So-tai' is intentionally the reverse of 'Tai-so' — Hashimoto designed Sotai as a gentle counterpoint to forceful, regimented Japanese exercise traditions. The central principle: move toward comfort, not against pain."
+          iconName="lucide:bone"
+          sourceUrl="https://en.wikipedia.org/wiki/Sotai"
+          sourceLabel="Learn about Sotai"
+        />
+      </Sidebar>
     </div>
   </main>
 </BaseLayout>

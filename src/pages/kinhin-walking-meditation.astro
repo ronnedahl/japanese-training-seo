@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Sidebar from '../components/Sidebar.astro';
+import TraditionCard from '../components/TraditionCard.astro';
 import kinhinMorning from '../assets/images/kinhin-morning-meditation-routine-home.webp';
 import kinhinHands from '../assets/images/kinhin-shashu-hand-position-meditation.webp';
 import kinhinIndoor from '../assets/images/kinhin-walking-meditation-technique-indoor.webp';
@@ -699,7 +700,18 @@ import kinhinZazen from '../assets/images/kinhin-zazen-seated-meditation-integra
 
       </article>
 
-      <Sidebar tocItems={[]} />
+      <Sidebar tocItems={[]}>
+        <TraditionCard
+          slot="pioneer"
+          name="Kinhin"
+          nameJp="経行"
+          origin="Zen Buddhist walking meditation"
+          description="A Zen Buddhist walking-meditation tradition, described by the founder of Sōtō Zen, Dōgen Zenji (1200–1253), in his work Eihei Shingi. Kinhin is practiced between sessions of seated zazen to bring meditative awareness into movement."
+          iconName="lucide:footprints"
+          sourceUrl="https://en.wikipedia.org/wiki/Kinhin"
+          sourceLabel="About Kinhin"
+        />
+      </Sidebar>
     </div>
   </main>
 </BaseLayout>
