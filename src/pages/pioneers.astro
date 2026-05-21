@@ -1,0 +1,287 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Icon } from 'astro-icon/components';
+
+interface PioneerEntry {
+  name: string;
+  nameJp?: string;
+  years?: string;
+  role: string;
+  bio: string;
+  iconName: string;
+  articles: { href: string; label: string }[];
+  sourceUrl: string;
+  sourceLabel: string;
+}
+
+interface TraditionEntry {
+  name: string;
+  nameJp?: string;
+  origin: string;
+  description: string;
+  iconName: string;
+  articles: { href: string; label: string }[];
+  sourceUrl: string;
+  sourceLabel: string;
+}
+
+const pioneers: PioneerEntry[] = [
+  {
+    name: 'Dr. Toshiki Fukutsuji',
+    role: 'Japanese chiropractor & shiatsu specialist',
+    bio: "Dr. Toshiki Fukutsuji is a Japanese chiropractor and reflexology/shiatsu massage specialist who developed the rolled-towel posture-correction method over more than a decade of clinical practice. He observed that modern lifestyles — long hours of sitting, hunched shoulders over phones and laptops — had created an epidemic of back pain and forward-tilted pelvises. His insight was that gravity and a strategically placed towel could do the work that aggressive stretching couldn't: passively decompress the spine and gently coax the pelvis back toward neutral. His book on the technique has sold over six million copies in Japan and across Asia, and an English edition is available worldwide. The method has become one of the most accessible and widely practiced back-care techniques in Japanese wellness.",
+    iconName: 'lucide:scroll',
+    articles: [
+      { href: '/towel-stretch-for-back', label: 'The Fukutsuji towel stretch' },
+      { href: '/fukutsuji-vs-yoga', label: 'Fukutsuji vs Yoga for seniors' },
+    ],
+    sourceUrl: 'https://www.penguin.co.uk/books/313569/the-5-second-stretch-by-fukutsuji-toshiki/9780241365809',
+    sourceLabel: 'Read his book',
+  },
+  {
+    name: 'Prof. Dr. Qing Li',
+    role: 'MD, PhD — Nippon Medical School, Tokyo',
+    bio: "Prof. Dr. Qing Li is a Clinical Professor in the Department of Rehabilitation Medicine at Nippon Medical School Hospital in Tokyo. He is President of the Japanese Society of Forest Medicine and Vice President of the International Society of Nature and Forest Medicine. In 2004, the Japanese government asked him to research the health effects of time spent in forests, and the field of forest medicine grew from that work. His research established that phytoncides — the natural compounds emitted by trees — contribute substantially to the measurable health benefits of forest bathing, including changes in immune function, blood pressure, and stress hormones. His book Shinrin-Yoku: The Art and Science of Forest Bathing (Penguin Random House, 2018) brought the practice to a global audience and remains the most widely read introduction to the field.",
+    iconName: 'lucide:trees',
+    articles: [
+      { href: '/shinrin-yoku-forest-bathing', label: 'Shinrin-Yoku forest bathing' },
+    ],
+    sourceUrl: 'https://forest-medicine.jp/',
+    sourceLabel: 'Visit the Japanese Society of Forest Medicine',
+  },
+  {
+    name: 'Wataru Nagai',
+    nameJp: '長井津',
+    years: '1889 – 1963',
+    role: 'Japanese businessman & creator of Makko-Ho',
+    bio: "Wataru Nagai was born at Sho-man-ji temple in Fukui prefecture, the son of a Buddhist monk. Rather than follow the family tradition, he chose business and rose to become a successful executive at what is now the Taisei Corporation. At the age of 42 he suffered a cerebral hemorrhage that left half his body paralyzed. Doctors said he would likely remain dependent on others for the rest of his life. Refusing to accept that prognosis, Nagai drew on the Buddhist temple postures of his childhood and developed four simple stretches that gradually restored his mobility over the course of the 1930s. He shared the technique only quietly during his lifetime; his son, Haruka Nagai, published the first Makko-Ho book in 1972. The practice has since spread well beyond Japan as one of the most accessible meridian-based stretching systems.",
+    iconName: 'ph:person-simple-tai-chi',
+    articles: [
+      { href: '/makko-ho-stretching', label: 'Makko-Ho 4-pose stretching' },
+    ],
+    sourceUrl: 'https://makkohoorg.wordpress.com/wataru-nagai-and-the-origin-of-makko-ho/',
+    sourceLabel: 'Learn about Makko-Ho',
+  },
+  {
+    name: 'Dr. Keizo Hashimoto',
+    nameJp: '橋本敬三',
+    years: '1897 – 1993',
+    role: 'Japanese medical doctor, Sendai',
+    bio: "Dr. Keizo Hashimoto was a Japanese medical doctor from Sendai who studied Western medicine in Niigata. During his early years of practice he engaged deeply with traditional Japanese bodywork and Eastern medicine, eventually integrating both worlds in his own approach to treatment. He invented Sotai-ho (操体法), a gentle movement system whose name is intentionally the reverse of Tai-so (体操) — the Japanese word for exercise. Where conventional taiso traditions emphasize forceful, regimented movement, Hashimoto designed Sotai as its quiet opposite: a practice built on the principle that the body heals by moving toward comfort, not by pushing through pain. His work became widely recognized throughout Japan in the 1980s and has since influenced physical therapists, somatic practitioners, and self-care teachers around the world.",
+    iconName: 'lucide:bone',
+    articles: [
+      { href: '/sotai-natural-movement', label: 'Sotai natural movement therapy' },
+    ],
+    sourceUrl: 'https://en.wikipedia.org/wiki/Sotai',
+    sourceLabel: 'Learn about Sotai',
+  },
+  {
+    name: 'Tomohide Akiyama',
+    role: 'Former Director-General, Japan Forestry Agency',
+    bio: "Tomohide Akiyama served as Director-General of the Japan Forestry Agency in the early 1980s. In 1982, as part of a national public-health campaign, he coined the term shinrin-yoku — literally 'forest bathing' — to encourage Japanese citizens to spend mindful time in the country's many forests for the sake of their wellbeing. The phrase was chosen deliberately to evoke the act of immersing oneself in the forest atmosphere with all the senses, rather than simply hiking or exercising outdoors. Akiyama's framing turned out to be remarkably durable: it gave both the Japanese public and later international researchers a clear, evocative name for a practice that has since been studied, documented, and adopted around the world. Today shinrin-yoku is taught and prescribed across Japan and abroad — but the term itself traces back to his 1982 campaign.",
+    iconName: 'lucide:leaf',
+    articles: [
+      { href: '/shinrin-yoku-forest-bathing', label: 'Shinrin-Yoku forest bathing' },
+    ],
+    sourceUrl: 'https://en.wikipedia.org/wiki/Forest_bathing',
+    sourceLabel: 'About forest bathing',
+  },
+];
+
+const traditions: TraditionEntry[] = [
+  {
+    name: 'Radio Taiso',
+    nameJp: 'ラジオ体操',
+    origin: 'Japan, 1928',
+    description: "Radio Taiso is a national calisthenics routine broadcast daily by NHK since 1928. It has been practiced every morning in schools, workplaces, and parks across Japan for nearly a century. The current most-broadcast version (No. 1) consists of 13 sequential movements lasting about three minutes. Although the routine evolved through several institutional iterations, it has no single creator — it belongs to Japan's collective public-health tradition.",
+    iconName: 'lucide:radio',
+    articles: [{ href: '/rajio-taiso-radio-calisthenics', label: 'Radio Taiso for seniors' }],
+    sourceUrl: 'https://en.wikipedia.org/wiki/Radio_taiso',
+    sourceLabel: 'About Radio Taiso',
+  },
+  {
+    name: 'Seiza',
+    nameJp: '正座',
+    origin: 'Centuries-old Japanese tradition',
+    description: "Seiza is the traditional Japanese kneeling posture, tied to Zen Buddhism, tea ceremony, martial arts, and everyday etiquette. The word literally means 'proper sitting'. The position evolved over centuries of Japanese cultural life and has no single inventor; rather, it became the default formal posture across Japanese society. Today it is still used in many traditional settings and is increasingly studied for its effects on hip mobility and posture.",
+    iconName: 'lucide:landmark',
+    articles: [{ href: '/seiza-sitting-benefits', label: 'Seiza sitting benefits' }],
+    sourceUrl: 'https://en.wikipedia.org/wiki/Seiza',
+    sourceLabel: 'About Seiza',
+  },
+  {
+    name: 'Hara breathing',
+    nameJp: '腹',
+    origin: 'Zen Buddhism & Japanese martial arts',
+    description: "The Hara is the body's vital center in Japanese tradition — a region in the lower belly, just below the navel, sometimes called the tanden in classical texts. The concept is rooted in Zen Buddhism and Japanese martial-arts traditions, where the Hara represents the seat of stability, breath, and presence. Breathing into the Hara — slow, deep, abdominal breathing — has shaped Japanese ideas of calm and centeredness for centuries and forms the basis of many breathwork practices.",
+    iconName: 'lucide:wind',
+    articles: [{ href: '/hara-breathing-exercises', label: 'Hara breathing for seniors' }],
+    sourceUrl: 'https://en.wikipedia.org/wiki/Hara_(tanden)',
+    sourceLabel: 'About the Hara',
+  },
+  {
+    name: 'Kinhin',
+    nameJp: '経行',
+    origin: 'Zen Buddhist walking meditation',
+    description: "Kinhin is a Zen Buddhist walking meditation, practiced between sessions of seated zazen to bring meditative awareness into movement. The founder of Sōtō Zen, Dōgen Zenji (1200–1253), described the practice in his work Eihei Shingi, and it has been transmitted within Zen monasteries for the eight centuries since. Outside Zen monasteries it is now used by laypeople worldwide as a gentle, mindful walking practice that pairs naturally with seated meditation.",
+    iconName: 'lucide:footprints',
+    articles: [{ href: '/kinhin-walking-meditation', label: 'Kinhin walking meditation' }],
+    sourceUrl: 'https://en.wikipedia.org/wiki/Kinhin',
+    sourceLabel: 'About Kinhin',
+  },
+  {
+    name: 'Asa no Taisō',
+    origin: 'Japanese morning-calisthenics tradition',
+    description: "Asa no Taisō is a Japanese tradition of light morning calisthenics — gentle movements practiced shortly after waking to ease stiffness and start the day. The tradition overlaps significantly with Radio Taiso and other broadcast morning routines, and is practiced informally in homes, schools, and workplaces across Japan. Like many of Japan's morning movement traditions, it has no single creator and evolved as a collective cultural habit.",
+    iconName: 'lucide:sunrise',
+    articles: [{ href: '/asa-no-taiso-morning-stretch', label: 'Asa no Taisō morning routine' }],
+    sourceUrl: 'https://en.wikipedia.org/wiki/Radio_taiso',
+    sourceLabel: 'About Radio Taiso (related tradition)',
+  },
+  {
+    name: 'Do-In',
+    nameJp: '導引',
+    origin: 'Ancient Japanese self-massage',
+    description: "Do-In is an ancient Japanese self-massage tradition that combines gentle stretching, breathing, and acupressure. Its roots reach back to the Chinese practice of Dao Yin (Tao Yin), from which the Japanese name and many of the techniques derive. Practitioners use their own hands to apply pressure along the body's meridian lines, supporting the daily flow of energy and circulation as part of traditional Eastern self-care.",
+    iconName: 'ph:hand-palm',
+    articles: [{ href: '/do-in-self-massage', label: 'Do-In self-massage' }],
+    sourceUrl: 'https://en.wikipedia.org/wiki/Daoyin',
+    sourceLabel: "About Daoyin (Do-In's Chinese root)",
+  },
+];
+---
+
+<BaseLayout
+  title="Pioneers & Traditions Behind the Practices We Cover"
+  description="Meet the verified Japanese practitioners and the collective traditions credited on Simple Senior Fitness. Honest attribution for every technique we share."
+  keywords="Japanese wellness pioneers, Toshiki Fukutsuji, Qing Li, Wataru Nagai, Keizo Hashimoto, Tomohide Akiyama, Makko-Ho, Sotai, forest medicine, shinrin-yoku, Japanese wellness traditions"
+  canonicalUrl="https://simpleseniorfitness.com/pioneers"
+  author="Simple Senior Fitness"
+>
+  <main class="flex-1 w-full max-w-6xl mx-auto pb-12 px-6">
+    <!-- Hero -->
+    <section class="pt-10 pb-12 max-w-3xl">
+      <span class="inline-block py-1.5 px-3 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-accent-dark dark:text-emerald-400 text-xs font-bold uppercase tracking-wider mb-4 border border-emerald-200 dark:border-emerald-800">Pioneers &amp; Traditions</span>
+      <h1 class="font-serif text-[1.4rem] lg:text-[2.25rem] font-medium text-text-main-light dark:text-text-main-dark mb-6 leading-tight">
+        The People and Traditions Behind the Practices We Share
+      </h1>
+      <p class="text-lg lg:text-xl text-text-muted-light dark:text-text-muted-dark leading-relaxed mb-4">
+        Every technique covered on Simple Senior Fitness comes from somewhere — from a Japanese clinician, a researcher, a temple posture, or a centuries-old collective practice. This page exists to give that attribution honestly.
+      </p>
+      <p class="text-base text-text-muted-light dark:text-text-muted-dark leading-relaxed">
+        Where a practice has a single, verifiable creator, we credit them by name and link to a primary source. Where it grew from collective tradition without one founder, we say so plainly. We're an independent site sharing what helped one of us — we are not affiliated with any of the people, organisations, or traditions listed here.
+      </p>
+    </section>
+
+    <!-- Featured Pioneers -->
+    <section class="mb-16">
+      <h2 class="font-serif text-2xl lg:text-3xl font-medium text-text-main-light dark:text-text-main-dark mb-2">Featured Pioneers</h2>
+      <p class="text-text-muted-light dark:text-text-muted-dark mb-8">Verified individuals whose work is the source of techniques covered on this site.</p>
+
+      <div class="grid gap-6 md:grid-cols-2">
+        {pioneers.map((p) => (
+          <article class="bg-white dark:bg-surface-dark rounded-xl p-6 lg:p-8 shadow-sm border border-gray-200 dark:border-gray-700 flex flex-col">
+            <span class="block text-[10px] font-bold text-accent-dark dark:text-emerald-400 uppercase tracking-wider mb-4">Featured Pioneer</span>
+
+            <div class="flex items-center justify-center size-20 rounded-full bg-emerald-50 dark:bg-emerald-900/30 mb-4">
+              <Icon name={p.iconName} class="size-10 text-accent-dark dark:text-emerald-400" aria-hidden="true" />
+            </div>
+
+            <h3 class="font-serif text-xl lg:text-2xl font-bold text-text-main-light dark:text-text-main-dark leading-tight">{p.name}</h3>
+            {p.nameJp && <p class="text-sm text-text-muted-light dark:text-text-muted-dark mt-1" lang="ja">{p.nameJp}</p>}
+            {p.years && <p class="text-sm text-text-muted-light dark:text-text-muted-dark mt-1">{p.years}</p>}
+
+            <p class="text-sm font-semibold text-accent-dark dark:text-emerald-400 mt-2 leading-snug">{p.role}</p>
+
+            <p class="text-sm lg:text-base text-text-muted-light dark:text-text-muted-dark leading-relaxed mt-4">{p.bio}</p>
+
+            <div class="mt-6 mb-2">
+              <p class="text-xs font-bold text-text-main-light dark:text-text-main-dark uppercase tracking-wider mb-2">On this site</p>
+              <ul class="space-y-1">
+                {p.articles.map((a) => (
+                  <li>
+                    <a href={a.href} class="inline-flex items-center gap-1 text-sm text-accent-dark dark:text-emerald-400 hover:underline">
+                      <span>{a.label}</span>
+                      <Icon name="lucide:arrow-right" class="size-3.5" aria-hidden="true" />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <a
+              href={p.sourceUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1 mt-4 text-sm font-bold text-accent-dark dark:text-emerald-400 hover:underline group"
+            >
+              <span>{p.sourceLabel}</span>
+              <Icon name="lucide:external-link" class="size-3.5 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+              <span class="sr-only">(opens in a new tab)</span>
+            </a>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <!-- Traditions -->
+    <section class="mb-16">
+      <h2 class="font-serif text-2xl lg:text-3xl font-medium text-text-main-light dark:text-text-main-dark mb-2">Traditions</h2>
+      <p class="text-text-muted-light dark:text-text-muted-dark mb-8">Collective Japanese practices without a single creator — credited to their cultural and historical context.</p>
+
+      <div class="grid gap-6 md:grid-cols-2">
+        {traditions.map((t) => (
+          <article class="bg-white dark:bg-surface-dark rounded-xl p-6 lg:p-8 shadow-sm border border-gray-200 dark:border-gray-700 flex flex-col">
+            <span class="block text-[10px] font-bold text-accent-dark dark:text-emerald-400 uppercase tracking-wider mb-4">Tradition</span>
+
+            <div class="flex items-center justify-center size-20 rounded-full bg-emerald-50 dark:bg-emerald-900/30 mb-4">
+              <Icon name={t.iconName} class="size-10 text-accent-dark dark:text-emerald-400" aria-hidden="true" />
+            </div>
+
+            <h3 class="font-serif text-xl lg:text-2xl font-bold text-text-main-light dark:text-text-main-dark leading-tight">{t.name}</h3>
+            {t.nameJp && <p class="text-sm text-text-muted-light dark:text-text-muted-dark mt-1" lang="ja">{t.nameJp}</p>}
+
+            <p class="text-sm font-semibold text-accent-dark dark:text-emerald-400 mt-2 leading-snug">{t.origin}</p>
+
+            <p class="text-sm lg:text-base text-text-muted-light dark:text-text-muted-dark leading-relaxed mt-4">{t.description}</p>
+
+            <div class="mt-6 mb-2">
+              <p class="text-xs font-bold text-text-main-light dark:text-text-main-dark uppercase tracking-wider mb-2">On this site</p>
+              <ul class="space-y-1">
+                {t.articles.map((a) => (
+                  <li>
+                    <a href={a.href} class="inline-flex items-center gap-1 text-sm text-accent-dark dark:text-emerald-400 hover:underline">
+                      <span>{a.label}</span>
+                      <Icon name="lucide:arrow-right" class="size-3.5" aria-hidden="true" />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <a
+              href={t.sourceUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1 mt-4 text-sm font-bold text-accent-dark dark:text-emerald-400 hover:underline group"
+            >
+              <span>{t.sourceLabel}</span>
+              <Icon name="lucide:external-link" class="size-3.5 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+              <span class="sr-only">(opens in a new tab)</span>
+            </a>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <!-- Independence disclosure -->
+    <section class="mb-12">
+      <div class="rounded-2xl p-6 lg:p-8 border border-gray-200 dark:border-gray-700">
+        <h3 class="font-bold text-text-main-light dark:text-text-main-dark mb-3">Independence Statement</h3>
+        <p class="text-sm lg:text-base text-text-muted-light dark:text-text-muted-dark leading-relaxed">
+          Simple Senior Fitness is an independent site. We are not affiliated with, endorsed by, or commercially connected to any of the pioneers, traditions, books, or organisations listed on this page. Where we link out to an author's book, a research society, or a Wikipedia article, that link is for attribution and further reading only — it carries no affiliate tracking and we receive no commission. Our aim is simply to give honest credit to the real Japanese practitioners and traditions behind every technique we share.
+        </p>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
