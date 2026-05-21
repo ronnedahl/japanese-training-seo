@@ -69,6 +69,9 @@ const { tocItems = [] } = Astro.props;
       </div>
     )}
 
+    <!-- Pioneer / Tradition Card (per-article) -->
+    <slot name="pioneer" />
+
     <!-- Japanese Exercise Methods -->
     <div class="bg-white dark:bg-surface-dark rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700">
       <h3 class="font-bold text-lg mb-2 flex items-center gap-2 text-text-main-light dark:text-text-main-dark">

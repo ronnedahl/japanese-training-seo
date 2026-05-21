@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Sidebar from '../components/Sidebar.astro';
+import PioneerCard from '../components/PioneerCard.astro';
 import towelStretchImage from '../assets/images/towel-stretch-exercise.png';
 ---
 
@@ -366,7 +367,17 @@ import towelStretchImage from '../assets/images/towel-stretch-exercise.png';
 
       </article>
 
-      <Sidebar />
+      <Sidebar>
+        <PioneerCard
+          slot="pioneer"
+          name="Dr. Toshiki Fukutsuji"
+          role="Japanese chiropractor & shiatsu specialist"
+          contribution="Developed the rolled-towel posture-correction method over more than a decade of clinical practice. His book on the technique has sold over 6 million copies in Japan and across Asia."
+          iconName="lucide:scroll"
+          sourceUrl="https://www.penguin.co.uk/books/313569/the-5-second-stretch-by-fukutsuji-toshiki/9780241365809"
+          sourceLabel="Read his book"
+        />
+      </Sidebar>
     </div>
   </main>
 </BaseLayout>

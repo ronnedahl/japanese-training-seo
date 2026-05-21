@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Sidebar from '../components/Sidebar.astro';
+import TraditionCard from '../components/TraditionCard.astro';
 import haraBreathingImage from '../assets/images/hara-breathing-meditation.png';
 ---
 
@@ -557,7 +558,18 @@ import haraBreathingImage from '../assets/images/hara-breathing-meditation.png';
         { href: "#practice-schedule", text: "Practice Schedule" },
         { href: "#common-mistakes", text: "Common Mistakes" },
         { href: "#faq", text: "FAQ" },
-      ]} />
+      ]}>
+        <TraditionCard
+          slot="pioneer"
+          name="Hara Breathing"
+          nameJp="腹"
+          origin="Zen Buddhism & Japanese martial arts"
+          description="Rooted in Zen Buddhism and Japanese martial-arts traditions, the concept of the hara — the body's vital center, located just below the navel — has shaped Japanese ideas of stability, breath, and presence for centuries."
+          iconName="lucide:wind"
+          sourceUrl="https://en.wikipedia.org/wiki/Hara_(tanden)"
+          sourceLabel="About the Hara"
+        />
+      </Sidebar>
 
     </div>
   </main>
