@@ -8,6 +8,7 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "deploy": "bash deploy.sh",
+    "indexnow": "node scripts/indexnow-ping.mjs",
     "astro": "astro"
   },
   "dependencies": {

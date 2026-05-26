@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create astro:*)",
+      "Bash(rm:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run build:*)",
+      "Bash(git branch:*)",
+      "Bash(curl:*)",
+      "Bash(git checkout:*)",
+      "Bash(npm run astro:*)",
+      "Bash(node *)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

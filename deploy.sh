@@ -84,6 +84,12 @@ fi
 log_success "Build completed!"
 
 # -----------------------------------------------------------------------------
+# Notify IndexNow (Bing/Yandex) — best-effort, never fails the deploy
+# -----------------------------------------------------------------------------
+log_info "Pinging IndexNow..."
+npm run indexnow || log_warning "IndexNow ping failed (non-fatal, deploy continues)"
+
+# -----------------------------------------------------------------------------
 # Deploy
 # -----------------------------------------------------------------------------
 log_info "Deploying to ${SERVER_USER}@${SERVER_HOST}:${SERVER_PATH}..."
