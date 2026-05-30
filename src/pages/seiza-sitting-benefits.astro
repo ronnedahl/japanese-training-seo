@@ -3,6 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Sidebar from '../components/Sidebar.astro';
 import TraditionCard from '../components/TraditionCard.astro';
 import seizaImage from '../assets/images/seiza-sitting-meditation.png';
+import seizaGettingIntoPosition from '../assets/images/seiza-getting-into-position-kneeling.webp';
+import seizaZafuModification from '../assets/images/seiza-zafu-cushion-modification.webp';
 ---
 
 <BaseLayout
@@ -323,6 +325,19 @@ import seizaImage from '../assets/images/seiza-sitting-meditation.png';
           <div class="rounded-2xl p-8 mb-8">
             <h3 class="font-serif text-[1.5rem] font-medium lg:text-2xl lg:font-medium text-text-main-light dark:text-text-main-dark mb-6">Getting Into Position</h3>
 
+            <figure class="mb-6">
+              <div class="w-full aspect-[16/9] rounded-2xl overflow-hidden">
+                <img
+                  src={seizaGettingIntoPosition.src}
+                  alt="Senior beginning to kneel into the Seiza position on a soft mat, hands and knees on the floor"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <figcaption class="text-sm text-text-muted-light dark:text-text-muted-dark mt-3 italic text-center">
+                Enter Seiza slowly through kneeling, so your knees and ankles can adjust to the load.
+              </figcaption>
+            </figure>
+
             <div class="space-y-4">
               <div class="flex gap-4">
                 <div class="flex-shrink-0 font-bold text-sm text-text-main-light dark:text-text-main-dark">1</div>
@@ -456,6 +471,19 @@ import seizaImage from '../assets/images/seiza-sitting-meditation.png';
         <!-- Modifications Section -->
         <section class="mb-12">
           <h2 class="font-serif text-[1.5rem] font-medium lg:text-3xl lg:font-medium text-text-main-light dark:text-text-main-dark mb-6">Modifications for Different Levels</h2>
+
+          <figure class="mb-8">
+            <div class="w-full aspect-[16/9] rounded-2xl overflow-hidden">
+              <img
+                src={seizaZafuModification.src}
+                alt="Senior practicing Seiza on a round zafu meditation cushion to reduce strain on knees and ankles"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <figcaption class="text-sm text-text-muted-light dark:text-text-muted-dark mt-3 italic text-center">
+              A zafu cushion is one of the simplest modifications: it lifts the hips and takes pressure off the ankles.
+            </figcaption>
+          </figure>
 
           <p class="text-text-muted-light dark:text-text-muted-dark mb-8">
             Most seniors will need to start with modifications and may continue using them indefinitely. This is perfectly fine. The benefits come from the practice at your level, not from achieving a specific ideal form.
