@@ -9,7 +9,8 @@
       "Bash(curl:*)",
       "Bash(git checkout:*)",
       "Bash(npm run astro:*)",
-      "Bash(node *)"
+      "Bash(node *)",
+      "Bash(git pull *)"
     ],
     "deny": [],
     "ask": []
