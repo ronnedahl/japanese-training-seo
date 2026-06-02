@@ -12,7 +12,8 @@
       "Bash(node *)",
       "Bash(git pull *)",
       "Bash(xargs -n1 basename)",
-      "Bash(grep -E '^\\\\s*\\(title|description|keywords\\)=' src/pages/__TRACKED_VAR__.astro)"
+      "Bash(grep -E '^\\\\s*\\(title|description|keywords\\)=' src/pages/__TRACKED_VAR__.astro)",
+      "Bash(git rm *)"
     ],
     "deny": [],
     "ask": []
