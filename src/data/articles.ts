@@ -16,15 +16,16 @@ export type ProblemArea =
   | 'breathing'
   | 'mobility';
 
-// Display labels + descriptions for the quiz UI. Order here = order shown.
-export const PROBLEM_AREAS: { id: ProblemArea; label: string; description: string }[] = [
-  { id: 'back',           label: 'Back pain or stiffness',     description: 'Lower or upper back tension and aches' },
-  { id: 'neck-shoulders', label: 'Neck & shoulders',          description: 'Tension, knots, and restricted movement' },
-  { id: 'posture',        label: 'Posture',                   description: 'Rounded shoulders, forward head, slouching' },
-  { id: 'balance',        label: 'Balance & stability',       description: 'Steadiness on your feet, fall prevention' },
-  { id: 'mobility',       label: 'General mobility & energy',  description: 'Overall stiffness, flexibility, and vitality' },
-  { id: 'stress-sleep',   label: 'Stress & sleep',            description: 'Calming the mind, relaxation, better rest' },
-  { id: 'breathing',      label: 'Breathing',                 description: 'Diaphragm, core, and breath control' },
+// Display labels, descriptions, and icons for the quiz UI. Order here = order shown.
+// Icons are Material Symbols names (the icon font is already loaded site-wide).
+export const PROBLEM_AREAS: { id: ProblemArea; label: string; description: string; icon: string }[] = [
+  { id: 'back',           label: 'Back pain or stiffness',     description: 'Lower or upper back tension and aches',        icon: 'accessibility_new' },
+  { id: 'neck-shoulders', label: 'Neck & shoulders',          description: 'Tension, knots, and restricted movement',      icon: 'self_improvement' },
+  { id: 'posture',        label: 'Posture',                   description: 'Rounded shoulders, forward head, slouching',   icon: 'straighten' },
+  { id: 'balance',        label: 'Balance & stability',       description: 'Steadiness on your feet, fall prevention',     icon: 'directions_walk' },
+  { id: 'mobility',       label: 'General mobility & energy',  description: 'Overall stiffness, flexibility, and vitality', icon: 'sprint' },
+  { id: 'stress-sleep',   label: 'Stress & sleep',            description: 'Calming the mind, relaxation, better rest',    icon: 'spa' },
+  { id: 'breathing',      label: 'Breathing',                 description: 'Diaphragm, core, and breath control',          icon: 'air' },
 ];
 
 export interface Article {
