@@ -2,6 +2,10 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Sidebar from '../components/Sidebar.astro';
 import PioneerCard from '../components/PioneerCard.astro';
+import heroPosture from '../assets/images/fukutsuji-towel-method-posture-seniors.webp';
+import placementOpenChest from '../assets/images/senior-better-posture-open-chest.webp';
+import howToRoll from '../assets/images/how-to-roll-towel-posture-exercise.webp';
+import stepByStep from '../assets/images/towel-exercise-rounded-shoulders-upper-back.webp';
 ---
 
 <BaseLayout
@@ -31,13 +35,13 @@ import PioneerCard from '../components/PioneerCard.astro';
       <article class="lg:col-span-8 space-y-8">
 
         <!-- Hero Image -->
-        <!-- IMAGE PLACEHOLDER: fukutsuji-towel-method-posture-seniors.jpg
-             alt: "Older woman practicing the Japanese Fukutsuji towel exercise for better posture on a light wood floor"
-             Swap this block for a <figure> with an imported <img> once the image is provided. -->
         <figure class="mb-8">
-          <div class="w-full aspect-[16/9] bg-gray-100 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg flex flex-col items-center justify-center border-2 border-dashed border-gray-300 dark:border-gray-700">
-            <span class="material-symbols-outlined text-gray-400 dark:text-gray-600" style="font-size: 48px;" aria-hidden="true">image</span>
-            <span class="text-xs text-gray-400 dark:text-gray-500 mt-2 font-mono">fukutsuji-towel-method-posture-seniors.jpg</span>
+          <div class="w-full aspect-[16/9] rounded-2xl overflow-hidden shadow-lg">
+            <img
+              src={heroPosture.src}
+              alt="Older woman practicing the Japanese Fukutsuji towel exercise for better posture on a light wood floor"
+              class="w-full h-full object-cover"
+            />
           </div>
           <figcaption class="text-sm text-text-muted-light dark:text-text-muted-dark mt-3 italic text-center">
             The upper back towel position opens the chest and gently eases rounded shoulders.
@@ -105,6 +109,19 @@ import PioneerCard from '../components/PioneerCard.astro';
           It is this upper placement that makes the difference for rounded shoulders, and it is the version we will walk through step by step.
         </p>
 
+        <figure class="my-6">
+          <div class="w-full aspect-[16/9] rounded-2xl overflow-hidden shadow-lg">
+            <img
+              src={placementOpenChest.src}
+              alt="Senior standing taller with an open chest and relaxed shoulders after the towel posture exercise"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <figcaption class="text-sm text-text-muted-light dark:text-text-muted-dark mt-3 italic text-center">
+            Over time, opening the chest helps the shoulders settle back and the upper body stand taller.
+          </figcaption>
+        </figure>
+
         <!-- Benefits -->
         <h2 class="font-serif text-[1.5rem] font-medium lg:text-3xl lg:font-medium text-accent-dark dark:text-emerald-400 pt-4" id="benefits">
           The benefits of the upper back towel position for seniors
@@ -132,13 +149,13 @@ import PioneerCard from '../components/PioneerCard.astro';
           How to roll the towel
         </h2>
 
-        <!-- IMAGE PLACEHOLDER: how-to-roll-towel-posture-exercise.jpg
-             alt: "Hands rolling a white bath towel into a tight cylinder for the posture exercise"
-             Swap this block for a <figure> with an imported <img> once the image is provided. -->
         <figure class="my-6">
-          <div class="w-full aspect-[16/9] bg-gray-100 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg flex flex-col items-center justify-center border-2 border-dashed border-gray-300 dark:border-gray-700">
-            <span class="material-symbols-outlined text-gray-400 dark:text-gray-600" style="font-size: 48px;" aria-hidden="true">image</span>
-            <span class="text-xs text-gray-400 dark:text-gray-500 mt-2 font-mono">how-to-roll-towel-posture-exercise.jpg</span>
+          <div class="w-full aspect-[16/9] rounded-2xl overflow-hidden shadow-lg">
+            <img
+              src={howToRoll.src}
+              alt="Hands rolling a white bath towel into a tight cylinder for the posture exercise"
+              class="w-full h-full object-cover"
+            />
           </div>
           <figcaption class="text-sm text-text-muted-light dark:text-text-muted-dark mt-3 italic text-center">
             Roll the towel tightly into a firm cylinder and secure it so it holds its shape.
@@ -157,13 +174,13 @@ import PioneerCard from '../components/PioneerCard.astro';
           How to do the towel exercise for posture, step by step
         </h2>
 
-        <!-- IMAGE PLACEHOLDER: towel-exercise-rounded-shoulders-upper-back.jpg
-             alt: "Older adult lying with a rolled towel under the upper back to ease rounded shoulders"
-             Swap this block for a <figure> with an imported <img> once the image is provided. -->
         <figure class="my-6">
-          <div class="w-full aspect-[16/9] bg-gray-100 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg flex flex-col items-center justify-center border-2 border-dashed border-gray-300 dark:border-gray-700">
-            <span class="material-symbols-outlined text-gray-400 dark:text-gray-600" style="font-size: 48px;" aria-hidden="true">image</span>
-            <span class="text-xs text-gray-400 dark:text-gray-500 mt-2 font-mono">towel-exercise-rounded-shoulders-upper-back.jpg</span>
+          <div class="w-full aspect-[16/9] rounded-2xl overflow-hidden shadow-lg">
+            <img
+              src={stepByStep.src}
+              alt="Older adult lying with a rolled towel under the upper back to ease rounded shoulders"
+              class="w-full h-full object-cover"
+            />
           </div>
           <figcaption class="text-sm text-text-muted-light dark:text-text-muted-dark mt-3 italic text-center">
             The roll sits between the shoulder blades, with arms open to the sides and palms up.
