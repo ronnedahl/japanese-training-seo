@@ -52,6 +52,12 @@ export const articles: Article[] = [
     problems: ['back', 'posture'],
   },
   {
+    title: 'Towel Exercise for Posture (Fukutsuji)',
+    url: '/japanese-towel-exercise-posture',
+    blurb: 'A rolled towel under the upper back to open the chest and ease rounded shoulders in five minutes a day.',
+    problems: ['posture', 'neck-shoulders'],
+  },
+  {
     title: 'Fukutsuji Method vs Yoga',
     url: '/fukutsuji-vs-yoga',
     blurb: 'An honest comparison to help you pick the gentler back-and-posture practice for your body.',
