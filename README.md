@@ -11,7 +11,11 @@ A static website built with Astro showcasing Japanese wellness and physical ther
 │   ├── components/
 │   │   ├── Header.astro
 │   │   ├── Footer.astro
-│   │   └── Sidebar.astro
+│   │   ├── Sidebar.astro
+│   │   ├── PioneerCard.astro
+│   │   └── TraditionCard.astro
+│   ├── data/
+│   │   └── articles.ts
 │   ├── layouts/
 │   │   └── BaseLayout.astro
 │   └── pages/
@@ -39,7 +43,7 @@ All commands are run from the root of the project, from a terminal:
 The site uses a custom Tailwind CSS configuration with:
 - **Primary accent**: `#08f7b3` (bright teal/green)
 - **Dark mode**: Class-based toggle
-- **Fonts**: Lexend (sans-serif), Playfair Display (serif)
+- **Fonts**: Atkinson Hyperlegible (sans-serif), Poppins (serif)
 - **Icons**: Material Symbols from Google Fonts
 
 ## Adding New Pages
@@ -65,6 +69,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </main>
 </BaseLayout>
 ```
+
+## Practice Finder
+
+`/practice-finder` is a one-question tool that recommends articles based on what
+the visitor wants to improve. It runs entirely in the browser (no AI, no backend)
+and reads its data from `src/data/articles.ts`.
+
+**To add a new article to the finder:** add one entry to the `articles` array in
+`src/data/articles.ts` and tag it with one or more problem areas. The first tag is
+the primary area (ranked highest in results); the rest are secondary. No other
+file needs to change, the finder reads this list directly.
 
 ## SEO
 
