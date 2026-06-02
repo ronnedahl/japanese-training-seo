@@ -1,5 +1,13 @@
 ---
 // Header component with mobile menu
+import { articles, CATEGORIES } from '../data/articles.ts';
+
+// Group articles by category for the mobile nav dropdowns. Driven entirely by
+// the manifest, so a new article appears here automatically once it is added.
+const articlesByCategory = CATEGORIES.map((category) => ({
+  ...category,
+  items: articles.filter((article) => article.category === category.id),
+})).filter((group) => group.items.length > 0);
 ---
 
 <header class="sticky top-0 z-50 w-full bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
@@ -17,7 +25,6 @@
       <nav class="hidden lg:flex items-center gap-6 ml-8">
         <a class="text-text-muted-light dark:text-text-muted-dark hover:text-accent-dark dark:hover:text-accent-light font-medium transition-colors" href="/">Home</a>
         <a class="text-text-muted-light dark:text-text-muted-dark hover:text-accent-dark dark:hover:text-accent-light font-medium transition-colors" href="/practice-finder">Find Your Practice</a>
-        <a class="text-text-muted-light dark:text-text-muted-dark hover:text-accent-dark dark:hover:text-accent-light font-medium transition-colors" href="/practices">All Practices</a>
         <a class="text-text-muted-light dark:text-text-muted-dark hover:text-accent-dark dark:hover:text-accent-light font-medium transition-colors" href="/about">About</a>
         <a class="text-text-muted-light dark:text-text-muted-dark hover:text-accent-dark dark:hover:text-accent-light font-medium transition-colors" href="/pioneers">Pioneers</a>
       </nav>
@@ -79,12 +86,6 @@
             </a>
           </li>
           <li>
-            <a href="/practices" class="flex items-center gap-3 px-3 py-3 rounded-lg text-text-main-light dark:text-text-main-dark hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
-              <span class="material-symbols-outlined text-accent-dark" style="font-size: 22px;">menu_book</span>
-              <span class="font-medium">All Practices</span>
-            </a>
-          </li>
-          <li>
             <a href="/about" class="flex items-center gap-3 px-3 py-3 rounded-lg text-text-main-light dark:text-text-main-dark hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
               <span class="material-symbols-outlined text-accent-dark" style="font-size: 22px;">person</span>
               <span class="font-medium">About</span>
@@ -97,6 +98,31 @@
             </a>
           </li>
         </ul>
+      </div>
+
+      <!-- Practices by category (generated from the article manifest) -->
+      <div class="px-4 mb-6">
+        <p class="text-xs font-bold uppercase tracking-wider text-text-muted-light dark:text-text-muted-dark mb-3">Practices</p>
+        <div class="space-y-1">
+          {articlesByCategory.map((category) => (
+            <details class="group rounded-lg">
+              <summary class="flex items-center gap-3 px-3 py-3 rounded-lg text-text-main-light dark:text-text-main-dark hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+                <span class="material-symbols-outlined text-accent-dark" style="font-size: 22px;" aria-hidden="true">{category.icon}</span>
+                <span class="font-medium flex-1">{category.label}</span>
+                <span class="material-symbols-outlined text-text-muted-light dark:text-text-muted-dark transition-transform duration-200 group-open:rotate-180" style="font-size: 20px;" aria-hidden="true">expand_more</span>
+              </summary>
+              <ul class="mt-1 ml-4 pl-4 border-l border-gray-200 dark:border-gray-700 space-y-1">
+                {category.items.map((article) => (
+                  <li>
+                    <a href={article.url} class="block px-3 py-2 rounded-lg text-sm text-text-muted-light dark:text-text-muted-dark hover:text-accent-dark dark:hover:text-accent-light hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                      {article.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </details>
+          ))}
+        </div>
       </div>
 
       <!-- Legal -->
