@@ -1,11 +1,14 @@
-// Single source of truth for the Practice Finder tool.
+// Single source of truth for the Practice Finder (/practice-finder) and the
+// Practices index (/practices). Both pages read this list directly.
 //
-// To add a new article to the finder: add one entry to the `articles` array
-// below and tag it with one or more problem areas. The first problem in the
-// array is the PRIMARY area (what the practice is best for); the rest are
-// secondary. The finder ranks primary matches above secondary matches.
+// To add a new article: add one entry to the `articles` array below and tag it
+// with one or more problem areas. The first problem in the array is the PRIMARY
+// area (what the practice is best for); the rest are secondary. The finder ranks
+// primary matches above secondary, and the index groups each article under its
+// primary area.
 //
-// No other file needs to change — the finder reads this list directly.
+// No other file needs to change, not even the navigation, both pages and the
+// "All Practices" menu link stay in sync automatically.
 
 export type ProblemArea =
   | 'back'
