@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import MedicalDisclaimer from '../components/MedicalDisclaimer.astro';
 import Sidebar from '../components/Sidebar.astro';
 import TraditionCard from '../components/TraditionCard.astro';
 import kinhinMorning from '../assets/images/kinhin-morning-meditation-routine-home.webp';
@@ -691,12 +692,9 @@ import kinhinZazen from '../assets/images/kinhin-zazen-seated-meditation-integra
         </section>
 
         <!-- Disclaimer -->
-        <section class="mb-12">
-          <h3 class="font-bold text-text-main-light dark:text-text-main-dark mb-2">Medical Disclaimer</h3>
-          <p class="text-text-muted-light dark:text-text-muted-dark text-base">
-            This article is for informational purposes only and should not replace professional medical advice. If you have balance disorders, neurological conditions, or other health concerns, consult your healthcare provider before beginning kinhin practice. Always practice near support if balance is a concern, and stop if you experience dizziness or pain.
-          </p>
-        </section>
+        <MedicalDisclaimer>
+          This article is for informational purposes only and should not replace professional medical advice. If you have balance disorders, neurological conditions, or other health concerns, consult your healthcare provider before beginning kinhin practice. Always practice near support if balance is a concern, and stop if you experience dizziness or pain.
+        </MedicalDisclaimer>
 
       </article>
 

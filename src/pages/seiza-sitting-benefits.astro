@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import MedicalDisclaimer from '../components/MedicalDisclaimer.astro';
 import Sidebar from '../components/Sidebar.astro';
 import TraditionCard from '../components/TraditionCard.astro';
 import seizaImage from '../assets/images/seiza-sitting-meditation.png';
@@ -948,17 +949,9 @@ import seizaZafuModification from '../assets/images/seiza-zafu-cushion-modificat
 
         <!-- Disclaimer -->
         <section class="mb-12">
-          <div class="bg-amber-50 dark:bg-amber-900/20 rounded-xl p-6 border border-amber-200 dark:border-amber-800">
-            <div class="flex items-start gap-3">
-              <span class="material-symbols-outlined text-amber-600 dark:text-amber-400 flex-shrink-0">warning</span>
-              <div>
-                <h3 class="font-bold text-amber-800 dark:text-amber-300 mb-2">Medical Disclaimer</h3>
-                <p class="text-amber-700 dark:text-amber-400 text-sm">
-                  This article is for informational purposes only and should not replace professional medical advice. Consult with your healthcare provider before beginning Seiza practice, especially if you have knee injuries, joint replacements, arthritis, or other musculoskeletal conditions. If you experience sharp pain during practice, stop immediately and seek professional guidance. Seiza should be practiced gradually with appropriate modifications for your individual needs and capabilities.
-                </p>
-              </div>
-            </div>
-          </div>
+          <MedicalDisclaimer>
+          This article is for informational purposes only and should not replace professional medical advice. Consult with your healthcare provider before beginning Seiza practice, especially if you have knee injuries, joint replacements, arthritis, or other musculoskeletal conditions. If you experience sharp pain during practice, stop immediately and seek professional guidance. Seiza should be practiced gradually with appropriate modifications for your individual needs and capabilities.
+        </MedicalDisclaimer>
         </section>
 
       </article>

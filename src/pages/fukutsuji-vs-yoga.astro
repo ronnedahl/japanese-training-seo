@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import MedicalDisclaimer from '../components/MedicalDisclaimer.astro';
 import Sidebar from '../components/Sidebar.astro';
 import PioneerCard from '../components/PioneerCard.astro';
 import comparisonImage from '../assets/images/fukutsuji-method-vs-yoga-comparison-seniors.webp';
@@ -308,12 +309,9 @@ import chairYoga from '../assets/images/chair-yoga-seniors-gentle-twist.webp';
         </section>
 
         <!-- Disclaimer -->
-        <section class="mb-12">
-          <h3 class="font-bold text-text-main-light dark:text-text-main-dark mb-2">Medical Disclaimer</h3>
-          <p class="text-text-muted-light dark:text-text-muted-dark text-sm">
-            This article is for informational purposes only and is not a substitute for professional medical advice. If you have recent spinal surgery, disc problems, severe osteoporosis, or any acute injury, consult your healthcare provider before beginning either the Fukutsuji method or a yoga practice. Stop immediately if you experience sharp pain, dizziness, or any symptom that feels unusual.
-          </p>
-        </section>
+        <MedicalDisclaimer>
+          This article is for informational purposes only and is not a substitute for professional medical advice. If you have recent spinal surgery, disc problems, severe osteoporosis, or any acute injury, consult your healthcare provider before beginning either the Fukutsuji method or a yoga practice. Stop immediately if you experience sharp pain, dizziness, or any symptom that feels unusual.
+        </MedicalDisclaimer>
 
       </article>
 

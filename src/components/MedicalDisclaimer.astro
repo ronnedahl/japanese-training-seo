@@ -1,0 +1,15 @@
+---
+// Consistent medical disclaimer box for article pages.
+// The page-specific disclaimer text goes in the default slot.
+---
+<div class="bg-amber-50 dark:bg-amber-900/20 rounded-2xl p-8 mt-8 border border-amber-200 dark:border-amber-800">
+  <div class="flex items-start gap-4">
+    <span class="material-symbols-outlined text-amber-600 dark:text-amber-400 text-3xl flex-shrink-0" aria-hidden="true">warning</span>
+    <div>
+      <h3 class="font-bold text-xl text-text-main-light dark:text-text-main-dark mb-3">Medical Disclaimer</h3>
+      <p class="text-base text-text-muted-light dark:text-text-muted-dark leading-relaxed">
+        <slot />
+      </p>
+    </div>
+  </div>
+</div>
