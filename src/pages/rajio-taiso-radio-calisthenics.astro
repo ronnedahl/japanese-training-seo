@@ -1,13 +1,14 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import MedicalDisclaimer from '../components/MedicalDisclaimer.astro';
 import Sidebar from '../components/Sidebar.astro';
 import TraditionCard from '../components/TraditionCard.astro';
 import radioTaisoImage from '../assets/images/radio-taiso-group-exercise.png';
 ---
 
 <BaseLayout
-  title="Radio Taiso: The Japanese Morning Exercise That's Perfect for Seniors Over 50"
-  description="Discover Radio Taiso, Japan's beloved morning exercise routine that helps seniors improve flexibility, balance, and energy. Learn the 13 simple movements today."
+  title="Radio Taiso: Japan's 3-Minute Morning Exercise for 50+"
+  description="Radio Taiso is Japan's daily 13-move morning exercise. Learn the gentle routine that builds flexibility, balance, and energy after 50."
   keywords="radio taiso, rajio taiso, senior fitness, japanese exercise, morning routine, balance exercises, japanese calisthenics"
   canonicalUrl="https://simpleseniorfitness.com/rajio-taiso-radio-calisthenics"
   author="Simple Senior Fitness"
@@ -529,17 +530,9 @@ import radioTaisoImage from '../assets/images/radio-taiso-group-exercise.png';
         </p>
 
         <!-- Disclaimer -->
-        <div class="bg-amber-50 dark:bg-amber-900/20 rounded-2xl p-8 mt-8 border border-amber-200 dark:border-amber-800">
-          <div class="flex items-start gap-4">
-            <span class="material-symbols-outlined text-amber-600 dark:text-amber-400 text-3xl flex-shrink-0">warning</span>
-            <div>
-              <h3 class="font-bold text-xl text-text-main-light dark:text-text-main-dark mb-3">Medical Disclaimer</h3>
-              <p class="text-base text-text-muted-light dark:text-text-muted-dark leading-relaxed">
-                This article is for informational purposes only and should not replace professional medical advice. Always consult with your healthcare provider before starting any new exercise program, especially if you have existing health conditions or concerns.
-              </p>
-            </div>
-          </div>
-        </div>
+        <MedicalDisclaimer>
+          This article is for informational purposes only and should not replace professional medical advice. Always consult with your healthcare provider before starting any new exercise program, especially if you have existing health conditions or concerns.
+        </MedicalDisclaimer>
 
         <!-- Related Articles -->
         <div class="bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20 rounded-2xl p-8 mt-12 border border-emerald-200 dark:border-emerald-800">

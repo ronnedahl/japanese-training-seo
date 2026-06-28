@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import MedicalDisclaimer from '../components/MedicalDisclaimer.astro';
 import Sidebar from '../components/Sidebar.astro';
 import PioneerCard from '../components/PioneerCard.astro';
 import heroTowelExercise from '../assets/images/fukutsuji-method-towel-exercise.webp';
@@ -296,14 +297,9 @@ import postureResults from '../assets/images/fukutsuji-method-posture-results.we
         </ul>
 
         <!-- Disclaimer -->
-        <div class="bg-amber-50 dark:bg-amber-900/20 rounded-2xl p-6 my-8 border border-amber-200 dark:border-amber-800">
-          <div class="flex items-start gap-4">
-            <span class="material-symbols-outlined text-amber-600 dark:text-amber-400 text-3xl flex-shrink-0" aria-hidden="true">warning</span>
-            <p class="text-base text-text-muted-light dark:text-text-muted-dark leading-relaxed">
-              This article is for general educational purposes and is not medical advice. Always speak with a qualified healthcare professional before starting any new exercise, especially if you have an existing health condition.
-            </p>
-          </div>
-        </div>
+        <MedicalDisclaimer>
+          This article is for general educational purposes and is not medical advice. Always speak with a qualified healthcare professional before starting any new exercise, especially if you have an existing health condition.
+        </MedicalDisclaimer>
 
         <!-- FAQ -->
         <h2 class="font-serif text-[1.5rem] font-medium lg:text-3xl lg:font-medium text-accent-dark dark:text-emerald-400 pt-4" id="faq">
@@ -366,6 +362,10 @@ import postureResults from '../assets/images/fukutsuji-method-posture-results.we
             <a href="/towel-stretch-for-back" class="block p-4 bg-white dark:bg-surface-dark rounded-xl border border-gray-200 dark:border-gray-700 hover:border-accent-light dark:hover:border-accent-light transition-colors">
               <h4 class="font-bold text-text-main-light dark:text-text-main-dark mb-1">Towel Stretch for Back Pain</h4>
               <p class="text-sm text-text-muted-light dark:text-text-muted-dark">The detailed lower-back routine</p>
+            </a>
+            <a href="/fukutsuji-vs-yoga" class="block p-4 bg-white dark:bg-surface-dark rounded-xl border border-gray-200 dark:border-gray-700 hover:border-accent-light dark:hover:border-accent-light transition-colors">
+              <h4 class="font-bold text-text-main-light dark:text-text-main-dark mb-1">Fukutsuji Method vs Yoga</h4>
+              <p class="text-sm text-text-muted-light dark:text-text-muted-dark">An honest comparison for back and posture care</p>
             </a>
             <a href="/makko-ho-stretching" class="block p-4 bg-white dark:bg-surface-dark rounded-xl border border-gray-200 dark:border-gray-700 hover:border-accent-light dark:hover:border-accent-light transition-colors">
               <h4 class="font-bold text-text-main-light dark:text-text-main-dark mb-1">Makko-Ho Stretching</h4>

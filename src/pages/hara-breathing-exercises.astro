@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import MedicalDisclaimer from '../components/MedicalDisclaimer.astro';
 import Sidebar from '../components/Sidebar.astro';
 import TraditionCard from '../components/TraditionCard.astro';
 import haraBreathingImage from '../assets/images/hara-breathing-meditation.png';
@@ -493,17 +494,9 @@ import haraBreathingImage from '../assets/images/hara-breathing-meditation.png';
         </p>
 
         <!-- Disclaimer -->
-        <div class="bg-amber-50 dark:bg-amber-900/20 rounded-2xl p-8 mt-8 border border-amber-200 dark:border-amber-800">
-          <div class="flex items-start gap-4">
-            <span class="material-symbols-outlined text-amber-600 dark:text-amber-400 text-3xl flex-shrink-0">warning</span>
-            <div>
-              <h3 class="font-bold text-xl text-text-main-light dark:text-text-main-dark mb-3">Medical Disclaimer</h3>
-              <p class="text-base text-text-muted-light dark:text-text-muted-dark leading-relaxed">
-                This article is for informational purposes only and should not replace professional medical advice. While Hara breathing is generally safe and beneficial, consult with your healthcare provider before beginning any new health practice, especially if you have respiratory conditions, cardiovascular issues, or other health concerns. If you experience dizziness, chest pain, or severe discomfort during practice, stop immediately and seek medical guidance.
-              </p>
-            </div>
-          </div>
-        </div>
+        <MedicalDisclaimer>
+          This article is for informational purposes only and should not replace professional medical advice. While Hara breathing is generally safe and beneficial, consult with your healthcare provider before beginning any new health practice, especially if you have respiratory conditions, cardiovascular issues, or other health concerns. If you experience dizziness, chest pain, or severe discomfort during practice, stop immediately and seek medical guidance.
+        </MedicalDisclaimer>
 
         <!-- Related Articles -->
         <div class="bg-gradient-to-r from-sky-50 to-cyan-50 dark:from-sky-900/20 dark:to-cyan-900/20 rounded-2xl p-8 mt-12 border border-sky-200 dark:border-sky-800">
