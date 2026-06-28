@@ -94,6 +94,13 @@ export const articles: Article[] = [
     problems: ['mobility', 'balance'],
   },
   {
+    title: 'The Fukutsuji Method (Complete Guide)',
+    url: '/fukutsuji-method',
+    blurb: 'The full guide to the Japanese towel exercise: what it is, who created it, how to do it safely after 50, and what it can and cannot do.',
+    category: 'posture-towel',
+    problems: ['back', 'posture'],
+  },
+  {
     title: 'Towel Stretch for Back Pain (Fukutsuji)',
     url: '/towel-stretch-for-back',
     blurb: 'A rolled towel under the lower back to ease pain and improve posture in five minutes a day.',
