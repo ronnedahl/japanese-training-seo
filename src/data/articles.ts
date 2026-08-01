@@ -101,6 +101,13 @@ export const articles: Article[] = [
     problems: ['back', 'posture'],
   },
   {
+    title: 'Benefits of the Japanese Towel Method',
+    url: '/japanese-towel-method-benefits',
+    blurb: 'An honest look at what five minutes a day actually delivers: an open chest, an easier back, a fuller breath, and what it cannot do.',
+    category: 'posture-towel',
+    problems: ['posture', 'back', 'breathing'],
+  },
+  {
     title: 'Towel Stretch for Back Pain (Fukutsuji)',
     url: '/towel-stretch-for-back',
     blurb: 'A rolled towel under the lower back to ease pain and improve posture in five minutes a day.',
