@@ -13,31 +13,31 @@ import { PROBLEM_AREAS, articles } from '../data/articles.ts';
   <div class="flex-1 w-full max-w-3xl mx-auto pb-16 px-6">
     <!-- Hero -->
     <section class="pt-10 pb-8 text-center">
-      <span class="inline-block py-1.5 px-3 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-accent-dark dark:text-emerald-400 text-xs font-bold uppercase tracking-wider mb-4 border border-emerald-200 dark:border-emerald-800">Practice Finder</span>
-      <h1 class="font-serif text-[1.5rem] lg:text-[2.25rem] font-medium text-text-main-light dark:text-text-main-dark mb-5 leading-tight">
+      <span class="inline-block py-1.5 px-3 rounded-full bg-emerald-100 text-accent-dark text-xs font-bold uppercase tracking-wider mb-4 border border-emerald-200">Practice Finder</span>
+      <h1 class="font-serif text-[1.5rem] lg:text-[2.25rem] font-medium text-text-main-light mb-5 leading-tight">
         Find the right practice for your body
       </h1>
-      <p class="text-lg lg:text-xl text-text-muted-light dark:text-text-muted-dark leading-relaxed max-w-2xl mx-auto">
+      <p class="text-lg lg:text-xl text-text-muted-light leading-relaxed max-w-2xl mx-auto">
         There are many Japanese wellness practices on this site. Tell us what you would most like to improve, and we will point you to the ones that fit best. It takes about ten seconds.
       </p>
     </section>
 
     <!-- Step 1: Question -->
     <section id="finder-question" class="mb-10">
-      <h2 class="font-serif text-lg lg:text-xl font-medium text-text-main-light dark:text-text-main-dark mb-6 text-center">
+      <h2 class="font-serif text-lg lg:text-xl font-medium text-text-main-light mb-6 text-center">
         What would you most like to improve?
       </h2>
       <div class="grid sm:grid-cols-2 gap-3" role="group" aria-label="Choose a focus area">
         {PROBLEM_AREAS.map((area) => (
           <button
             type="button"
-            class="finder-option group flex items-start gap-4 text-left bg-white dark:bg-surface-dark rounded-xl p-5 border border-gray-200 dark:border-gray-700 shadow-sm hover:border-accent-light dark:hover:border-accent-light hover:shadow-md transition-all focus-visible:border-accent-dark"
+            class="finder-option group flex items-start gap-4 text-left bg-white rounded-xl p-5 border border-gray-200 shadow-sm hover:border-accent-light hover:shadow-md transition-all focus-visible:border-accent-dark"
             data-area={area.id}
           >
-            <span class="material-symbols-outlined text-accent-dark dark:text-emerald-400 mt-0.5 shrink-0" style="font-size: 28px;" aria-hidden="true">{area.icon}</span>
+            <span class="material-symbols-outlined text-accent-dark mt-0.5 shrink-0" style="font-size: 28px;" aria-hidden="true">{area.icon}</span>
             <span>
-              <span class="block font-bold text-text-main-light dark:text-text-main-dark">{area.label}</span>
-              <span class="block text-sm text-text-muted-light dark:text-text-muted-dark mt-0.5">{area.description}</span>
+              <span class="block font-bold text-text-main-light">{area.label}</span>
+              <span class="block text-sm text-text-muted-light mt-0.5">{area.description}</span>
             </span>
           </button>
         ))}
@@ -47,35 +47,35 @@ import { PROBLEM_AREAS, articles } from '../data/articles.ts';
     <!-- Step 2: Results (hidden until a choice is made) -->
     <section id="finder-results" class="mb-10 hidden" aria-live="polite">
       <div class="flex items-center justify-between gap-4 mb-6">
-        <h2 class="font-serif text-lg lg:text-xl font-medium text-text-main-light dark:text-text-main-dark">
+        <h2 class="font-serif text-lg lg:text-xl font-medium text-text-main-light">
           Your recommended practices
         </h2>
         <button
           id="finder-reset"
           type="button"
-          class="inline-flex items-center gap-1.5 text-sm font-bold text-accent-dark dark:text-emerald-400 hover:underline shrink-0"
+          class="inline-flex items-center gap-1.5 text-sm font-bold text-accent-dark hover:underline shrink-0"
         >
           <span class="material-symbols-outlined" style="font-size: 18px;" aria-hidden="true">restart_alt</span>
           Start over
         </button>
       </div>
 
-      <p id="finder-results-intro" class="text-text-muted-light dark:text-text-muted-dark mb-6"></p>
+      <p id="finder-results-intro" class="text-text-muted-light mb-6"></p>
 
       <div id="finder-cards" class="flex flex-col gap-4">
         {articles.map((article) => (
           <a
             href={article.url}
-            class="finder-card hidden flex-col bg-white dark:bg-surface-dark rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-sm hover:border-accent-light hover:shadow-md transition-all"
+            class="finder-card hidden flex-col bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:border-accent-light hover:shadow-md transition-all"
             data-problems={article.problems.join(',')}
             data-primary={article.problems[0]}
           >
             <div class="flex items-center gap-3 mb-2">
-              <h3 class="font-serif text-lg font-bold text-text-main-light dark:text-text-main-dark">{article.title}</h3>
-              <span class="finder-badge hidden py-0.5 px-2 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-accent-dark dark:text-emerald-400 text-[0.65rem] font-bold uppercase tracking-wider border border-emerald-200 dark:border-emerald-800 shrink-0">Best match</span>
+              <h3 class="font-serif text-lg font-bold text-text-main-light">{article.title}</h3>
+              <span class="finder-badge hidden py-0.5 px-2 rounded-full bg-emerald-100 text-accent-dark text-[0.65rem] font-bold uppercase tracking-wider border border-emerald-200 shrink-0">Best match</span>
             </div>
-            <p class="text-sm text-text-muted-light dark:text-text-muted-dark leading-relaxed mb-3">{article.blurb}</p>
-            <span class="inline-flex items-center gap-1 text-sm font-bold text-accent-dark dark:text-emerald-400">
+            <p class="text-sm text-text-muted-light leading-relaxed mb-3">{article.blurb}</p>
+            <span class="inline-flex items-center gap-1 text-sm font-bold text-accent-dark">
               Read the guide
               <span class="material-symbols-outlined" style="font-size: 18px;" aria-hidden="true">arrow_forward</span>
             </span>
@@ -85,8 +85,8 @@ import { PROBLEM_AREAS, articles } from '../data/articles.ts';
     </section>
 
     <!-- Helper note -->
-    <section class="border-t border-gray-200 dark:border-gray-700 pt-6">
-      <p class="text-sm text-text-muted-light dark:text-text-muted-dark leading-relaxed">
+    <section class="border-t border-gray-200 pt-6">
+      <p class="text-sm text-text-muted-light leading-relaxed">
         These suggestions are a starting point, not medical advice. Every practice on this site is gentle and designed for adults over 50, so feel free to explore more than one. If you have a health condition or pain that worries you, talk to your doctor before starting.
       </p>
     </section>
@@ -137,8 +137,8 @@ import { PROBLEM_AREAS, articles } from '../data/articles.ts';
     if (resultsIntro) {
       const noun = total === 1 ? 'practice' : 'practices';
       const lead = primaryCount > 0
-        ? `Based on <strong class="text-text-main-light dark:text-text-main-dark">${label.toLowerCase()}</strong>, here ${total === 1 ? 'is' : 'are'} ${total} ${noun} worth trying. The best match is marked.`
-        : `For <strong class="text-text-main-light dark:text-text-main-dark">${label.toLowerCase()}</strong>, these ${noun} can all help.`;
+        ? `Based on <strong class="text-text-main-light">${label.toLowerCase()}</strong>, here ${total === 1 ? 'is' : 'are'} ${total} ${noun} worth trying. The best match is marked.`
+        : `For <strong class="text-text-main-light">${label.toLowerCase()}</strong>, these ${noun} can all help.`;
       resultsIntro.innerHTML = lead;
     }
 

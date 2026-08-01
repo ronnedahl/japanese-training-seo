@@ -161,46 +161,46 @@ const traditions: TraditionEntry[] = [
   <main class="flex-1 w-full max-w-6xl mx-auto pb-12 px-6">
     <!-- Hero -->
     <section class="pt-10 pb-12 max-w-3xl">
-      <span class="inline-block py-1.5 px-3 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-accent-dark dark:text-emerald-400 text-xs font-bold uppercase tracking-wider mb-4 border border-emerald-200 dark:border-emerald-800">Pioneers &amp; Traditions</span>
-      <h1 class="font-serif text-[1.4rem] lg:text-[2.25rem] font-medium text-text-main-light dark:text-text-main-dark mb-6 leading-tight">
+      <span class="inline-block py-1.5 px-3 rounded-full bg-emerald-100 text-accent-dark text-xs font-bold uppercase tracking-wider mb-4 border border-emerald-200">Pioneers &amp; Traditions</span>
+      <h1 class="font-serif text-[1.4rem] lg:text-[2.25rem] font-medium text-text-main-light mb-6 leading-tight">
         The People and Traditions Behind the Practices We Share
       </h1>
-      <p class="text-lg lg:text-xl text-text-muted-light dark:text-text-muted-dark leading-relaxed mb-4">
+      <p class="text-lg lg:text-xl text-text-muted-light leading-relaxed mb-4">
         Every technique covered on Simple Senior Fitness comes from somewhere: from a Japanese clinician, a researcher, a temple posture, or a centuries-old collective practice. This page exists to give that attribution honestly.
       </p>
-      <p class="text-base text-text-muted-light dark:text-text-muted-dark leading-relaxed">
+      <p class="text-base text-text-muted-light leading-relaxed">
         Where a practice has a single, verifiable creator, we credit them by name and link to a primary source. Where it grew from collective tradition without one founder, we say so plainly. We're an independent site sharing what helped one of us, and we are not affiliated with any of the people, organisations, or traditions listed here.
       </p>
     </section>
 
     <!-- Featured Pioneers -->
     <section class="mb-16">
-      <h2 class="font-serif text-2xl lg:text-3xl font-medium text-text-main-light dark:text-text-main-dark mb-2">Featured Pioneers</h2>
-      <p class="text-text-muted-light dark:text-text-muted-dark mb-8">Verified individuals whose work is the source of techniques covered on this site.</p>
+      <h2 class="font-serif text-2xl lg:text-3xl font-medium text-text-main-light mb-2">Featured Pioneers</h2>
+      <p class="text-text-muted-light mb-8">Verified individuals whose work is the source of techniques covered on this site.</p>
 
       <div class="grid gap-6 md:grid-cols-2">
         {pioneers.map((p) => (
-          <article class="bg-white dark:bg-surface-dark rounded-xl p-6 lg:p-8 shadow-sm border border-gray-200 dark:border-gray-700 flex flex-col">
-            <span class="block text-[10px] font-bold text-accent-dark dark:text-emerald-400 uppercase tracking-wider mb-4">Featured Pioneer</span>
+          <article class="bg-white rounded-xl p-6 lg:p-8 shadow-sm border border-gray-200 flex flex-col">
+            <span class="block text-[10px] font-bold text-accent-dark uppercase tracking-wider mb-4">Featured Pioneer</span>
 
-            <div class="flex items-center justify-center size-20 rounded-full bg-emerald-50 dark:bg-emerald-900/30 mb-4">
-              <Icon name={p.iconName} class="size-10 text-accent-dark dark:text-emerald-400" aria-hidden="true" />
+            <div class="flex items-center justify-center size-20 rounded-full bg-emerald-50 mb-4">
+              <Icon name={p.iconName} class="size-10 text-accent-dark" aria-hidden="true" />
             </div>
 
-            <h3 class="font-serif text-xl lg:text-2xl font-bold text-text-main-light dark:text-text-main-dark leading-tight">{p.name}</h3>
-            {p.nameJp && <p class="text-sm text-text-muted-light dark:text-text-muted-dark mt-1" lang="ja">{p.nameJp}</p>}
-            {p.years && <p class="text-sm text-text-muted-light dark:text-text-muted-dark mt-1">{p.years}</p>}
+            <h3 class="font-serif text-xl lg:text-2xl font-bold text-text-main-light leading-tight">{p.name}</h3>
+            {p.nameJp && <p class="text-sm text-text-muted-light mt-1" lang="ja">{p.nameJp}</p>}
+            {p.years && <p class="text-sm text-text-muted-light mt-1">{p.years}</p>}
 
-            <p class="text-sm font-semibold text-accent-dark dark:text-emerald-400 mt-2 leading-snug">{p.role}</p>
+            <p class="text-sm font-semibold text-accent-dark mt-2 leading-snug">{p.role}</p>
 
-            <p class="text-sm lg:text-base text-text-muted-light dark:text-text-muted-dark leading-relaxed mt-4">{p.bio}</p>
+            <p class="text-sm lg:text-base text-text-muted-light leading-relaxed mt-4">{p.bio}</p>
 
             <div class="mt-6 mb-2">
-              <p class="text-xs font-bold text-text-main-light dark:text-text-main-dark uppercase tracking-wider mb-2">On this site</p>
+              <p class="text-xs font-bold text-text-main-light uppercase tracking-wider mb-2">On this site</p>
               <ul class="space-y-1">
                 {p.articles.map((a) => (
                   <li>
-                    <a href={a.href} class="inline-flex items-center gap-1 text-sm text-accent-dark dark:text-emerald-400 hover:underline">
+                    <a href={a.href} class="inline-flex items-center gap-1 text-sm text-accent-dark hover:underline">
                       <span>{a.label}</span>
                       <Icon name="lucide:arrow-right" class="size-3.5" aria-hidden="true" />
                     </a>
@@ -213,7 +213,7 @@ const traditions: TraditionEntry[] = [
               href={p.sourceUrl}
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center gap-1 mt-4 text-sm font-bold text-accent-dark dark:text-emerald-400 hover:underline group"
+              class="inline-flex items-center gap-1 mt-4 text-sm font-bold text-accent-dark hover:underline group"
             >
               <span>{p.sourceLabel}</span>
               <Icon name="lucide:external-link" class="size-3.5 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
@@ -226,31 +226,31 @@ const traditions: TraditionEntry[] = [
 
     <!-- Traditions -->
     <section class="mb-16">
-      <h2 class="font-serif text-2xl lg:text-3xl font-medium text-text-main-light dark:text-text-main-dark mb-2">Traditions</h2>
-      <p class="text-text-muted-light dark:text-text-muted-dark mb-8">Collective Japanese practices without a single creator, credited to their cultural and historical context.</p>
+      <h2 class="font-serif text-2xl lg:text-3xl font-medium text-text-main-light mb-2">Traditions</h2>
+      <p class="text-text-muted-light mb-8">Collective Japanese practices without a single creator, credited to their cultural and historical context.</p>
 
       <div class="grid gap-6 md:grid-cols-2">
         {traditions.map((t) => (
-          <article class="bg-white dark:bg-surface-dark rounded-xl p-6 lg:p-8 shadow-sm border border-gray-200 dark:border-gray-700 flex flex-col">
-            <span class="block text-[10px] font-bold text-accent-dark dark:text-emerald-400 uppercase tracking-wider mb-4">Tradition</span>
+          <article class="bg-white rounded-xl p-6 lg:p-8 shadow-sm border border-gray-200 flex flex-col">
+            <span class="block text-[10px] font-bold text-accent-dark uppercase tracking-wider mb-4">Tradition</span>
 
-            <div class="flex items-center justify-center size-20 rounded-full bg-emerald-50 dark:bg-emerald-900/30 mb-4">
-              <Icon name={t.iconName} class="size-10 text-accent-dark dark:text-emerald-400" aria-hidden="true" />
+            <div class="flex items-center justify-center size-20 rounded-full bg-emerald-50 mb-4">
+              <Icon name={t.iconName} class="size-10 text-accent-dark" aria-hidden="true" />
             </div>
 
-            <h3 class="font-serif text-xl lg:text-2xl font-bold text-text-main-light dark:text-text-main-dark leading-tight">{t.name}</h3>
-            {t.nameJp && <p class="text-sm text-text-muted-light dark:text-text-muted-dark mt-1" lang="ja">{t.nameJp}</p>}
+            <h3 class="font-serif text-xl lg:text-2xl font-bold text-text-main-light leading-tight">{t.name}</h3>
+            {t.nameJp && <p class="text-sm text-text-muted-light mt-1" lang="ja">{t.nameJp}</p>}
 
-            <p class="text-sm font-semibold text-accent-dark dark:text-emerald-400 mt-2 leading-snug">{t.origin}</p>
+            <p class="text-sm font-semibold text-accent-dark mt-2 leading-snug">{t.origin}</p>
 
-            <p class="text-sm lg:text-base text-text-muted-light dark:text-text-muted-dark leading-relaxed mt-4">{t.description}</p>
+            <p class="text-sm lg:text-base text-text-muted-light leading-relaxed mt-4">{t.description}</p>
 
             <div class="mt-6 mb-2">
-              <p class="text-xs font-bold text-text-main-light dark:text-text-main-dark uppercase tracking-wider mb-2">On this site</p>
+              <p class="text-xs font-bold text-text-main-light uppercase tracking-wider mb-2">On this site</p>
               <ul class="space-y-1">
                 {t.articles.map((a) => (
                   <li>
-                    <a href={a.href} class="inline-flex items-center gap-1 text-sm text-accent-dark dark:text-emerald-400 hover:underline">
+                    <a href={a.href} class="inline-flex items-center gap-1 text-sm text-accent-dark hover:underline">
                       <span>{a.label}</span>
                       <Icon name="lucide:arrow-right" class="size-3.5" aria-hidden="true" />
                     </a>
@@ -263,7 +263,7 @@ const traditions: TraditionEntry[] = [
               href={t.sourceUrl}
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center gap-1 mt-4 text-sm font-bold text-accent-dark dark:text-emerald-400 hover:underline group"
+              class="inline-flex items-center gap-1 mt-4 text-sm font-bold text-accent-dark hover:underline group"
             >
               <span>{t.sourceLabel}</span>
               <Icon name="lucide:external-link" class="size-3.5 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
@@ -276,9 +276,9 @@ const traditions: TraditionEntry[] = [
 
     <!-- Independence disclosure -->
     <section class="mb-12">
-      <div class="rounded-2xl p-6 lg:p-8 border border-gray-200 dark:border-gray-700">
-        <h3 class="font-bold text-text-main-light dark:text-text-main-dark mb-3">Independence Statement</h3>
-        <p class="text-sm lg:text-base text-text-muted-light dark:text-text-muted-dark leading-relaxed">
+      <div class="rounded-2xl p-6 lg:p-8 border border-gray-200">
+        <h3 class="font-bold text-text-main-light mb-3">Independence Statement</h3>
+        <p class="text-sm lg:text-base text-text-muted-light leading-relaxed">
           Simple Senior Fitness is an independent site. We are not affiliated with, endorsed by, or commercially connected to any of the pioneers, traditions, books, or organisations listed on this page. Where we link out to an author's book, a research society, or a Wikipedia article, that link is for attribution and further reading only. It carries no affiliate tracking and we receive no commission. Our aim is simply to give honest credit to the real Japanese practitioners and traditions behind every technique we share.
         </p>
       </div>
