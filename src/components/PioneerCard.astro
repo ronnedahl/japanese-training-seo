@@ -15,30 +15,30 @@ interface Props {
 const { name, role, contribution, iconName, sourceUrl, sourceLabel, years, nameJp } = Astro.props;
 ---
 
-<aside class="bg-white dark:bg-surface-dark rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700">
-  <span class="block text-[10px] font-bold text-accent-dark dark:text-emerald-400 uppercase tracking-wider mb-4">Featured Pioneer</span>
+<aside class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+  <span class="block text-[10px] font-bold text-accent-dark uppercase tracking-wider mb-4">Featured Pioneer</span>
 
-  <div class="flex items-center justify-center size-20 rounded-full bg-emerald-50 dark:bg-emerald-900/30 mb-4">
-    <Icon name={iconName} class="size-10 text-accent-dark dark:text-emerald-400" aria-hidden="true" />
+  <div class="flex items-center justify-center size-20 rounded-full bg-emerald-50 mb-4">
+    <Icon name={iconName} class="size-10 text-accent-dark" aria-hidden="true" />
   </div>
 
-  <h3 class="font-serif text-lg font-bold text-text-main-light dark:text-text-main-dark leading-tight">
+  <h3 class="font-serif text-lg font-bold text-text-main-light leading-tight">
     {name}
   </h3>
 
   {nameJp && (
-    <p class="text-sm text-text-muted-light dark:text-text-muted-dark mt-1" lang="ja">{nameJp}</p>
+    <p class="text-sm text-text-muted-light mt-1" lang="ja">{nameJp}</p>
   )}
 
   {years && (
-    <p class="text-sm text-text-muted-light dark:text-text-muted-dark mt-1">{years}</p>
+    <p class="text-sm text-text-muted-light mt-1">{years}</p>
   )}
 
-  <p class="text-sm font-semibold text-accent-dark dark:text-emerald-400 mt-2 leading-snug">
+  <p class="text-sm font-semibold text-accent-dark mt-2 leading-snug">
     {role}
   </p>
 
-  <p class="text-sm text-text-muted-light dark:text-text-muted-dark leading-relaxed mt-3">
+  <p class="text-sm text-text-muted-light leading-relaxed mt-3">
     {contribution}
   </p>
 
@@ -46,7 +46,7 @@ const { name, role, contribution, iconName, sourceUrl, sourceLabel, years, nameJ
     href={sourceUrl}
     target="_blank"
     rel="noopener noreferrer"
-    class="inline-flex items-center gap-1 mt-4 text-sm font-bold text-accent-dark dark:text-emerald-400 hover:underline group"
+    class="inline-flex items-center gap-1 mt-4 text-sm font-bold text-accent-dark hover:underline group"
   >
     <span>{sourceLabel}</span>
     <Icon name="lucide:external-link" class="size-3.5 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
@@ -55,15 +55,15 @@ const { name, role, contribution, iconName, sourceUrl, sourceLabel, years, nameJ
 
   <a
     href="/pioneers"
-    class="block mt-3 text-xs font-medium text-text-muted-light dark:text-text-muted-dark hover:text-accent-dark dark:hover:text-emerald-400 transition-colors group"
+    class="block mt-3 text-xs font-medium text-text-muted-light hover:text-accent-dark transition-colors group"
   >
     <span>View all pioneers</span>
     <Icon name="lucide:arrow-right" class="size-3 inline transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
   </a>
 
-  <hr class="my-5 border-gray-100 dark:border-gray-800" />
+  <hr class="my-5 border-gray-100" />
 
-  <p class="text-xs text-text-muted-light dark:text-text-muted-dark italic leading-relaxed">
+  <p class="text-xs text-text-muted-light italic leading-relaxed">
     This site credits and links to the original developers of each technique. We are not affiliated with them.
   </p>
 </aside>

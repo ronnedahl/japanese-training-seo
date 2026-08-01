@@ -10,7 +10,7 @@ const articlesByCategory = CATEGORIES.map((category) => ({
 })).filter((group) => group.items.length > 0);
 ---
 
-<header class="sticky top-0 z-50 w-full bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
+<header class="sticky top-0 z-50 w-full bg-background-light/95 backdrop-blur-sm border-b border-gray-200 transition-colors duration-300">
   <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
     <div class="flex items-center gap-4">
       <button
@@ -18,25 +18,25 @@ const articlesByCategory = CATEGORIES.map((category) => ({
         aria-label="Open menu"
         aria-expanded="false"
         aria-controls="mobile-menu"
-        class="material-symbols-outlined text-text-main-light dark:text-text-main-dark cursor-pointer p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors lg:hidden"
+        class="material-symbols-outlined text-text-main-light cursor-pointer p-2 hover:bg-gray-100 rounded-full transition-colors lg:hidden"
         style="font-size: 28px;"
       >menu</button>
-      <a href="/" class="text-[1rem] lg:text-[1.2rem] font-medium lg:font-bold tracking-tight text-text-main-light dark:text-text-main-dark font-serif hover:text-accent-dark dark:hover:text-accent-light transition-colors">Simple Senior Fitness</a>
+      <a href="/" class="text-[1rem] lg:text-[1.2rem] font-medium lg:font-bold tracking-tight text-text-main-light font-serif hover:text-accent-dark transition-colors">Simple Senior Fitness</a>
       <nav class="hidden lg:flex items-center gap-6 ml-8">
-        <a class="text-text-muted-light dark:text-text-muted-dark hover:text-accent-dark dark:hover:text-accent-light font-medium transition-colors" href="/">Home</a>
-        <a class="text-text-muted-light dark:text-text-muted-dark hover:text-accent-dark dark:hover:text-accent-light font-medium transition-colors" href="/practice-finder">Find Your Practice</a>
-        <a class="text-text-muted-light dark:text-text-muted-dark hover:text-accent-dark dark:hover:text-accent-light font-medium transition-colors" href="/about">About</a>
-        <a class="text-text-muted-light dark:text-text-muted-dark hover:text-accent-dark dark:hover:text-accent-light font-medium transition-colors" href="/pioneers">Pioneers</a>
+        <a class="text-text-muted-light hover:text-accent-dark font-medium transition-colors" href="/">Home</a>
+        <a class="text-text-muted-light hover:text-accent-dark font-medium transition-colors" href="/practice-finder">Find Your Practice</a>
+        <a class="text-text-muted-light hover:text-accent-dark font-medium transition-colors" href="/about">About</a>
+        <a class="text-text-muted-light hover:text-accent-dark font-medium transition-colors" href="/pioneers">Pioneers</a>
       </nav>
     </div>
     <div class="flex items-center gap-4">
-      <button aria-label="Search" class="material-symbols-outlined text-text-main-light dark:text-text-main-dark cursor-pointer p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors" style="font-size: 24px;">search</button>
+      <button aria-label="Search" class="material-symbols-outlined text-text-main-light cursor-pointer p-2 hover:bg-gray-100 rounded-full transition-colors" style="font-size: 24px;">search</button>
       <button aria-label="User Profile" class="flex items-center justify-center size-9 rounded-full bg-accent-dark text-white font-bold text-sm hover:opacity-90 transition-opacity shadow-sm">
         <span class="material-symbols-outlined" style="font-size: 20px;">person</span>
       </button>
     </div>
   </div>
-  <div class="h-1 w-full bg-gray-200 dark:bg-gray-700" role="presentation" aria-hidden="true">
+  <div class="h-1 w-full bg-gray-200" role="presentation" aria-hidden="true">
     <div class="h-full w-[35%] bg-accent-dark rounded-r-full"></div>
   </div>
 </header>
@@ -51,18 +51,18 @@ const articlesByCategory = CATEGORIES.map((category) => ({
 <!-- Mobile Menu Drawer -->
 <nav
   id="mobile-menu"
-  class="fixed top-0 left-0 h-full w-[280px] max-w-[85vw] bg-background-light dark:bg-background-dark z-[70] transform -translate-x-full transition-transform duration-300 ease-out lg:hidden shadow-2xl"
+  class="fixed top-0 left-0 h-full w-[280px] max-w-[85vw] bg-background-light z-[70] transform -translate-x-full transition-transform duration-300 ease-out lg:hidden shadow-2xl"
   aria-label="Mobile navigation"
   aria-hidden="true"
 >
   <div class="flex flex-col h-full">
     <!-- Menu Header -->
-    <div class="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
-      <span class="text-lg font-bold text-text-main-light dark:text-text-main-dark font-serif">Menu</span>
+    <div class="flex items-center justify-between p-4 border-b border-gray-200">
+      <span class="text-lg font-bold text-text-main-light font-serif">Menu</span>
       <button
         id="mobile-menu-close"
         aria-label="Close menu"
-        class="material-symbols-outlined text-text-main-light dark:text-text-main-dark p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors"
+        class="material-symbols-outlined text-text-main-light p-2 hover:bg-gray-100 rounded-full transition-colors"
         style="font-size: 24px;"
       >close</button>
     </div>
@@ -71,28 +71,28 @@ const articlesByCategory = CATEGORIES.map((category) => ({
     <div class="flex-1 overflow-y-auto py-4">
       <!-- Main Navigation -->
       <div class="px-4 mb-6">
-        <p class="text-xs font-bold uppercase tracking-wider text-text-muted-light dark:text-text-muted-dark mb-3">Navigation</p>
+        <p class="text-xs font-bold uppercase tracking-wider text-text-muted-light mb-3">Navigation</p>
         <ul class="space-y-1">
           <li>
-            <a href="/" class="flex items-center gap-3 px-3 py-3 rounded-lg text-text-main-light dark:text-text-main-dark hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+            <a href="/" class="flex items-center gap-3 px-3 py-3 rounded-lg text-text-main-light hover:bg-gray-100 transition-colors">
               <span class="material-symbols-outlined text-accent-dark" style="font-size: 22px;">home</span>
               <span class="font-medium">Home</span>
             </a>
           </li>
           <li>
-            <a href="/practice-finder" class="flex items-center gap-3 px-3 py-3 rounded-lg text-text-main-light dark:text-text-main-dark hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+            <a href="/practice-finder" class="flex items-center gap-3 px-3 py-3 rounded-lg text-text-main-light hover:bg-gray-100 transition-colors">
               <span class="material-symbols-outlined text-accent-dark" style="font-size: 22px;">explore</span>
               <span class="font-medium">Find Your Practice</span>
             </a>
           </li>
           <li>
-            <a href="/about" class="flex items-center gap-3 px-3 py-3 rounded-lg text-text-main-light dark:text-text-main-dark hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+            <a href="/about" class="flex items-center gap-3 px-3 py-3 rounded-lg text-text-main-light hover:bg-gray-100 transition-colors">
               <span class="material-symbols-outlined text-accent-dark" style="font-size: 22px;">person</span>
               <span class="font-medium">About</span>
             </a>
           </li>
           <li>
-            <a href="/pioneers" class="flex items-center gap-3 px-3 py-3 rounded-lg text-text-main-light dark:text-text-main-dark hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+            <a href="/pioneers" class="flex items-center gap-3 px-3 py-3 rounded-lg text-text-main-light hover:bg-gray-100 transition-colors">
               <span class="material-symbols-outlined text-accent-dark" style="font-size: 22px;">groups</span>
               <span class="font-medium">Pioneers</span>
             </a>
@@ -102,19 +102,19 @@ const articlesByCategory = CATEGORIES.map((category) => ({
 
       <!-- Practices by category (generated from the article manifest) -->
       <div class="px-4 mb-6">
-        <p class="text-xs font-bold uppercase tracking-wider text-text-muted-light dark:text-text-muted-dark mb-3">Practices</p>
+        <p class="text-xs font-bold uppercase tracking-wider text-text-muted-light mb-3">Practices</p>
         <div class="space-y-1">
           {articlesByCategory.map((category) => (
             <details class="group rounded-lg">
-              <summary class="flex items-center gap-3 px-3 py-3 rounded-lg text-text-main-light dark:text-text-main-dark hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+              <summary class="flex items-center gap-3 px-3 py-3 rounded-lg text-text-main-light hover:bg-gray-100 transition-colors cursor-pointer list-none [&::-webkit-details-marker]:hidden">
                 <span class="material-symbols-outlined text-accent-dark" style="font-size: 22px;" aria-hidden="true">{category.icon}</span>
                 <span class="font-medium flex-1">{category.label}</span>
-                <span class="material-symbols-outlined text-text-muted-light dark:text-text-muted-dark transition-transform duration-200 group-open:rotate-180" style="font-size: 20px;" aria-hidden="true">expand_more</span>
+                <span class="material-symbols-outlined text-text-muted-light transition-transform duration-200 group-open:rotate-180" style="font-size: 20px;" aria-hidden="true">expand_more</span>
               </summary>
-              <ul class="mt-1 ml-4 pl-4 border-l border-gray-200 dark:border-gray-700 space-y-1">
+              <ul class="mt-1 ml-4 pl-4 border-l border-gray-200 space-y-1">
                 {category.items.map((article) => (
                   <li>
-                    <a href={article.url} class="block px-3 py-2 rounded-lg text-sm text-text-muted-light dark:text-text-muted-dark hover:text-accent-dark dark:hover:text-accent-light hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                    <a href={article.url} class="block px-3 py-2 rounded-lg text-sm text-text-muted-light hover:text-accent-dark hover:bg-gray-100 transition-colors">
                       {article.title}
                     </a>
                   </li>
@@ -127,10 +127,10 @@ const articlesByCategory = CATEGORIES.map((category) => ({
 
       <!-- Legal -->
       <div class="px-4">
-        <p class="text-xs font-bold uppercase tracking-wider text-text-muted-light dark:text-text-muted-dark mb-3">Legal</p>
+        <p class="text-xs font-bold uppercase tracking-wider text-text-muted-light mb-3">Legal</p>
         <ul class="space-y-1">
           <li>
-            <a href="/privacy-policy" class="flex items-center gap-3 px-3 py-3 rounded-lg text-text-main-light dark:text-text-main-dark hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+            <a href="/privacy-policy" class="flex items-center gap-3 px-3 py-3 rounded-lg text-text-main-light hover:bg-gray-100 transition-colors">
               <span class="material-symbols-outlined text-accent-dark" style="font-size: 22px;">shield</span>
               <span class="font-medium">Privacy Policy</span>
             </a>
@@ -140,8 +140,8 @@ const articlesByCategory = CATEGORIES.map((category) => ({
     </div>
 
     <!-- Menu Footer -->
-    <div class="p-4 border-t border-gray-200 dark:border-gray-700">
-      <p class="text-xs text-text-muted-light dark:text-text-muted-dark text-center">
+    <div class="p-4 border-t border-gray-200">
+      <p class="text-xs text-text-muted-light text-center">
         © 2026 Simple Senior Fitness
       </p>
     </div>

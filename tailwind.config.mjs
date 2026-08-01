@@ -1,20 +1,20 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  // The site is light-theme only. Kept on the 'class' strategy (rather than the
+  // 'media' default) so a stray `dark:` utility can never be triggered by the
+  // visitor's OS preference.
   darkMode: 'class',
   theme: {
     extend: {
       colors: {
         primary: '#08f7b3',
         'background-light': '#f8fafc',
-        'background-dark': '#0f172a',
+        'background-dark': '#0f172a', // only used for text on `selection:bg-primary`
         'surface-light': '#ffffff',
-        'surface-dark': '#1e293b',
         'text-main-light': '#0f172a',
-        'text-main-dark': '#f8fafc',
         'text-muted-light': '#475569',
-        'text-muted-dark': '#94a3b8',
-        'accent-dark': '#047857',
+        'accent-dark': '#047857', // deep emerald brand accent (light theme)
         'accent-light': '#10b981',
       },
       fontFamily: {
