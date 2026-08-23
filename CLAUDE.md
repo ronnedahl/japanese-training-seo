@@ -128,7 +128,9 @@ The layout automatically generates:
 
 ## Image Handling
 
-- Images are stored in `src/assets/images/`
+- Images live in `src/assets/images/<page-slug>/`, one folder per page, named
+  after the page it belongs to (e.g. `src/assets/images/seiza-sitting-benefits/`)
+- Images used by more than one page go in `src/assets/images/shared/`
 - Use Astro's `Image` component for optimization
 - Import images directly in Astro components
 - Use descriptive alt text for all images

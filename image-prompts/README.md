@@ -20,5 +20,5 @@ Every prompt below is self-contained, but they all target the same visual style 
 
 1. For each prompt, copy the prompt block into ChatGPT (with DALL-E or GPT-Image)
 2. Download as `.jpg` (preferred for photos) or `.webp` (smaller file size)
-3. Save into `src/assets/images/` using the suggested filename
+3. Save into `src/assets/images/<page-slug>/` using the suggested filename, creating the folder if the page has none yet
 4. Once all images for a page are generated, add `import`s and `<figure>` blocks into the corresponding `.astro` file
