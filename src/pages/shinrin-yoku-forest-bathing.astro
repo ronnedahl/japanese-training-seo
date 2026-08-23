@@ -4,6 +4,13 @@ import MedicalDisclaimer from '../components/MedicalDisclaimer.astro';
 import Sidebar from '../components/Sidebar.astro';
 import PioneerCard from '../components/PioneerCard.astro';
 import shinrinYokuImage from '../assets/images/shinrin-yoku-forest-sunlight.jpg';
+import vsHikingImage from '../assets/images/forest-bathing-vs-hiking-mindful-standing-still.webp';
+import cedarBarkImage from '../assets/images/shinrin-yoku-touching-cedar-bark-phytoncides.webp';
+import benchStressImage from '../assets/images/senior-couple-forest-bathing-bench-stress-relief.webp';
+import fiveSensesImage from '../assets/images/shinrin-yoku-five-senses-nature-illustration.webp';
+import whatToBringImage from '../assets/images/what-to-bring-forest-bathing-checklist-gear.webp';
+import accessibleTrailImage from '../assets/images/forest-bathing-accessible-trail-rollator-senior.webp';
+import fourSeasonsImage from '../assets/images/shinrin-yoku-forest-path-four-seasons.webp';
 ---
 
 <BaseLayout
@@ -70,6 +77,19 @@ import shinrinYokuImage from '../assets/images/shinrin-yoku-forest-sunlight.jpg'
           Unlike hiking or traditional outdoor recreation, Shinrin-Yoku is not about physical exertion or reaching a destination. Instead, it's about slowing down, being present, and consciously engaging with nature through all your senses: seeing the play of light through leaves, hearing birdsong and rustling branches, feeling bark textures and cool breezes, smelling the earthy forest scent, and even tasting fresh air.
         </p>
 
+        <figure class="my-8">
+          <div class="w-full aspect-[3/2] rounded-2xl overflow-hidden shadow-lg">
+            <img
+              src={vsHikingImage.src}
+              alt="Older adult standing still on a woodland path with eyes closed, while a hiker walks briskly past in the background"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <figcaption class="text-sm text-text-muted-light mt-3 italic text-center">
+            The difference in one picture: hiking passes through the forest, Shinrin-Yoku stops inside it.
+          </figcaption>
+        </figure>
+
         <h3 class="font-serif text-[1.5rem] font-medium lg:text-2xl lg:font-medium text-text-main-light pt-2" id="science-behind">
           The Science Behind Forest Bathing
         </h3>
@@ -79,6 +99,19 @@ import shinrinYokuImage from '../assets/images/shinrin-yoku-forest-sunlight.jpg'
         <p class="text-xl leading-relaxed text-text-main-light font-normal">
           The secret lies partly in <strong>phytoncides</strong>, natural compounds released by trees and plants. When you breathe in forest air, you inhale these phytoncides, which have been shown to boost the activity of natural killer (NK) cells in your immune system. These cells are crucial for fighting infections and even preventing certain types of cancer.
         </p>
+
+        <figure class="my-8">
+          <div class="w-full aspect-[3/2] rounded-2xl overflow-hidden shadow-lg">
+            <img
+              src={cedarBarkImage.src}
+              alt="Close-up of an older adult hand resting on the furrowed bark of a cedar tree in dappled forest light"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <figcaption class="text-sm text-text-muted-light mt-3 italic text-center">
+            Cedars and other conifers release phytoncides, the airborne compounds linked to higher natural killer cell activity.
+          </figcaption>
+        </figure>
 
         <!-- Comparison Box -->
         <div class="grid md:grid-cols-2 gap-6 my-8">
@@ -153,6 +186,19 @@ import shinrinYokuImage from '../assets/images/shinrin-yoku-forest-sunlight.jpg'
         </div>
 
         <!-- How to Practice Section -->
+        <figure class="my-8">
+          <div class="w-full aspect-[3/2] rounded-2xl overflow-hidden shadow-lg">
+            <img
+              src={benchStressImage.src}
+              alt="Senior couple sitting quietly together on a wooden bench in a sunlit forest clearing, shoulders relaxed"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <figcaption class="text-sm text-text-muted-light mt-3 italic text-center">
+            Sitting still is where much of the effect shows up: lower cortisol, slower pulse, calmer blood pressure.
+          </figcaption>
+        </figure>
+
         <h2 class="font-serif text-[1.5rem] font-medium lg:text-3xl lg:font-medium text-text-main-light pt-4" id="how-to-practice">
           How to Practice Shinrin-Yoku: A Step-by-Step Guide
         </h2>
@@ -226,6 +272,19 @@ import shinrinYokuImage from '../assets/images/shinrin-yoku-forest-sunlight.jpg'
           <p class="text-base text-text-main-light mb-4">
             This is the heart of Shinrin-Yoku. Consciously use each sense to connect with your surroundings:
           </p>
+          <figure class="my-8">
+            <div class="w-full max-w-lg mx-auto aspect-[3/2] rounded-2xl overflow-hidden shadow-lg">
+              <img
+                src={fiveSensesImage.src}
+                alt="Illustration of the five senses in a forest setting: sight, sound, smell, touch and taste linked to leaves, birds, pine, bark and fresh air"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <figcaption class="text-sm text-text-muted-light mt-3 italic text-center">
+              The five doorways into the practice. Use one at a time rather than trying to track all five at once.
+            </figcaption>
+          </figure>
+
           <div class="grid gap-4">
             <div>
               <strong class="text-text-main-light">Sight:</strong>
@@ -297,6 +356,19 @@ import shinrinYokuImage from '../assets/images/shinrin-yoku-forest-sunlight.jpg'
           </div>
         </div>
 
+        <figure class="my-8">
+          <div class="w-full aspect-[3/2] rounded-2xl overflow-hidden shadow-lg">
+            <img
+              src={whatToBringImage.src}
+              alt="Flat lay of forest bathing essentials: walking shoes, water bottle, light rain jacket, sun hat, folding seat and a small notebook"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <figcaption class="text-sm text-text-muted-light mt-3 italic text-center">
+            Nothing here is required. Comfortable shoes, water and something to sit on cover almost every outing.
+          </figcaption>
+        </figure>
+
         <!-- Tips for Limited Mobility -->
         <h2 class="font-serif text-[1.5rem] font-medium lg:text-3xl lg:font-medium text-text-main-light pt-4" id="limited-mobility">
           Tips for Seniors with Limited Mobility
@@ -339,6 +411,19 @@ import shinrinYokuImage from '../assets/images/shinrin-yoku-forest-sunlight.jpg'
           </p>
         </div>
 
+        <figure class="my-8">
+          <div class="w-full aspect-[3/2] rounded-2xl overflow-hidden shadow-lg">
+            <img
+              src={accessibleTrailImage.src}
+              alt="Senior walking slowly along a wide, level, well-surfaced forest trail using a rollator with a seat"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <figcaption class="text-sm text-text-muted-light mt-3 italic text-center">
+            A paved loop with benches counts. Even thirty minutes seated among trees produces measurable changes.
+          </figcaption>
+        </figure>
+
         <!-- Best Times Section -->
         <h2 class="font-serif text-[1.5rem] font-medium lg:text-3xl lg:font-medium text-text-main-light pt-4" id="best-times">
           Best Times and Seasons for Forest Bathing
@@ -364,6 +449,19 @@ import shinrinYokuImage from '../assets/images/shinrin-yoku-forest-sunlight.jpg'
         <p class="text-base text-text-muted-light italic">
           <strong>Optimal Time of Day:</strong> Morning sessions (before 11 AM) provide cooler temperatures, higher phytoncide concentrations, and quieter trails.
         </p>
+
+        <figure class="my-8">
+          <div class="w-full aspect-[3/2] rounded-2xl overflow-hidden shadow-lg">
+            <img
+              src={fourSeasonsImage.src}
+              alt="The same forest path shown across the four seasons: spring blossom, summer canopy, autumn colour and winter snow"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <figcaption class="text-sm text-text-muted-light mt-3 italic text-center">
+            Every season offers something. Evergreens keep releasing phytoncides straight through the winter.
+          </figcaption>
+        </figure>
 
         <!-- Common Mistakes Section -->
         <h2 class="font-serif text-[1.5rem] font-medium lg:text-3xl lg:font-medium text-text-main-light pt-4" id="common-mistakes">
