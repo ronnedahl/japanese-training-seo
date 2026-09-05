@@ -9,6 +9,7 @@ import kinhinIndoor from '../assets/images/kinhin-walking-meditation/kinhin-walk
 import kinhinCircle from '../assets/images/kinhin-walking-meditation/kinhin-circular-walking-pattern-overhead.webp';
 import kinhinForest from '../assets/images/kinhin-walking-meditation/kinhin-forest-walking-meditation-nature.webp';
 import kinhinZazen from '../assets/images/kinhin-walking-meditation/kinhin-zazen-seated-meditation-integration.webp';
+import ExploreMethods from '../components/ExploreMethods.astro';
 ---
 
 <BaseLayout
@@ -671,33 +672,6 @@ import kinhinZazen from '../assets/images/kinhin-walking-meditation/kinhin-zazen
           </p>
         </section>
 
-        <!-- Related Articles -->
-        <section class="mb-12">
-          <h2 class="font-serif text-[1.5rem] font-medium lg:text-3xl lg:font-medium text-text-main-light mb-6">Explore More Japanese Wellness Practices</h2>
-
-          <div class="grid gap-4">
-            <a href="/shinrin-yoku-forest-bathing" class="block rounded-xl p-6 hover:shadow-md transition-shadow">
-              <h3 class="font-bold text-text-main-light">Shinrin-Yoku Forest Bathing</h3>
-              <p class="text-text-muted-light text-base">Combine kinhin with nature immersion for the ultimate mindful walking experience.</p>
-            </a>
-
-            <a href="/seiza-sitting-benefits" class="block rounded-xl p-6 hover:shadow-md transition-shadow">
-              <h3 class="font-bold text-text-main-light">Seiza Sitting</h3>
-              <p class="text-text-muted-light text-base">Traditional Japanese floor sitting, alternate with kinhin for a complete Zen practice session.</p>
-            </a>
-
-            <a href="/hara-breathing-exercises" class="block rounded-xl p-6 hover:shadow-md transition-shadow">
-              <h3 class="font-bold text-text-main-light">Hara Breathing</h3>
-              <p class="text-text-muted-light text-base">Deepen your kinhin practice with advanced Hara breathing techniques from the Japanese tradition.</p>
-            </a>
-
-            <a href="/sotai-natural-movement" class="block rounded-xl p-6 hover:shadow-md transition-shadow">
-              <h3 class="font-bold text-text-main-light">Sotai Natural Movement Therapy</h3>
-              <p class="text-text-muted-light text-base">Gentle Japanese movement therapy that works with your body's natural patterns.</p>
-            </a>
-          </div>
-        </section>
-
         <!-- Disclaimer -->
         <MedicalDisclaimer>
           This article is for informational purposes only and should not replace professional medical advice. If you have balance disorders, neurological conditions, or other health concerns, consult your healthcare provider before beginning kinhin practice. Always practice near support if balance is a concern, and stop if you experience dizziness or pain.
@@ -718,5 +692,7 @@ import kinhinZazen from '../assets/images/kinhin-walking-meditation/kinhin-zazen
         />
       </Sidebar>
     </div>
+
+    <ExploreMethods />
   </main>
 </BaseLayout>

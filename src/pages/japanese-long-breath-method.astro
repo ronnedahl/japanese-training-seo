@@ -4,6 +4,7 @@ import MedicalDisclaimer from '../components/MedicalDisclaimer.astro';
 import Sidebar from '../components/Sidebar.astro';
 import bellyBreathing from '../assets/images/japanese-long-breath-method/japanese-long-breath-method-belly-breathing-technique.webp';
 import seniorsExercise from '../assets/images/japanese-long-breath-method/japanese-long-breath-method-seniors-exercise.webp';
+import ExploreMethods from '../components/ExploreMethods.astro';
 ---
 
 <BaseLayout
@@ -290,38 +291,6 @@ import seniorsExercise from '../assets/images/japanese-long-breath-method/japane
           </p>
         </section>
 
-        <!-- Related Articles -->
-        <section class="mb-12">
-          <h2 class="font-serif text-[1.5rem] font-medium lg:text-3xl lg:font-medium text-text-main-light mb-6">Explore More Japanese Wellness Practices</h2>
-
-          <div class="grid gap-4">
-            <a href="/hara-breathing-exercises" class="block rounded-xl p-6 hover:shadow-md transition-shadow">
-              <h3 class="font-bold text-text-main-light">Hara Breathing</h3>
-              <p class="text-text-muted-light text-base">Belly-centered breathwork that complements the Long Breath Method beautifully.</p>
-            </a>
-
-            <a href="/rajio-taiso-radio-calisthenics" class="block rounded-xl p-6 hover:shadow-md transition-shadow">
-              <h3 class="font-bold text-text-main-light">Rajio Taiso</h3>
-              <p class="text-text-muted-light text-base">Japan's national 3-minute calisthenics routine, perfect after your daily breathing practice.</p>
-            </a>
-
-            <a href="/makko-ho-stretching" class="block rounded-xl p-6 hover:shadow-md transition-shadow">
-              <h3 class="font-bold text-text-main-light">Makko-Ho Stretching</h3>
-              <p class="text-text-muted-light text-base">Four gentle poses that improve flexibility and pair naturally with deep breathing.</p>
-            </a>
-
-            <a href="/seiza-sitting-benefits" class="block rounded-xl p-6 hover:shadow-md transition-shadow">
-              <h3 class="font-bold text-text-main-light">Seiza Sitting</h3>
-              <p class="text-text-muted-light text-base">Traditional Japanese floor posture, an ideal seated position for breathing practice.</p>
-            </a>
-
-            <a href="/towel-stretch-for-back" class="block rounded-xl p-6 hover:shadow-md transition-shadow">
-              <h3 class="font-bold text-text-main-light">Japanese Towel Stretch</h3>
-              <p class="text-text-muted-light text-base">The Fukutsuji method for back relief, works beautifully alongside core breathing.</p>
-            </a>
-          </div>
-        </section>
-
         <!-- Disclaimer -->
         <MedicalDisclaimer>
           This article is for informational purposes only and should not replace professional medical advice. If you have uncontrolled high blood pressure, respiratory conditions, or any other health concerns, consult your healthcare provider before beginning the Japanese Long Breath Method. Stop immediately if you experience persistent dizziness, chest discomfort, or pain.
@@ -331,5 +300,7 @@ import seniorsExercise from '../assets/images/japanese-long-breath-method/japane
 
       <Sidebar tocItems={[]} />
     </div>
+
+    <ExploreMethods />
   </main>
 </BaseLayout>

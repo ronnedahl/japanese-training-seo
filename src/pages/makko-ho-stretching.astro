@@ -9,6 +9,7 @@ import straddleImage from '../assets/images/makko-ho-stretching/makko-ho-butterf
 import sideStretchImage from '../assets/images/makko-ho-stretching/makko-ho-seated-side-stretch-seniors.webp';
 import backBendImage from '../assets/images/makko-ho-stretching/makko-ho-reclining-seiza-stretch-seniors.webp';
 import practiceImage from '../assets/images/makko-ho-stretching/makko-ho-cross-legged-stretch-seniors.webp';
+import ExploreMethods from '../components/ExploreMethods.astro';
 ---
 
 <BaseLayout
@@ -697,48 +698,6 @@ import practiceImage from '../assets/images/makko-ho-stretching/makko-ho-cross-l
           This article is for informational purposes only and should not replace professional medical advice. Consult with your healthcare provider before beginning any new exercise program, especially if you have existing health conditions, injuries, or concerns. If you experience pain during these stretches, stop immediately and seek professional guidance.
         </MedicalDisclaimer>
 
-        <!-- Related Articles -->
-        <div class="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-2xl p-8 mt-12 border border-emerald-200">
-          <h2 class="font-serif text-[1.5rem] font-medium lg:text-2xl lg:font-medium text-text-main-light mb-4">Explore More Japanese Wellness Practices</h2>
-          <p class="text-lg text-text-main-light mb-6">
-            Enhance your Makko-Ho practice with these complementary Japanese wellness techniques.
-          </p>
-          <div class="grid md:grid-cols-2 gap-4 mb-6">
-            <a href="/hara-breathing-exercises" class="flex items-center gap-4 p-4 bg-white/70 rounded-xl hover:bg-white transition-colors">
-              <span class="material-symbols-outlined text-accent-dark text-2xl">respiratory_rate</span>
-              <div>
-                <span class="font-bold text-text-main-light">Hara Breathing</span>
-                <p class="text-sm text-text-muted-light">Deep breathing for relaxation</p>
-              </div>
-            </a>
-            <a href="/seiza-sitting-benefits" class="flex items-center gap-4 p-4 bg-white/70 rounded-xl hover:bg-white transition-colors">
-              <span class="material-symbols-outlined text-accent-dark text-2xl">self_improvement</span>
-              <div>
-                <span class="font-bold text-text-main-light">Seiza Sitting</span>
-                <p class="text-sm text-text-muted-light">Traditional floor posture</p>
-              </div>
-            </a>
-            <a href="/rajio-taiso-radio-calisthenics" class="flex items-center gap-4 p-4 bg-white/70 rounded-xl hover:bg-white transition-colors">
-              <span class="material-symbols-outlined text-accent-dark text-2xl">directions_run</span>
-              <div>
-                <span class="font-bold text-text-main-light">Radio Taiso</span>
-                <p class="text-sm text-text-muted-light">Daily morning exercises</p>
-              </div>
-            </a>
-            <a href="/shinrin-yoku-forest-bathing" class="flex items-center gap-4 p-4 bg-white/70 rounded-xl hover:bg-white transition-colors">
-              <span class="material-symbols-outlined text-accent-dark text-2xl">forest</span>
-              <div>
-                <span class="font-bold text-text-main-light">Shinrin-Yoku</span>
-                <p class="text-sm text-text-muted-light">Nature therapy walks</p>
-              </div>
-            </a>
-          </div>
-          <a href="/" class="inline-flex items-center gap-2 bg-accent-dark hover:bg-emerald-800 text-white font-bold py-3 px-6 rounded-lg transition-colors shadow-md hover:shadow-lg">
-            Browse All Articles
-            <span class="material-symbols-outlined text-sm">arrow_forward</span>
-          </a>
-        </div>
-
       </article>
 
       <Sidebar tocItems={[
@@ -765,5 +724,7 @@ import practiceImage from '../assets/images/makko-ho-stretching/makko-ho-cross-l
       </Sidebar>
 
     </div>
+
+    <ExploreMethods />
   </main>
 </BaseLayout>
