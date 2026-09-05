@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Sidebar from '../components/Sidebar.astro';
 import towelStretchImage from '../assets/images/shared/towel-stretch-exercise.png';
 import towelImage from '../assets/towel-small.jpg';
+import ExploreMethods from '../components/ExploreMethods.astro';
 ---
 
 <BaseLayout
@@ -197,63 +198,6 @@ import towelImage from '../assets/towel-small.jpg';
           Remember: the Japanese approach isn't about quick fixes. It's about building sustainable habits that support your body for the long term. Start with one or two techniques that feel good to you, and gradually build your routine from there. Your neck will thank you.
         </p>
 
-        <!-- Related Articles Section -->
-        <div class="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-2xl p-8 mt-12 border border-emerald-200">
-          <h2 class="font-serif text-[1.5rem] font-medium lg:text-2xl lg:font-medium text-text-main-light mb-6">Explore More Japanese Wellness Practices</h2>
-          <div class="grid gap-4">
-            <a href="/rajio-taiso-radio-calisthenics" class="bg-white p-4 rounded-xl border border-gray-200 hover:border-accent-dark transition-colors group">
-              <div class="flex items-center gap-4">
-                <span class="material-symbols-outlined text-3xl text-accent-dark">fitness_center</span>
-                <div>
-                  <h3 class="font-bold text-lg text-text-main-light group-hover:text-accent-dark transition-colors">Radio Taiso</h3>
-                  <p class="text-sm text-text-muted-light">Japan's 3-minute morning exercise routine for better balance and flexibility.</p>
-                </div>
-                <span class="material-symbols-outlined text-gray-400 group-hover:text-accent-dark ml-auto">arrow_forward</span>
-              </div>
-            </a>
-            <a href="/shinrin-yoku-forest-bathing" class="bg-white p-4 rounded-xl border border-gray-200 hover:border-accent-dark transition-colors group">
-              <div class="flex items-center gap-4">
-                <span class="material-symbols-outlined text-3xl text-accent-dark">forest</span>
-                <div>
-                  <h3 class="font-bold text-lg text-text-main-light group-hover:text-accent-dark transition-colors">Shinrin-Yoku</h3>
-                  <p class="text-sm text-text-muted-light">Forest bathing for stress relief, better immunity, and mental clarity.</p>
-                </div>
-                <span class="material-symbols-outlined text-gray-400 group-hover:text-accent-dark ml-auto">arrow_forward</span>
-              </div>
-            </a>
-            <a href="/makko-ho-stretching" class="bg-white p-4 rounded-xl border border-gray-200 hover:border-accent-dark transition-colors group">
-              <div class="flex items-center gap-4">
-                <span class="material-symbols-outlined text-3xl text-accent-dark">self_improvement</span>
-                <div>
-                  <h3 class="font-bold text-lg text-text-main-light group-hover:text-accent-dark transition-colors">Makko-Ho</h3>
-                  <p class="text-sm text-text-muted-light">4-pose meridian stretching for energy flow, flexibility, and relaxation.</p>
-                </div>
-                <span class="material-symbols-outlined text-gray-400 group-hover:text-accent-dark ml-auto">arrow_forward</span>
-              </div>
-            </a>
-            <a href="/hara-breathing-exercises" class="bg-white p-4 rounded-xl border border-gray-200 hover:border-accent-dark transition-colors group">
-              <div class="flex items-center gap-4">
-                <span class="material-symbols-outlined text-3xl text-accent-dark">respiratory_rate</span>
-                <div>
-                  <h3 class="font-bold text-lg text-text-main-light group-hover:text-accent-dark transition-colors">Hara Breathing</h3>
-                  <p class="text-sm text-text-muted-light">Japanese belly breathing for stress relief, lower blood pressure, and better sleep.</p>
-                </div>
-                <span class="material-symbols-outlined text-gray-400 group-hover:text-accent-dark ml-auto">arrow_forward</span>
-              </div>
-            </a>
-            <a href="/seiza-sitting-benefits" class="bg-white p-4 rounded-xl border border-gray-200 hover:border-accent-dark transition-colors group">
-              <div class="flex items-center gap-4">
-                <span class="material-symbols-outlined text-3xl text-accent-dark">self_improvement</span>
-                <div>
-                  <h3 class="font-bold text-lg text-text-main-light group-hover:text-accent-dark transition-colors">Seiza Sitting</h3>
-                  <p class="text-sm text-text-muted-light">Traditional Japanese floor sitting for posture, knee health, and mindfulness.</p>
-                </div>
-                <span class="material-symbols-outlined text-gray-400 group-hover:text-accent-dark ml-auto">arrow_forward</span>
-              </div>
-            </a>
-          </div>
-        </div>
-
       </article>
 
       <Sidebar tocItems={[
@@ -268,5 +212,7 @@ import towelImage from '../assets/towel-small.jpg';
       ]} />
 
     </div>
+
+    <ExploreMethods />
   </main>
 </BaseLayout>

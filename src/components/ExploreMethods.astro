@@ -1,0 +1,80 @@
+---
+// Cross-links to the other practices on the site, rendered full width at the
+// bottom of an article (outside the two-column grid).
+//
+// This used to live in two places at once: the "Japanese Exercise Methods" card
+// in Sidebar.astro, and a hand-written "Explore More" block at the end of nine
+// article pages. The sidebar card made the sidebar taller than the viewport,
+// which forced an inner scrollbar, so the list moved down here and the two were
+// merged into this single component.
+//
+// The order, numbering and subtitles are carried over verbatim from the sidebar
+// card. NOTE: this is 12 of the 15 articles in src/data/articles.ts - the three
+// Fukutsuji pages that were never in the sidebar card are still missing here.
+
+interface Method {
+  url: string;
+  title: string;
+  subtitle: string;
+}
+
+const METHODS: Method[] = [
+  { url: '/rajio-taiso-radio-calisthenics', title: 'Rajio Taiso',             subtitle: 'Radio Calisthenics' },
+  { url: '/shinrin-yoku-forest-bathing',    title: 'Shinrin-Yoku',            subtitle: 'Forest Bathing Walks' },
+  { url: '/makko-ho-stretching',            title: 'Makko-Ho',                subtitle: '4-Pose Meridian Stretching' },
+  { url: '/seiza-sitting-benefits',         title: 'Seiza Sitting',           subtitle: 'Traditional Floor Posture' },
+  { url: '/hara-breathing-exercises',       title: 'Hara Breathing',          subtitle: 'Belly-Centered Breathwork' },
+  { url: '/towel-stretch-for-back',         title: 'Towel Stretch for Back',  subtitle: 'Fukutsuji Method' },
+  { url: '/asa-no-taiso-morning-stretch',   title: 'Morning Stretch Routine', subtitle: 'Asa no Taisō' },
+  { url: '/do-in-self-massage',             title: 'Do-In Self Massage',      subtitle: 'Acupressure Techniques' },
+  { url: '/sotai-natural-movement',         title: 'Sotai',                   subtitle: 'Natural Movement Therapy' },
+  { url: '/kinhin-walking-meditation',      title: 'Kinhin',                  subtitle: 'Walking Meditation' },
+  { url: '/japanese-long-breath-method',    title: 'Long Breath Method',      subtitle: 'Ryosuke Breathing' },
+  { url: '/fukutsuji-vs-yoga',              title: 'Fukutsuji vs Yoga',       subtitle: 'Comparison for Seniors' },
+];
+
+// Never link to the page we are already on. `trailingSlash: 'never'` is set in
+// astro.config.mjs, but the home page still arrives here as '/'.
+const currentPath = Astro.url.pathname.replace(/\/+$/, '');
+const methods = METHODS.filter((method) => method.url !== currentPath);
+---
+
+<section
+  class="mt-12 rounded-2xl border border-emerald-200 bg-gradient-to-r from-emerald-50 to-teal-50 p-6 lg:p-8"
+  aria-labelledby="explore-methods-heading"
+>
+  <h2
+    id="explore-methods-heading"
+    class="font-serif text-[1.5rem] font-medium lg:text-2xl lg:font-medium text-text-main-light mb-2"
+  >
+    Explore More Japanese Wellness Practices
+  </h2>
+  <p class="text-text-muted-light mb-6">
+    Traditional techniques for longevity and wellness — pick the one your body is asking for.
+  </p>
+
+  <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    {methods.map((method, index) => (
+      <li>
+        <a
+          href={method.url}
+          class="group flex h-full items-center gap-3 rounded-xl border border-gray-200 bg-white p-4 transition-colors hover:border-accent-dark"
+        >
+          <span class="flex size-9 shrink-0 items-center justify-center rounded-lg bg-emerald-100 text-sm font-bold text-accent-dark transition-colors group-hover:bg-accent-dark group-hover:text-white">
+            {index + 1}
+          </span>
+          <span class="min-w-0 flex-1">
+            <span class="block font-bold text-text-main-light transition-colors group-hover:text-accent-dark">
+              {method.title}
+            </span>
+            <span class="block text-sm text-text-muted-light">{method.subtitle}</span>
+          </span>
+          <span
+            class="material-symbols-outlined shrink-0 text-gray-300 transition-colors group-hover:text-accent-dark"
+            aria-hidden="true"
+          >arrow_forward</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+</section>

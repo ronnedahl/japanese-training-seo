@@ -6,6 +6,7 @@ import TraditionCard from '../components/TraditionCard.astro';
 import seizaImage from '../assets/images/seiza-sitting-benefits/seiza-sitting-meditation.png';
 import seizaGettingIntoPosition from '../assets/images/seiza-sitting-benefits/seiza-getting-into-position-kneeling.webp';
 import seizaZafuModification from '../assets/images/seiza-sitting-benefits/seiza-zafu-cushion-modification.webp';
+import ExploreMethods from '../components/ExploreMethods.astro';
 ---
 
 <BaseLayout
@@ -917,43 +918,6 @@ import seizaZafuModification from '../assets/images/seiza-sitting-benefits/seiza
           </div>
         </section>
 
-        <!-- Related Articles -->
-        <section class="mb-12">
-          <div class="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-2xl p-8 border border-emerald-200">
-            <h2 class="font-serif text-[1.5rem] font-medium lg:text-2xl lg:font-medium text-text-main-light mb-6">Explore More Japanese Wellness Practices</h2>
-            <div class="grid gap-4">
-              <a href="/rajio-taiso-radio-calisthenics" class="flex items-center gap-4 p-4 bg-white/70 rounded-xl hover:bg-white transition-colors">
-                <span class="material-symbols-outlined text-emerald-600" style="font-size: 32px;">fitness_center</span>
-                <div>
-                  <h3 class="font-semibold text-text-main-light">Radio Taiso</h3>
-                  <p class="text-sm text-text-muted-light">Japan's beloved morning exercise routine for all ages</p>
-                </div>
-              </a>
-              <a href="/shinrin-yoku-forest-bathing" class="flex items-center gap-4 p-4 bg-white/70 rounded-xl hover:bg-white transition-colors">
-                <span class="material-symbols-outlined text-emerald-600" style="font-size: 32px;">forest</span>
-                <div>
-                  <h3 class="font-semibold text-text-main-light">Shinrin-Yoku</h3>
-                  <p class="text-sm text-text-muted-light">The healing art of forest bathing</p>
-                </div>
-              </a>
-              <a href="/makko-ho-stretching" class="flex items-center gap-4 p-4 bg-white/70 rounded-xl hover:bg-white transition-colors">
-                <span class="material-symbols-outlined text-emerald-600" style="font-size: 32px;">self_improvement</span>
-                <div>
-                  <h3 class="font-semibold text-text-main-light">Makko-Ho</h3>
-                  <p class="text-sm text-text-muted-light">4-pose meridian stretching for flexibility and energy</p>
-                </div>
-              </a>
-              <a href="/hara-breathing-exercises" class="flex items-center gap-4 p-4 bg-white/70 rounded-xl hover:bg-white transition-colors">
-                <span class="material-symbols-outlined text-emerald-600" style="font-size: 32px;">respiratory_rate</span>
-                <div>
-                  <h3 class="font-semibold text-text-main-light">Hara Breathing</h3>
-                  <p class="text-sm text-text-muted-light">Japanese belly breathing for calm and vitality</p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </section>
-
         <!-- Disclaimer -->
         <section class="mb-12">
           <MedicalDisclaimer>
@@ -976,5 +940,7 @@ import seizaZafuModification from '../assets/images/seiza-sitting-benefits/seiza
         />
       </Sidebar>
     </div>
+
+    <ExploreMethods />
   </main>
 </BaseLayout>

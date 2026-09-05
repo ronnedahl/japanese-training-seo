@@ -6,6 +6,7 @@ import PioneerCard from '../components/PioneerCard.astro';
 import comparisonImage from '../assets/images/fukutsuji-vs-yoga/fukutsuji-method-vs-yoga-comparison-seniors.webp';
 import towelPosition from '../assets/images/fukutsuji-vs-yoga/fukutsuji-method-towel-stretch-position.webp';
 import chairYoga from '../assets/images/fukutsuji-vs-yoga/chair-yoga-seniors-gentle-twist.webp';
+import ExploreMethods from '../components/ExploreMethods.astro';
 ---
 
 <BaseLayout
@@ -283,38 +284,6 @@ import chairYoga from '../assets/images/fukutsuji-vs-yoga/chair-yoga-seniors-gen
           </p>
         </section>
 
-        <!-- Related Articles -->
-        <section class="mb-12">
-          <h2 class="font-serif text-[1.5rem] font-medium lg:text-3xl lg:font-medium text-text-main-light mb-6">Explore More Gentle Practices</h2>
-
-          <div class="grid gap-4">
-            <a href="/towel-stretch-for-back" class="block rounded-xl p-6 hover:shadow-md transition-shadow">
-              <h3 class="font-bold text-text-main-light">The Fukutsuji Towel Stretch</h3>
-              <p class="text-text-muted-light text-base">The full step-by-step guide to the five-minute Japanese back-relief method.</p>
-            </a>
-
-            <a href="/makko-ho-stretching" class="block rounded-xl p-6 hover:shadow-md transition-shadow">
-              <h3 class="font-bold text-text-main-light">Makko-Ho Stretching</h3>
-              <p class="text-text-muted-light text-base">Four gentle Japanese poses that improve flexibility, a natural complement to chair yoga.</p>
-            </a>
-
-            <a href="/hara-breathing-exercises" class="block rounded-xl p-6 hover:shadow-md transition-shadow">
-              <h3 class="font-bold text-text-main-light">Hara Breathing</h3>
-              <p class="text-text-muted-light text-base">Belly-centered breathwork that adds calm and depth to either practice.</p>
-            </a>
-
-            <a href="/japanese-long-breath-method" class="block rounded-xl p-6 hover:shadow-md transition-shadow">
-              <h3 class="font-bold text-text-main-light">Japanese Long Breath Method</h3>
-              <p class="text-text-muted-light text-base">A two-minute breathing exercise that quietly strengthens the deep core.</p>
-            </a>
-
-            <a href="/asa-no-taiso-morning-stretch" class="block rounded-xl p-6 hover:shadow-md transition-shadow">
-              <h3 class="font-bold text-text-main-light">Asa no Taiso Morning Stretch</h3>
-              <p class="text-text-muted-light text-base">A short Japanese wake-up routine that pairs naturally with morning yoga.</p>
-            </a>
-          </div>
-        </section>
-
         <!-- Disclaimer -->
         <MedicalDisclaimer>
           This article is for informational purposes only and is not a substitute for professional medical advice. If you have recent spinal surgery, disc problems, severe osteoporosis, or any acute injury, consult your healthcare provider before beginning either the Fukutsuji method or a yoga practice. Stop immediately if you experience sharp pain, dizziness, or any symptom that feels unusual.
@@ -334,5 +303,7 @@ import chairYoga from '../assets/images/fukutsuji-vs-yoga/chair-yoga-seniors-gen
         />
       </Sidebar>
     </div>
+
+    <ExploreMethods />
   </main>
 </BaseLayout>

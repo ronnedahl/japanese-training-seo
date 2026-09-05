@@ -1,5 +1,19 @@
 ---
-// Sidebar component with table of contents, product card, author card, and related topics
+// Article sidebar: the essential-tool card, an optional per-article pioneer card,
+// and the table of contents.
+//
+// Two layout rules hold this together, both easy to break by accident:
+//
+// 1. <aside> is a grid item and keeps the default `align-items: stretch`, so it
+//    is as tall as the article beside it. That height is the track the sticky
+//    table of contents runs along - a sticky element can never move outside its
+//    containing block, so `align-self: start` would shrink the aside to its own
+//    content and unstick the TOC almost immediately.
+// 2. The TOC is last. A sticky element stays put while later siblings scroll up
+//    past it, so anything placed after it would slide underneath.
+//
+// Sticky also needs no scroll-container ancestor - see the `overflow-x-clip`
+// note in BaseLayout.astro.
 import { Image } from 'astro:assets';
 import towelImage from '../assets/towel-small.jpg';
 
@@ -15,195 +29,131 @@ interface Props {
 const { tocItems = [] } = Astro.props;
 ---
 
-<aside class="hidden lg:block lg:col-span-4 relative">
-  <div class="sticky top-24 space-y-8">
+<aside class="hidden space-y-8 lg:col-span-4 lg:block">
 
-    <!-- Essential Tool Card -->
-    <div class="bg-white border border-gray-200 rounded-xl shadow-lg overflow-hidden relative group">
-      <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent-dark to-primary"></div>
-      <div class="p-6">
-        <div class="flex items-center justify-between mb-4">
-          <span class="text-xs font-bold text-accent-dark uppercase tracking-wider bg-emerald-50 px-2 py-1 rounded">Essential Tool</span>
-          <span class="material-symbols-outlined text-gray-400" style="font-size: 20px;">check_circle</span>
-        </div>
-        <div class="flex gap-4 mb-4">
-          <Image src={towelImage} alt="Soft cotton household towel used for Japanese neck stretching exercises - the only equipment needed" class="size-24 rounded-lg object-cover bg-gray-100 shadow-md" width={96} height={96} />
-          <div>
-            <h4 class="text-lg font-bold text-text-main-light leading-tight">Your Household Towel</h4>
-            <p class="text-xs text-text-muted-light mt-1">
-              No equipment needed
-            </p>
-          </div>
-        </div>
-        <p class="text-sm text-text-muted-light mb-5 leading-relaxed">
-          You don't need expensive gym equipment. Learn how a simple towel can fix your posture.
-        </p>
-        <a href="/#technique-1" class="flex items-center justify-center gap-2 bg-accent-dark hover:bg-emerald-800 text-white font-bold py-3 px-4 rounded-lg text-sm w-full transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
-          See How It Works
-          <span class="material-symbols-outlined text-sm">arrow_forward</span>
-        </a>
+  <!-- Essential Tool Card -->
+  <div class="bg-white border border-gray-200 rounded-xl shadow-lg overflow-hidden relative group">
+    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent-dark to-primary"></div>
+    <div class="p-6">
+      <div class="flex items-center justify-between mb-4">
+        <span class="text-xs font-bold text-accent-dark uppercase tracking-wider bg-emerald-50 px-2 py-1 rounded">Essential Tool</span>
+        <span class="material-symbols-outlined text-gray-400" style="font-size: 20px;">check_circle</span>
       </div>
+      <div class="flex gap-4 mb-4">
+        <Image src={towelImage} alt="Soft cotton household towel used for Japanese neck stretching exercises - the only equipment needed" class="size-24 rounded-lg object-cover bg-gray-100 shadow-md" width={96} height={96} />
+        <div>
+          <h4 class="text-lg font-bold text-text-main-light leading-tight">Your Household Towel</h4>
+          <p class="text-xs text-text-muted-light mt-1">
+            No equipment needed
+          </p>
+        </div>
+      </div>
+      <p class="text-sm text-text-muted-light mb-5 leading-relaxed">
+        You don't need expensive gym equipment. Learn how a simple towel can fix your posture.
+      </p>
+      <a href="/#technique-1" class="flex items-center justify-center gap-2 bg-accent-dark hover:bg-emerald-800 text-white font-bold py-3 px-4 rounded-lg text-sm w-full transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+        See How It Works
+        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+      </a>
     </div>
+  </div>
 
-    <!-- Table of Contents -->
-    {tocItems.length > 0 && (
-      <div class="bg-gray-50 rounded-xl p-6 border border-gray-100">
-        <h3 class="font-bold text-lg mb-4 flex items-center gap-2 text-text-main-light">
-          <span class="material-symbols-outlined text-accent-dark">list</span>
-          In this Article
-        </h3>
-        <nav>
-          <ul class="space-y-3 relative border-l border-gray-200 ml-2 pl-4">
-            {tocItems.map((item, index) => (
-              <li>
-                <a
-                  class={`block text-sm transition-colors ${index === 0 ? 'font-medium text-accent-dark hover:text-emerald-800' : 'text-text-muted-light hover:text-accent-dark'}`}
-                  href={item.href}
-                >
-                  {item.text}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </div>
-    )}
+  <!-- Pioneer / Tradition Card (per-article) -->
+  <slot name="pioneer" />
 
-    <!-- Pioneer / Tradition Card (per-article) -->
-    <slot name="pioneer" />
-
-    <!-- Japanese Exercise Methods -->
-    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
-      <h3 class="font-bold text-lg mb-2 flex items-center gap-2 text-text-main-light">
-        <span class="material-symbols-outlined text-accent-dark">fitness_center</span>
-        Japanese Exercise Methods
+  <!-- Table of Contents. Pinned below the sticky header; must stay the last
+       child of the aside so the pinned card has nothing to overlap. -->
+  {tocItems.length > 0 && (
+    <div class="sticky top-24 bg-gray-50 rounded-xl p-6 border border-gray-100">
+      <h3 class="font-bold text-lg mb-4 flex items-center gap-2 text-text-main-light">
+        <span class="material-symbols-outlined text-accent-dark">list</span>
+        In this Article
       </h3>
-      <p class="text-xs text-text-muted-light mb-4">Explore traditional techniques for longevity and wellness</p>
-      <nav>
-        <ul class="space-y-2">
-          <li>
-            <a class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-emerald-50 transition-colors group" href="/rajio-taiso-radio-calisthenics">
-              <span class="flex items-center justify-center size-8 rounded-lg bg-emerald-100 text-accent-dark text-xs font-bold group-hover:bg-accent-dark group-hover:text-white transition-colors">1</span>
-              <div class="flex-1">
-                <span class="block text-sm font-medium text-text-main-light group-hover:text-accent-dark transition-colors">Rajio Taiso</span>
-                <span class="block text-xs text-text-muted-light">Radio Calisthenics</span>
-              </div>
-              <span class="material-symbols-outlined text-gray-300 group-hover:text-accent-dark transition-colors text-sm">arrow_forward</span>
-            </a>
-          </li>
-          <li>
-            <a class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-emerald-50 transition-colors group" href="/shinrin-yoku-forest-bathing">
-              <span class="flex items-center justify-center size-8 rounded-lg bg-emerald-100 text-accent-dark text-xs font-bold group-hover:bg-accent-dark group-hover:text-white transition-colors">2</span>
-              <div class="flex-1">
-                <span class="block text-sm font-medium text-text-main-light group-hover:text-accent-dark transition-colors">Shinrin-Yoku</span>
-                <span class="block text-xs text-text-muted-light">Forest Bathing Walks</span>
-              </div>
-              <span class="material-symbols-outlined text-gray-300 group-hover:text-accent-dark transition-colors text-sm">arrow_forward</span>
-            </a>
-          </li>
-          <li>
-            <a class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-emerald-50 transition-colors group" href="/makko-ho-stretching">
-              <span class="flex items-center justify-center size-8 rounded-lg bg-emerald-100 text-accent-dark text-xs font-bold group-hover:bg-accent-dark group-hover:text-white transition-colors">3</span>
-              <div class="flex-1">
-                <span class="block text-sm font-medium text-text-main-light group-hover:text-accent-dark transition-colors">Makko-Ho</span>
-                <span class="block text-xs text-text-muted-light">4-Pose Meridian Stretching</span>
-              </div>
-              <span class="material-symbols-outlined text-gray-300 group-hover:text-accent-dark transition-colors text-sm">arrow_forward</span>
-            </a>
-          </li>
-          <li>
-            <a class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-emerald-50 transition-colors group" href="/seiza-sitting-benefits">
-              <span class="flex items-center justify-center size-8 rounded-lg bg-emerald-100 text-accent-dark text-xs font-bold group-hover:bg-accent-dark group-hover:text-white transition-colors">4</span>
-              <div class="flex-1">
-                <span class="block text-sm font-medium text-text-main-light group-hover:text-accent-dark transition-colors">Seiza Sitting</span>
-                <span class="block text-xs text-text-muted-light">Traditional Floor Posture</span>
-              </div>
-              <span class="material-symbols-outlined text-gray-300 group-hover:text-accent-dark transition-colors text-sm">arrow_forward</span>
-            </a>
-          </li>
-          <li>
-            <a class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-emerald-50 transition-colors group" href="/hara-breathing-exercises">
-              <span class="flex items-center justify-center size-8 rounded-lg bg-emerald-100 text-accent-dark text-xs font-bold group-hover:bg-accent-dark group-hover:text-white transition-colors">5</span>
-              <div class="flex-1">
-                <span class="block text-sm font-medium text-text-main-light group-hover:text-accent-dark transition-colors">Hara Breathing</span>
-                <span class="block text-xs text-text-muted-light">Belly-Centered Breathwork</span>
-              </div>
-              <span class="material-symbols-outlined text-gray-300 group-hover:text-accent-dark transition-colors text-sm">arrow_forward</span>
-            </a>
-          </li>
-          <li>
-            <a class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-emerald-50 transition-colors group" href="/towel-stretch-for-back">
-              <span class="flex items-center justify-center size-8 rounded-lg bg-emerald-100 text-accent-dark text-xs font-bold group-hover:bg-accent-dark group-hover:text-white transition-colors">6</span>
-              <div class="flex-1">
-                <span class="block text-sm font-medium text-text-main-light group-hover:text-accent-dark transition-colors">Towel Stretch for Back</span>
-                <span class="block text-xs text-text-muted-light">Fukutsuji Method</span>
-              </div>
-              <span class="material-symbols-outlined text-gray-300 group-hover:text-accent-dark transition-colors text-sm">arrow_forward</span>
-            </a>
-          </li>
-          <li>
-            <a class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-emerald-50 transition-colors group" href="/asa-no-taiso-morning-stretch">
-              <span class="flex items-center justify-center size-8 rounded-lg bg-emerald-100 text-accent-dark text-xs font-bold group-hover:bg-accent-dark group-hover:text-white transition-colors">7</span>
-              <div class="flex-1">
-                <span class="block text-sm font-medium text-text-main-light group-hover:text-accent-dark transition-colors">Morning Stretch Routine</span>
-                <span class="block text-xs text-text-muted-light">Asa no Taisō</span>
-              </div>
-              <span class="material-symbols-outlined text-gray-300 group-hover:text-accent-dark transition-colors text-sm">arrow_forward</span>
-            </a>
-          </li>
-          <li>
-            <a class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-emerald-50 transition-colors group" href="/do-in-self-massage">
-              <span class="flex items-center justify-center size-8 rounded-lg bg-emerald-100 text-accent-dark text-xs font-bold group-hover:bg-accent-dark group-hover:text-white transition-colors">8</span>
-              <div class="flex-1">
-                <span class="block text-sm font-medium text-text-main-light group-hover:text-accent-dark transition-colors">Do-In Self Massage</span>
-                <span class="block text-xs text-text-muted-light">Acupressure Techniques</span>
-              </div>
-              <span class="material-symbols-outlined text-gray-300 group-hover:text-accent-dark transition-colors text-sm">arrow_forward</span>
-            </a>
-          </li>
-          <li>
-            <a class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-emerald-50 transition-colors group" href="/sotai-natural-movement">
-              <span class="flex items-center justify-center size-8 rounded-lg bg-emerald-100 text-accent-dark text-xs font-bold group-hover:bg-accent-dark group-hover:text-white transition-colors">9</span>
-              <div class="flex-1">
-                <span class="block text-sm font-medium text-text-main-light group-hover:text-accent-dark transition-colors">Sotai</span>
-                <span class="block text-xs text-text-muted-light">Natural Movement Therapy</span>
-              </div>
-              <span class="material-symbols-outlined text-gray-300 group-hover:text-accent-dark transition-colors text-sm">arrow_forward</span>
-            </a>
-          </li>
-          <li>
-            <a class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-emerald-50 transition-colors group" href="/kinhin-walking-meditation">
-              <span class="flex items-center justify-center size-8 rounded-lg bg-emerald-100 text-accent-dark text-xs font-bold group-hover:bg-accent-dark group-hover:text-white transition-colors">10</span>
-              <div class="flex-1">
-                <span class="block text-sm font-medium text-text-main-light group-hover:text-accent-dark transition-colors">Kinhin</span>
-                <span class="block text-xs text-text-muted-light">Walking Meditation</span>
-              </div>
-              <span class="material-symbols-outlined text-gray-300 group-hover:text-accent-dark transition-colors text-sm">arrow_forward</span>
-            </a>
-          </li>
-          <li>
-            <a class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-emerald-50 transition-colors group" href="/japanese-long-breath-method">
-              <span class="flex items-center justify-center size-8 rounded-lg bg-emerald-100 text-accent-dark text-xs font-bold group-hover:bg-accent-dark group-hover:text-white transition-colors">11</span>
-              <div class="flex-1">
-                <span class="block text-sm font-medium text-text-main-light group-hover:text-accent-dark transition-colors">Long Breath Method</span>
-                <span class="block text-xs text-text-muted-light">Ryosuke Breathing</span>
-              </div>
-              <span class="material-symbols-outlined text-gray-300 group-hover:text-accent-dark transition-colors text-sm">arrow_forward</span>
-            </a>
-          </li>
-          <li>
-            <a class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-emerald-50 transition-colors group" href="/fukutsuji-vs-yoga">
-              <span class="flex items-center justify-center size-8 rounded-lg bg-emerald-100 text-accent-dark text-xs font-bold group-hover:bg-accent-dark group-hover:text-white transition-colors">12</span>
-              <div class="flex-1">
-                <span class="block text-sm font-medium text-text-main-light group-hover:text-accent-dark transition-colors">Fukutsuji vs Yoga</span>
-                <span class="block text-xs text-text-muted-light">Comparison for Seniors</span>
-              </div>
-              <span class="material-symbols-outlined text-gray-300 group-hover:text-accent-dark transition-colors text-sm">arrow_forward</span>
-            </a>
-          </li>
+      <nav id="sidebar-toc" aria-label="Table of contents">
+        <ul class="space-y-3 relative border-l border-gray-200 ml-2 pl-4">
+          {tocItems.map((item) => (
+            <li>
+              <a
+                class="toc-link block text-sm text-text-muted-light transition-colors hover:text-accent-dark"
+                href={item.href}
+              >
+                {item.text}
+              </a>
+            </li>
+          ))}
         </ul>
       </nav>
     </div>
+  )}
 
-  </div>
 </aside>
+
+<style>
+  /* Set by the scroll-spy script below. Plain CSS rather than toggled utility
+     classes so the styling sits next to the code that applies it. */
+  .toc-link.is-active {
+    color: #047857; /* accent-dark */
+    font-weight: 500;
+  }
+</style>
+
+<script>
+  // Marks the table-of-contents entry for the section currently being read.
+  // Only runs on pages that pass tocItems to <Sidebar />.
+  type TocEntry = { link: HTMLAnchorElement; heading: HTMLElement };
+
+  const toc = document.getElementById('sidebar-toc');
+
+  if (toc) {
+    // Every TOC link points at an <h2> in the article, so observing the linked
+    // headings is the same set of elements, minus any heading without an entry.
+    const entries: TocEntry[] = [];
+    toc.querySelectorAll<HTMLAnchorElement>('a[href^="#"]').forEach((link) => {
+      const heading = document.getElementById(decodeURIComponent(link.hash.slice(1)));
+      if (heading) entries.push({ link, heading });
+    });
+
+    if (entries.length > 0) {
+      // A heading counts as "current" while it sits in a band just under the
+      // sticky header, between 96px and 30% down the viewport.
+      const BAND_TOP = 96;
+      const visible = new Set<Element>();
+      let active: TocEntry | null = null;
+
+      const setActive = (entry: TocEntry) => {
+        if (entry === active) return;
+        active?.link.classList.remove('is-active');
+        active?.link.removeAttribute('aria-current');
+        entry.link.classList.add('is-active');
+        entry.link.setAttribute('aria-current', 'location');
+        active = entry;
+      };
+
+      const observer = new IntersectionObserver(
+        (records) => {
+          for (const record of records) {
+            if (record.isIntersecting) visible.add(record.target);
+            else visible.delete(record.target);
+          }
+
+          const inBand = entries.find((entry) => visible.has(entry.heading));
+          if (inBand) {
+            setActive(inBand);
+            return;
+          }
+
+          // Nothing in the band: either we are mid-section, or we scrolled back
+          // up out of one. Fall back to the last heading we have scrolled past.
+          let passed = entries[0];
+          for (const entry of entries) {
+            if (entry.heading.getBoundingClientRect().top < BAND_TOP) passed = entry;
+          }
+          setActive(passed);
+        },
+        { rootMargin: `-${BAND_TOP}px 0px -70% 0px`, threshold: 0 }
+      );
+
+      entries.forEach((entry) => observer.observe(entry.heading));
+    }
+  }
+</script>

@@ -11,6 +11,7 @@ import fiveSensesImage from '../assets/images/shinrin-yoku-forest-bathing/shinri
 import whatToBringImage from '../assets/images/shinrin-yoku-forest-bathing/what-to-bring-forest-bathing-checklist-gear.webp';
 import accessibleTrailImage from '../assets/images/shinrin-yoku-forest-bathing/forest-bathing-accessible-trail-rollator-senior.webp';
 import fourSeasonsImage from '../assets/images/shinrin-yoku-forest-bathing/shinrin-yoku-forest-path-four-seasons.webp';
+import ExploreMethods from '../components/ExploreMethods.astro';
 ---
 
 <BaseLayout
@@ -605,55 +606,6 @@ import fourSeasonsImage from '../assets/images/shinrin-yoku-forest-bathing/shinr
           This article is for informational purposes only and should not replace professional medical advice. Always consult with your healthcare provider before starting any new wellness practice, especially if you have existing health conditions or concerns.
         </MedicalDisclaimer>
 
-        <!-- Related Articles -->
-        <div class="mt-12">
-          <h2 class="font-serif text-[1.5rem] font-medium lg:text-2xl lg:font-medium text-text-main-light mb-6">Related Articles</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <a href="/hara-breathing-exercises" class="group block bg-white rounded-xl p-6 border border-gray-200 hover:border-emerald-300 transition-all hover:shadow-lg">
-              <div class="flex items-start gap-4">
-                <span class="material-symbols-outlined text-3xl text-emerald-600 group-hover:scale-110 transition-transform">self_improvement</span>
-                <div>
-                  <h3 class="font-bold text-lg text-text-main-light group-hover:text-emerald-600 transition-colors">Hara Breathing Exercises</h3>
-                  <p class="text-sm text-text-muted-light mt-1">Deep abdominal breathing techniques for stress relief and mental clarity.</p>
-                </div>
-              </div>
-            </a>
-            <a href="/makko-ho-stretching" class="group block bg-white rounded-xl p-6 border border-gray-200 hover:border-emerald-300 transition-all hover:shadow-lg">
-              <div class="flex items-start gap-4">
-                <span class="material-symbols-outlined text-3xl text-emerald-600 group-hover:scale-110 transition-transform">sports_gymnastics</span>
-                <div>
-                  <h3 class="font-bold text-lg text-text-main-light group-hover:text-emerald-600 transition-colors">Makko-Ho Stretching</h3>
-                  <p class="text-sm text-text-muted-light mt-1">Four simple stretches to improve flexibility and energy flow.</p>
-                </div>
-              </div>
-            </a>
-            <a href="/seiza-sitting-benefits" class="group block bg-white rounded-xl p-6 border border-gray-200 hover:border-emerald-300 transition-all hover:shadow-lg">
-              <div class="flex items-start gap-4">
-                <span class="material-symbols-outlined text-3xl text-emerald-600 group-hover:scale-110 transition-transform">accessibility_new</span>
-                <div>
-                  <h3 class="font-bold text-lg text-text-main-light group-hover:text-emerald-600 transition-colors">Seiza Sitting Benefits</h3>
-                  <p class="text-sm text-text-muted-light mt-1">The traditional Japanese sitting posture for better posture and focus.</p>
-                </div>
-              </div>
-            </a>
-            <a href="/rajio-taiso-radio-calisthenics" class="group block bg-white rounded-xl p-6 border border-gray-200 hover:border-emerald-300 transition-all hover:shadow-lg">
-              <div class="flex items-start gap-4">
-                <span class="material-symbols-outlined text-3xl text-emerald-600 group-hover:scale-110 transition-transform">fitness_center</span>
-                <div>
-                  <h3 class="font-bold text-lg text-text-main-light group-hover:text-emerald-600 transition-colors">Rajio Taiso</h3>
-                  <p class="text-sm text-text-muted-light mt-1">Japan's beloved radio calisthenics for daily movement and vitality.</p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="mt-8 text-center">
-            <a href="/" class="inline-flex items-center gap-2 bg-accent-dark hover:bg-emerald-800 text-white font-bold py-3 px-6 rounded-lg transition-colors shadow-md hover:shadow-lg">
-              Browse All Articles
-              <span class="material-symbols-outlined text-sm">arrow_forward</span>
-            </a>
-          </div>
-        </div>
-
       </article>
 
       <Sidebar tocItems={[
@@ -678,5 +630,7 @@ import fourSeasonsImage from '../assets/images/shinrin-yoku-forest-bathing/shinr
       </Sidebar>
 
     </div>
+
+    <ExploreMethods />
   </main>
 </BaseLayout>
